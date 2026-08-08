@@ -34,20 +34,21 @@ Ursprünglich enstand das Projekt als möglichst kleine *fischertechnik*-Control
         </div>
     </div>
     <div>
-        <div><img class="linkfree" class="zoom" src="/assets/img/ftSwarmCAM.png"></div>
-        <div><p class="headline">ftSwarmCAM</p></div>
-        <div>
-            <p class="pdetail">
-            Mit dem ftSwarmCAM können Bilder und Videos aus dem Modell übertragen werden. Nebenbei steuert er noch zwei Motoren, einen Servo und bis zu drei analoge oder digitale Sensoren. Zwei direkt anschließbare LiPo-Akkus machen den Controller mobil.
-            </p>
-        </div>
-    </div>
-    <div>
         <div><a class="linkfree" href="products/ftSwarmControl"><img class="zoom" src="/assets/img/ftSwarmControl.png"></a></div>
         <div><p class="headline">ftSwarmControlUSBMicro</p></div>
         <div>
             <p class="pdetail">
                 Als Bedienfeld verfügt der ftSwarmControl neben zwei Joysticks, acht Tasten und einem LCD-Display über die Möglichkeit zwei DC-Motoren zu steuern und vier digitale Sensoren auszulesen. Im Fernbedienungsmodus können einfache Modelle ohne Programmierung gesteuert werden.
+            </p>
+        </div>
+    </div>
+    <div>
+        <div><img class="linkfree" class="zoom" src="/assets/img/ftSwarmRC.png"></div>
+        <div><p class="headline">ftSwarmRC</p></div>
+        <div>
+            <p class="pdetail">
+            Der ftSwarmRC ist ersetzt den 4-Kanal-RC-Empfänger (3246X) als auch den RC-Funk-Empfänger (30272) aus den 1980er Jahren.<br><br>
+            Er kann jedoch mehr als die klassischen fischertechnik RC-Empfänger: Es ist möglich sowohl einen Radantrieb, bis zu 4 RC-Servos und normale Motoren sowie bis zu 6 Sensoren steuern.
             </p>
         </div>
     </div>
