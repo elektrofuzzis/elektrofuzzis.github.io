@@ -8,7 +8,7 @@ sidebar:
 ftSwarm:
  - url: "/en/products/ftSwarm/"
    image_path: "/assets/img/ftSwarm.png"
-   title: "ftSwarm"
+   title: "ftSwarmJST"
  - url: "/en/products/ftSwarmRS/"
    image_path: "/assets/img/ftSwarmRS.png"
    title: "ftSwarmRS"
@@ -17,7 +17,7 @@ ftSwarm:
    title: "ftSwarmXL"
  - url: "/en/products/ftSwarmControl/"
    image_path: "/assets/img/ftSwarmControl.png"
-   title: "ftSwarmControl"
+   title: "ftSwarmControlUSBMicro"
  - url: "/en/products/ftSwarmPwrDrive/"
    image_path: "/assets/img/ftSwarmPwrDrive.png"
    title: "ftSwarmPwrDrive"

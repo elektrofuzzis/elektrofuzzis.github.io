@@ -14,57 +14,95 @@ Up to now, the IO's were identified by the serial number and the name of the por
   SwitchWithAlias  = new FtSwarmSwitch( "MotorEndStop" );    // New style: call my alias name!
 ```
 
-It's the same hardware setup as used before.
- 
-1st Controller:
-- Connect a switch to input A1.
-- Connect a 9V power supply to PWR.
+![Home](/assets/img/examples/motor_switch_swarm.png)
 
-2nd Controller:
-- Connect a motor or a lamp to output M2 of your ftSwarm.
-- Connect a 9V power supply to PWR.
-
-
-First, you need to set the alias names for switch and motor. Therefore you need to upload the standard firmware and enter the firmware menu. Use **(3) alias names** in main menu:
+First, you need to set the alias names for switch and motor. Therefore you need to upload the standard firmware. Start a serial console and enter the firmware menu by using **setup**. Use **"(i)  IO-Configuration"** in main menu:
 
 ```
-alias controler menu:
+***** IO-Configuration *****
 
-( 1) hostname ftSwarm100 - 
-( 2) A1   - switch                                 
-( 3) A2   -                                 
-( 4) A3   -                                 
-( 5) A4   -                                 
-( 6) A5   -                                 
-( 7) A6   -                                 
-( 8) M1   -                                 
-( 9) M2   -                                 
-(10) LED1 -                                 
-(11) LED2 -                                 
-(12) SERVO -                                 
+     Name               Type            Events Alias
+( 1) A1                 DigitalInput    0        
+( 2) A2                 DigitalInput    0        
+( 3) A3                 DigitalInput    0        
+( 4) A4                 DigitalInput    0        
+( 5) A5                 DigitalInput    0        
+( 6) A6                 DigitalInput    0        
+( 8) PWRCTL             Powersensor     0        
+( 9) ftSwarm1011.A1     DigitalInput    0        
+(10) ftSwarm1011.A2     DigitalInput    0        
+(11) ftSwarm1011.A3     DigitalInput    0        
+(12) ftSwarm1011.A4     DigitalInput    0        
+(13) ftSwarm1011.A5     DigitalInput    0        
+(14) ftSwarm1011.A6     DigitalInput    0        
+(15) ftSwarm1011.PWRCTL Powersensor     0   
 
-(0) exit
-alias>
+(a)  show actors
+(p)  show pixels
+
+(x)  Exit
+
+IO configuration>
 ```
 
-Set `A1 - switch` at the 1st controller running the example program and `M2 - motor` at the 2nd controller. Use `Example/MotorSwitchAlias`:
+On the second controller, the name **switch** must be set for **A1**. Therefore, select **“( 9) ftSwarm1011.A1”** to configure the port.
+
+```
+***** A1 *****
+
+     name:       A1
+(t)  IO type:    DigitalInput
+(a)  alias
+
+(+)  add event
+(s)  switch configuration
+
+(x)  Exit
+
+IO configuration/A1>
+```
+
+Select **“(”a)  Alias"** and assign the alias name **switch**. Use **(x)  Exit** to return to the **IO Configuration** menu.
+
+On the first controller, motor **M2** must now be assigned the alias name **motor**. Use **“(a)  show actors”** to switch the display from sensors to actuators:
+
+```
+***** IO configuration *****
+
+     Name               Type            Events Alias
+( 1) M1                 Motor           0        
+( 2) M2                 Motor           0        
+( 3) SERVO1             Servo           0        
+( 4) SERVO2             Servo           0        
+( 5) ftSwarm1011.M1     Motor           0        
+( 6) ftSwarm1011.M2     Motor           0        
+( 7) ftSwarm1011.SERVO1 Servo           0        
+( 8) ftSwarm1011.SERVO2 Servo           0        
+
+(i)  show inputs
+(p)  show pixels
+
+(x)  Exit
+
+IO configuration>
+```
+
+Use **“( 1) M1”** to select the motor and assign the alias name **motor**. Exit the port and IO configuration by pressing **(x) Exit** twice. When exiting the I/O configuration, confirm **“Save changes? (Y/N)?”** with “**Y**.”
 
 ```cpp
-#include <ftSwarmRS.h>
+#include <ftSwarm.h>
 
 FtSwarmSwitch *sw;
-FtSwarmMotor  *mot;
+FtSwarmSMotor *mot;
 
 void setup( ) {
-
-  Serial.begin(115200);
 
   // start the swarm
   FtSwarmSerialNumber_t local = ftSwarm.begin( );
   
   // get switch and motor instances
   sw  = new FtSwarmSwitch( "switch" );
-  mot = new FtSwarmMotor( "motor" );
+  mot = new FtSwarmSMotor( "motor" );
 
 }
 
@@ -72,7 +110,7 @@ void loop( ) {
 
   // check if switch is pressed or released
   if ( sw->isPressed() )
-    mot->setSpeed(255);
+    mot->setSpeed(100);
   else
     mot->setSpeed(0);
   

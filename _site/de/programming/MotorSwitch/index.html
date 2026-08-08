@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Das erste Programm -</title>
-<meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
+<meta name="description" content="">
 
 
   <meta name="author" content="The ftSwarm Project">
@@ -23,8 +23,6 @@
 <meta property="og:title" content="Das erste Programm">
 <meta property="og:url" content="http://localhost:4000/de/programming/MotorSwitch/">
 
-
-  <meta property="og:description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
 
@@ -66,8 +64,6 @@
 <!-- end _includes/seo.html -->
 
 
-
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title=" Feed">
 
 
 <!-- https://t.co/dKP3o1e -->
@@ -115,40 +111,75 @@
         </a>
 
         <!-- original stuff 
-        <ul class="visible-links"></ul>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
         end original stuff-->
-
-        <script>
-          function callRef( url ) {
-            if ( location.pathname.startsWith('/en/') ) {
-              location.href='/en/'+url;
-            } else {
-              location.href='/de/'+url;
-            }
-          }
-        </script>
 
         <ul class="visible-links">
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('gettingstarted/gettingstarted')" title="Manual">Manual</a>
+            <a id="gettingstarted" href="/en/gettingstarted/gettingstarted" title="Getting Started">Getting Started</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('cpp-api/index')" title="api">api</a>
+            <a id="programming" href="/en/programming/manual" title="C++ Manual">C++ Manual</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('products/index')" title="Products">Products</a>
+            <a id="remote" href="/en/remote/remote" title="Remote Control">Remote Control</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('faq')" title="FAQ">FAQ</a>
+            <a id="firmware" href="/en/firmware/flash" title="firmware">Firmware</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="api" href="/en/cpp-api/index" title="api">api</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="products" href="/en/products/index" title="Products">Products</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="faq" href="/en/faq" title="FAQ">FAQ</a>
           </li>
         </ul>
 
+        <!-- Translation -->
+        <script>
+          if ( location.pathname.startsWith('/de/') ) {
+
+            const gettingstarted = document.getElementById("gettingstarted");
+            gettingstarted.title = "Inbetriebnahme";
+            gettingstarted.innerHTML = "Inbetriebnahme";
+            gettingstarted.href = "/de/gettingstarted/gettingstarted"
+            
+            const programming = document.getElementById("programming");
+            programming.title = "C++ Handbuch";
+            programming.innerHTML = "C++ Handbuch";
+            programming.href = "/de/programming/manual"
+
+            const remote = document.getElementById("remote");
+            remote.title = "Fernsteuerung";
+            remote.innerHTML = "Fernsteuerung";
+            remote.href = "/de/remote/remote"
+
+            const firmware = document.getElementById("firmware");
+            firmware.href = "/de/firmware/flash"
+
+            const api = document.getElementById("api");
+            api.href = "/de/cpp-api/index"
+
+            const faq = document.getElementById("faq");
+            faq.href = "/de/faq"
+
+            const products = document.getElementById("products");
+            products.title = "Produkte";
+            products.innerHTML = "Produkte";
+            products.href = "/de/products/index"
+                      }
+        </script>
+
 
         <!-- language picker -->
+        <a href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
+        <a href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
 
-        <a class="alang" href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
-        <a class="alang" href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
-        
         <!-- language picker -->
 
         
@@ -190,27 +221,29 @@
     
       <li>
         
-          <span class="nav__sub-title">Manual</span>
-        
-
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Inbetriebnahme</span>
+          <span class="nav__sub-title">C++ Handbuch</span>
         
 
         
         <ul>
           
-            <li><a href="/de/gettingstarted/pinout">Anschlüsse</a></li>
+            <li><a href="/de/programming/manual">Einleitung</a></li>
           
-            <li><a href="/de/gettingstarted/serial">USB Anschluss</a></li>
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/de/ide/ide"><span class="nav__sub-title">Programmierumgebung</span></a>
+        
+
+        
+        <ul>
           
-            <li><a href="/de/gettingstarted/WebUI">WLAN & Statusseite</a></li>
+            <li><a href="/de/ide/arduino">Arduino</a></li>
           
-            <li><a href="/de/gettingstarted/ide">Installation IDE</a></li>
+            <li><a href="/de/ide/PlatformIO">PlatformIO & VSCode</a></li>
           
         </ul>
         
@@ -234,77 +267,11 @@
           
             <li><a href="/de/programming/switches">Switches & Buttons</a></li>
           
-            <li><a href="/de/programming/RemoteControl">Fernbedienung</a></li>
+            <li><a href="/de/programming/events">Eventprogrammierung</a></li>
           
-            <li><a href="/de/programming/EventControlled">Events</a></li>
+            <li><a href="/de/programming/FtSwarmPixel">FtSwarmPixel</a></li>
           
-            <li><a href="/de/programming/FtSwarmPixel">RGB LEDs & FtSwarmPixel</a></li>
-          
-            <li><a href="/de/programming/FtSwarmOLED">OLED Display</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <a href="/de/rs485/rs485"><span class="nav__sub-title">RS485</span></a>
-        
-
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Extension Port</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/de/extensionPort/index">Einführung</a></li>
-          
-            <li><a href="/de/extensionPort/I2CMaster">I²C Breakout-Boards</a></li>
-          
-            <li><a href="/de/extensionPort/I2CSlave">I²C TX-/TXT Kommunikation</a></li>
-          
-            <li><a href="/de/extensionPort/gyro">Gyro</a></li>
-          
-            <li><a href="/de/extensionPort/outputs">Motorausgänge</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Firmware</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/de/firmware/Configuration">Konfiguration</a></li>
-          
-            <li><a href="/de/firmware/firmware">Firmware & Updates</a></li>
-          
-            <li><a href="/de/firmware/versions">Versionen</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Advanced</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/de/advanced/PlatformIO">PlatformIO & VSCode</a></li>
-          
-            <li><a href="/de/advanced/debugging">Debugging</a></li>
+            <li><a href="/de/programming/debugging">Debugging</a></li>
           
         </ul>
         
@@ -323,67 +290,28 @@
     
       <h1 id="page-title" class="page__title">Das erste Programm</h1>
     
-    <p>Das erste Programm gibt nicht “Hello World” auf dem Bildschirm aus. Es wird einen Motor mit einem einfachen Taster steuern. 
-Dazu werden ein ftSwarm, ein Taster, ein Motor oder eine Lampe sowie eine 9V-Stromversorgung benötigt.</p>
+    <p>Das erste Programm wird einen Motor mit einem einfachen Taster steuern. 
+Dazu werden ein ftSwarm-Controller, ein Taster, ein Motor oder eine Lampe sowie eine 9V-Stromversorgung benötigt.</p>
 
 <p>Der Versuchsaufbau ist einfach:</p>
 
-<ul>
-  <li>Am Ausgang M2 des ftSwarm wird der Motor oder eine Lampe angeschlossen.</li>
-  <li>Der Taster wird am Eingang A1 angeschlossen.</li>
-  <li>Ein 9V Netzteil wird an PWR angeschlossen.</li>
-  <li>Der ftSwarm-Controller wird mit einem USB Kabel am PC angeschlossen.</li>
-</ul>
+<p><img src="/assets/img/examples/motor_switch.png" alt="Home" /></p>
 
-<p>Damit Ihr Controller Programme ausführen kann, muss zunächst der Kelda-Modus aktiviert werden. Starten Sie über die serielle Schnittstelle in das interaktive Firmware Menu. Wechseln Sie im Main Menu nach <strong>(2) swarm configuration</strong>:</p>
+<p>Kopieren Sie das folgende Programm und flashen Sie es auf Ihrem ftSwarm-Controller. Wird der Taster gedrückt, so startet der Motor. Lässt man den Taster los, stoppt der Motor.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>swarm configuration
-
-This device is connected to swarm "ftSwarm100" with 1 member(s) online.
-Swarm PIN is 100.
-(1) Kelda:               none
-(2) swarm communication: wifi
-(3) join another swarm
-(4) list swarm members
-
-(0) exit
-swarm configuration&gt;
-</code></pre></div></div>
-
-<p>Wählen Sie <strong>(1) Kelda</strong> um den Kelda Modus zu aktivieren. Zum Aktivieren der Änderung bootet Ihr Controller.</p>
-
-<p>Beim Neustart zeigt der Controller nun an, dass er im Kelda-Modus betrieben wird:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ftSwarmOS 0.5.0
-
-(C) Christian Bergschneider &amp; Stefan Fuss
-
-Press any key to enter bios settings.
-I am KELDA!
-Boot ftSwarm100 (SN:100).
-</code></pre></div></div>
-
-<p>Da der Controller im Kelda-Modus gestartet wurde, wechselt er nicht mehr automatisch in das interaktive Firmwaremenu. Geben Sie <strong>setup</strong> ein, das Menu wird gestartet. Wechseln Sie erneut zu <strong>(2) swarm configuration</strong>. Geben Sie nun mit <strong>(3) create a new swarm</strong> Ihrem Swarm - auch wenn er erst aus einem Controller besteht - Ihren Liebingsnamen.</p>
-
-<p>Schreiben Sie den folgenden Sketch oder verwenden Sie die Beispieldatei <em>MotorSwitch</em> und flashen ihn auf Ihrem ftSwarm-Controller. Wird der Taster gedrückt, so startet der Motor. Lässt man den Taster los, stoppt der Motor.</p>
-
-<p>Setzen Sie anstatt eines ftSwarmRS einen ftSwarmControl oder einen ftSwarm ein? Tauschen Sie dafür <code class="language-plaintext highlighter-rouge">#include &lt;ftSwarmRS.h&gt;</code> mit <code class="language-plaintext highlighter-rouge">#include &lt;ftSwarmControl.h&gt;</code> oder <code class="language-plaintext highlighter-rouge">#include &lt;ftSwarm.h&gt;</code> aus.</p>
-
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;ftSwarmRS.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;ftSwarm.h&gt;</span><span class="cp">
 </span>
 <span class="n">FtSwarmSwitch</span> <span class="o">*</span><span class="n">sw</span><span class="p">;</span>
-<span class="n">FtSwarmMotor</span>  <span class="o">*</span><span class="n">mot</span><span class="p">;</span>
+<span class="n">FtSwarmSMotor</span> <span class="o">*</span><span class="n">mot</span><span class="p">;</span>
 
 <span class="kt">void</span> <span class="nf">setup</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
-
-  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
 
   <span class="c1">// start the swarm</span>
   <span class="n">FtSwarmSerialNumber_t</span> <span class="n">local</span> <span class="o">=</span> <span class="n">ftSwarm</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span> <span class="p">);</span>
 	
   <span class="c1">// get switch and motor instances</span>
   <span class="n">sw</span>  <span class="o">=</span> <span class="k">new</span> <span class="n">FtSwarmSwitch</span><span class="p">(</span> <span class="n">local</span><span class="p">,</span> <span class="n">FTSWARM_A1</span> <span class="p">);</span>
-  <span class="n">mot</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FtSwarmMotor</span><span class="p">(</span> <span class="n">local</span><span class="p">,</span> <span class="n">FTSWARM_M2</span> <span class="p">);</span>
+  <span class="n">mot</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FtSwarmSMotor</span><span class="p">(</span> <span class="n">local</span><span class="p">,</span> <span class="n">FTSWARM_M1</span> <span class="p">);</span>
 
 <span class="p">}</span>
 
@@ -391,7 +319,7 @@ Boot ftSwarm100 (SN:100).
 
   <span class="c1">// check if switch is pressed or released</span>
   <span class="k">if</span> <span class="p">(</span> <span class="n">sw</span><span class="o">-&gt;</span><span class="n">isPressed</span><span class="p">()</span> <span class="p">)</span>
-    <span class="n">mot</span><span class="o">-&gt;</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+    <span class="n">mot</span><span class="o">-&gt;</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
   <span class="k">else</span>
     <span class="n">mot</span><span class="o">-&gt;</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 	
@@ -407,15 +335,10 @@ Boot ftSwarm100 (SN:100).
   <li>Danach wird die <strong><code class="language-plaintext highlighter-rouge">loop</code></strong> Funktion ausgeführt. Wird diese beendet, startet der Sketch diese immer wieder von neuem. In der <strong><code class="language-plaintext highlighter-rouge">loop</code></strong> findet die eigentliche Steuerung des Modells statt.</li>
 </ul>
 
-<p><strong><code class="language-plaintext highlighter-rouge">#include "ftSwarm.h"</code></strong> lädt die  ftSwarm-Bibliothek um die ftSwarm Firmware zu verwenden. 
+<p><strong><code class="language-plaintext highlighter-rouge">#include "ftSwarm.h"</code></strong> lädt die  ftSwarm-Bibliothek. 
 Danach werden die IOs <strong><code class="language-plaintext highlighter-rouge">switch</code></strong> und <strong><code class="language-plaintext highlighter-rouge">motor</code></strong> definiert.</p>
 
-<p>In <strong><code class="language-plaintext highlighter-rouge">setup</code></strong> wird zunächst die serielle Console initialisiert. Darüber können Debug- und Fehlermeldungen auf dem PC ausgegeben werden:</p>
-
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p>Danach wird der Schwarm initialisiert:</p>
+<p>In <strong><code class="language-plaintext highlighter-rouge">setup</code></strong> wird zunächst der Schwarm initialisiert:</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// start the swarm</span>
 <span class="n">FtSwarmSerialNumber</span> <span class="n">local</span> <span class="o">=</span> <span class="n">ftSwarm</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span> <span class="p">);</span>
@@ -424,23 +347,24 @@ Danach werden die IOs <strong><code class="language-plaintext highlighter-rouge"
 <p>Es wird die Seriennummer des lokalen Controllers zurückgegeben. Mit der Seriennummer werden nun Instanzen für Taster und Motor erzeugt:</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sw</span>  <span class="o">=</span> <span class="k">new</span> <span class="nf">FtSwarmSwitch</span><span class="p">(</span> <span class="n">local</span><span class="p">,</span> <span class="n">FTSWARM_A1</span> <span class="p">);</span>
-<span class="n">mot</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">FtSwarmMotor</span><span class="p">(</span> <span class="n">local</span><span class="p">,</span> <span class="n">FTSWARM_M2</span> <span class="p">);</span>
+<span class="n">mot</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">FtSwarmMiniMotor</span><span class="p">(</span> <span class="n">local</span><span class="p">,</span> <span class="n">FTSWARM_M1</span> <span class="p">);</span>
 </code></pre></div></div>
 
-<ul>
-  <li><strong>Achtung:</strong> * Es muss immer zuerst der Schwarm gestartet werden, bevor ein IO genutzt werden kann. Wird ein IO angesprochen, der noch nicht im Schwarm online ist, so wartet die Firmware bis der IO vorhanden ist. Ist der Schwarm noch nicht initialisiert, wartet das Programm in einer Endlosschleife.</li>
-</ul>
-
-<p>Um die IOs global zu definieren, müssen sie deshalb als Pointer implementiert werden. So können Sie initialisiert werden, nachdem der Schwarm gestartet wurde.</p>
+<p>Der Swarm muss immer als erstes mit <strong>ftSwarm.begin();</strong> initialisiert werden. Um IOs global zu definieren, müssen sie deshalb als Pointer implementiert werden. So können Sie initialisiert werden, nachdem der Schwarm gestartet wurde.</p>
 
 <p>In <strong><code class="language-plaintext highlighter-rouge">loop</code></strong> wird der Taster abgefragt und der Motor gestartet und wieder angehalten.</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span> <span class="n">sw</span><span class="o">-&gt;</span><span class="n">isPressed</span><span class="p">()</span> <span class="p">)</span>
-  <span class="n">mot</span><span class="o">-&gt;</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+  <span class="n">mot</span><span class="o">-&gt;</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
 <span class="k">else</span>
   <span class="n">mot</span><span class="o">-&gt;</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </code></pre></div></div>
 
+<p>Die Auswahl des richtigen Motortyps ist wichtig. Jeder fischertechnik Motor hat seine eigene Kennlinie und benötigt eine andere Spannung um zu starten. Diese Kennlinien sind in der Firmware hinterlegt, so dass der Motor ohne mechanische Belastung sich bereits mit <strong>mot-&gt;setSpeed(1)</strong> dreht.</p>
+
+<p>Der Motortyp hat in unserem Beispiel keine Auswirkung, da der Motor entweder mit voller Geschwindigkeit arbeitet oder ausgeschaltet ist.</p>
+
+<p>Die Motorgeschwindigkeit wird in Prozent angegeben - bei einem Wert von -100 dreht der Motor mit voller Geschwindigkeit in eine Richtung, bei 100 in die andere Richtung. Schrittmotoren weichen davon ab und arbeiten in einem Bereich von -4096 bis 4096.</p>
 
 
 
@@ -457,7 +381,7 @@ Danach werden die IOs <strong><code class="language-plaintext highlighter-rouge"
     <div id="footer" class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
-
+<script src="/assets/js/copy-code.js"></script>
 <!-- end custom footer snippets -->
         <div class="page__footer-follow">
   <ul class="social-icons">
@@ -490,12 +414,10 @@ Danach werden die IOs <strong><code class="language-plaintext highlighter-rouge"
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
-    
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2026 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

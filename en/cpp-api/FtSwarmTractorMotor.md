@@ -20,7 +20,7 @@ Please check out the details about speed, coast & brake in the [motor overview](
 Constructor to create a FtSwarmTractorMotor object. If the referenced controller isn't connected to the swarm yet, the firmware will waits until the controller gets online.
 
 - serialNumber: Serial number of the used ftSwarm controller.
-- port: Port number, **FTSWARM_M1** or **FTSWARM_M2**
+- port: Port number, **FTSWARM_M1** to **FTSWARM_M8**
 
 #### FtSwarmTractorMotor( const char *name )
 

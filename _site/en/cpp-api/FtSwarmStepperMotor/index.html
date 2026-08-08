@@ -1,0 +1,585 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>FtSwarmStepperMotor -</title>
+<meta name="description" content="">
+
+
+  <meta name="author" content="The ftSwarm Project">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="">
+<meta property="og:title" content="FtSwarmStepperMotor">
+<meta property="og:url" content="http://localhost:4000/en/cpp-api/FtSwarmStepperMotor/">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/en/cpp-api/FtSwarmStepperMotor/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "The ftSwarm Project",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--category wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/img/ftSwarm.svg" alt=""></a>
+        
+          <a class="site-title" href="/">
+          
+          
+        </a>
+
+        <!-- original stuff 
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
+        end original stuff-->
+
+        <ul class="visible-links">
+          <li class="masthead__menu-item">
+            <a id="gettingstarted" href="/en/gettingstarted/gettingstarted" title="Getting Started">Getting Started</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="programming" href="/en/programming/manual" title="C++ Manual">C++ Manual</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="remote" href="/en/remote/remote" title="Remote Control">Remote Control</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="firmware" href="/en/firmware/flash" title="firmware">Firmware</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="api" href="/en/cpp-api/index" title="api">api</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="products" href="/en/products/index" title="Products">Products</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="faq" href="/en/faq" title="FAQ">FAQ</a>
+          </li>
+        </ul>
+
+        <!-- Translation -->
+        <script>
+          if ( location.pathname.startsWith('/de/') ) {
+
+            const gettingstarted = document.getElementById("gettingstarted");
+            gettingstarted.title = "Inbetriebnahme";
+            gettingstarted.innerHTML = "Inbetriebnahme";
+            gettingstarted.href = "/de/gettingstarted/gettingstarted"
+            
+            const programming = document.getElementById("programming");
+            programming.title = "C++ Handbuch";
+            programming.innerHTML = "C++ Handbuch";
+            programming.href = "/de/programming/manual"
+
+            const remote = document.getElementById("remote");
+            remote.title = "Fernsteuerung";
+            remote.innerHTML = "Fernsteuerung";
+            remote.href = "/de/remote/remote"
+
+            const firmware = document.getElementById("firmware");
+            firmware.href = "/de/firmware/flash"
+
+            const api = document.getElementById("api");
+            api.href = "/de/cpp-api/index"
+
+            const faq = document.getElementById("faq");
+            faq.href = "/de/faq"
+
+            const products = document.getElementById("products");
+            products.title = "Produkte";
+            products.innerHTML = "Produkte";
+            products.href = "/de/products/index"
+                      }
+        </script>
+
+
+        <!-- language picker -->
+        <a href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
+        <a href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
+
+        <!-- language picker -->
+
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">C++ API</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/cpp-api/index">Overview</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Analog Sensors</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/cpp-api/analogSensors">Overview</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmJoystick">Joystick</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmLDR">Phototransistor/Resistor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmOhmmeter">Ohmmeter</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmThermometer">Thermometer</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmVoltmeter">Voltmeter</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Digital Sensors</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/cpp-api/digitalSensors">Overview</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmButton">ftSwarmControl Button</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmLightBarrier">Light Barrier / Photo Transistor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmReedSwitch">Reed Switch</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmSwitch">Switch</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmCounter/">Counter</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmFrequencyMeter/">Frequency</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmRotaryEncoder/">Rotary</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">LEDs, Lamps & Displays</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/cpp-api/leds">Overview</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmPixel">ftPixel</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmLamp">Lamp</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmOLED">OLED</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Motors</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/cpp-api/motors">Overview</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmMiniMotor">Mini-Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmMotor">M-Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmSMotor">S-Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmXMMotor">XM-Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmXSMotor">XS-Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmTractorMotor">Traktor Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmEncoderMotor">Encoder Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmStepperMotor">Stepper Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmRCMotor">RC-Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmWheelDrive">Wheel Drive</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Other Actors</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/cpp-api/otherActors">Overview</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmBuzzer">Buzzer</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmCompressor">Compressor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmServo">Servo</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmRCServo">RC-Servo</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmValve">Valve</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">FtSwarmStepperMotor</h1>
+    
+    <div class="apicontainer">
+    <div class="apileft">
+        Stepper motors can move their axis in fixed angles or steps and hold that position. They are therefore used in X-Y tables, such as plotters and scanners, as well as in robotic arms.<br /><br />
+        The ftSwarmStepperMotor can only be used in conjunction with an ftSwarmPwrDrive.<br /><br />
+    </div>
+    <div class="apiright apiimg"><img title="Bildnachweis: fischertechnik" src="/assets/img/motor/motor-stepper.png" />Stepper Motor</div>
+</div>
+
+<p>When controlling stepper motors, the target position is specified to the controller via the number of steps to be traveled. The controller “moves” the set number of steps at a specified speed. Unlike standard fischertechnik motors, the speed is specified in steps per second.</p>
+
+<p>Several steps are required to start a stepper motor:</p>
+<ul>
+  <li>Set the step speed using <strong>setSpeed</strong>.</li>
+  <li>Specify the target number of steps to be traveled using <strong>setDistance</strong>.</li>
+  <li>Start the motor using <strong>run</strong>.</li>
+  <li>Once the target position is reached, the motor stops automatically.</li>
+</ul>
+
+<p>The stepper motor counts the steps it has traveled. To ensure the model knows its absolute position, a reference position must first be reached after the controller starts up. The ftSwarmPwrDrive controller uses the combined reference/limit switch inputs ES1 through ES4 for this purpose.</p>
+<ul>
+  <li>Set the step speed using <strong>setSpeed</strong>.</li>
+  <li>Use <strong>homing</strong> to start moving toward the reference position. The specified distance determines the direction of travel based on its sign; if no reference position is found within the specified distance, the process aborts. If the reference point is detected, the motor moves back a few steps—thus deactivating the limit switch input again. The distance can be set in advance using <strong>setHomingOffset</strong>.</li>
+</ul>
+
+<p>Use reed switches for precise reference positions. Fischertechnik push buttons exhibit significant bounce, so the reference position can only be measured imprecisely. If you only want to use the inputs as limit switches, standard push buttons are perfectly sufficient.</p>
+
+<p>The homing process establishes an absolute coordinate system. The corresponding motor is then at its 0 position. Movement commands via <strong>setDistance</strong> can refer to both the absolute position in the coordinate system and relative positions. With each movement, the position in the coordinate system is “incremented.”</p>
+<ul>
+  <li>You can use <strong>setPosition</strong> to set the current position in the coordinate system.</li>
+  <li><strong>getPosition</strong> returns the current position in the coordinate system.</li>
+</ul>
+
+<p class="notice--info">Stepper motors do not play a major role in fischertechnik. To date, they have only been used in two kits—the Computing Plotter+Scanner (30571) and the 3D Printer (533624). They were controlled via the Computing Interface—which is practically obsolete today—or the 3D Printer control unit. The stepper motors used in these kits are not compatible with the ftSwarmPwrDrive.</p>
+
+<h4 id="ftswarmsteppermotorftswarmserialnumber_t-serialnumber-ftswarmport_t-port">FtSwarmStepperMotor(FtSwarmSerialNumber_t serialNumber, FtSwarmPort_t port)</h4>
+
+<p>Constructor to create a FtSwarmStepperMotor object. If the referenced controller isn’t connected to the swarm yet, the firmware will waits until the controller gets online.</p>
+
+<ul>
+  <li>serialNumber: Serial number of the used ftSwarm controller.</li>
+  <li>port: Port number, <strong>FTSWARM_SETP1</strong> to <strong>FTSWARM_STEP4</strong></li>
+</ul>
+
+<h4 id="ftswarmsteppermotor-const-char-name-">FtSwarmStepperMotor( const char *name )</h4>
+
+<p>Constructor to create a FtSwarmStepperMotor object. If the referenced controller isn’t connected to the swarm yet, the firmware will waits until the controller gets online.</p>
+
+<ul>
+  <li>name: Aliasname des IO-Ports.</li>
+</ul>
+
+<h4 id="void-setspeed-int16_t-speed-">void setSpeed( int16_t speed )</h4>
+
+<p>Sets the motor speed.</p>
+
+<ul>
+  <li>speed: Speed in the range of -4096 to 4096 steps per second.</li>
+</ul>
+
+<h4 id="uint16_t-getspeed">uint16_t getSpeed()</h4>
+
+<p>Returns the motor speed.</p>
+
+<h4 id="void-setdistance-int32_t-distance-bool-relative-">void setDistance( int32_t distance, bool relative )</h4>
+
+<p>Sets the distance to be traveled. However, the motor is not started until the <strong>run</strong> command is executed.</p>
+
+<ul>
+  <li>distance: Number of steps</li>
+  <li>relative: If relative is true, the distance is traveled relative to the current position. If the value is false, the motor moves to the absolute position specified by distance.</li>
+</ul>
+
+<h4 id="int32_t-getdistance-void-">int32_t getDistance( void )</h4>
+
+<p>Returns the number of steps remaining.</p>
+
+<h4 id="void-run-void-">void run( void )</h4>
+
+<p>Start the motor.</p>
+
+<h4 id="bool-isrunning-void-">bool isRunning( void )</h4>
+
+<p>True, if the motor is “running”.</p>
+
+<h4 id="void-stop-void-">void stop( void )</h4>
+
+<p>Stops the motor immediately.</p>
+
+<h4 id="void-setposition-int32_t-position-">void setPosition( int32_t position )</h4>
+
+<p>This command sets the position in the coordinate system. The <strong>homing</strong> command moves the motor to a reference position. Its position in the coordinate system is 0 after the homing command.</p>
+
+<p>If the motor is moved 5,000 steps using <strong>setDistance(5000, true)</strong> followed by <strong>run()</strong>, its absolute position is then 5,000. Another <strong>setDistance(-500, true)</strong> moves the motor 500 steps in the opposite direction, and the absolute position is now 4,500.</p>
+
+<p>The <strong>setPosition</strong> command can be used to set the position in the absolute coordinate system. If the axis has a travel range of 10,000 steps and the zero position is to be set at the center of the travel range, there are two options:</p>
+<ul>
+  <li><strong>setHomingOffset(5000)</strong> followed by <strong>homing(-10000)</strong> first moves to the reference position and then 5,000 steps to the center of the travel range. The absolute position of the motor is 0.</li>
+  <li><strong>homing(-10000)</strong> moves to the reference position. <strong>setPosition(-5000)</strong> then correctly defines the absolute coordinate system—the center of the travel range is 0. However, the motor remains at the reference position and does not move to the center position.</li>
+</ul>
+
+<h4 id="int32_t-getposition-void-">int32_t getPosition( void )</h4>
+
+<p>Returns the motor’s position in the absolute coordinate system.</p>
+
+<h4 id="void-homing-int32_t-maxdistance-">void homing( int32_t maxDistance )</h4>
+
+<p>Starts the homing process. During this process, the motor moves a maximum of maxDistance steps. The sign of maxDistance determines the direction of rotation of the motor during the homing process.</p>
+
+<h4 id="bool-ishoming-void-">bool isHoming( void )</h4>
+
+<p>True, when the homing process is running.</p>
+
+<h4 id="void-sethomingoffset-int32_t-offset-">void setHomingOffset( int32_t offset )</h4>
+
+<p>Sets the offset by which the motor is moved in the opposite direction after the reference switch is triggered.</p>
+
+<h4 id="void-setmotiontype-ftswarmmotion_t-motiontype-">void setMotionType( FtSwarmMotion_t motionType )</h4>
+
+<p>This function sets the motor driver’s operating mode:</p>
+<ul>
+  <li><strong>FTSWARM_COAST</strong> the motor is stopped but can be adjusted manually.</li>
+  <li><strong>FTSWARM_BRAKE</strong> the motor is stopped but actively braked. The motor cannot be adjusted manually.</li>
+  <li><strong>FTSWARM_ON</strong> switches the power stage on again at the original speed.</li>
+</ul>
+
+<h4 id="ftswarmmotion_t-getmotiontype">FtSwarmMotion_t getMotionType()</h4>
+
+<p>Returns the motor’s motion type;</p>
+
+<h4 id="void-coast-void-">void coast( void )</h4>
+
+<p>Set the motor’s motion type to <strong>FTSWARM_COAST</strong>.</p>
+
+<h4 id="void-brake-void-">void brake( void )</h4>
+
+<p>Set the motor’s motion type to <strong>FTSWARM_BRAKE</strong>.</p>
+
+
+
+<div class="entries-list">
+  
+</div>
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<script src="/assets/js/copy-code.js"></script>
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/elektrofuzzis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://instagram.com/elektrofuzzies" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+        
+          <li><a href="mailto:ftpi@gmx.de" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

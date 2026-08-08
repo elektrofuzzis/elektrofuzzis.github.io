@@ -1,5 +1,5 @@
 ---
-title: RGB LEDs & ftPixel
+title: ftPixel
 layout: category
 lang: de
 classes: wide
@@ -8,28 +8,27 @@ sidebar:
 ---
 Der ftSwarm hat zwei eingebaute RGB-LEDs, um den Betriebszustand anzeigen. Die LEDs können aber auch über das Steuerprogramm geschaltet werden. Bis zu 16 ftPixels können  zusätzliche extern an den LED-Port angeschlossen werden.
 
-Die Einrichtung der Hardware ist einfach: Sie benötigen lediglich einen ftSwarm-Controller, der mit einem USB-Kabel an Ihren PC angeschlossen ist, und ein Netzteil.
+![Home](/assets/img/examples/ftPixel.png)
 
-ftPixel können nur mit dem ftSwarm oder dem ftSwarmRS verwendet werden.
+
+Externe ftPixel können nur an den ftSwarmJST, den ftSwarmRS und ftSwarmRC angeschlossen werden.
 {: .notice--info}
 
 ```cpp
 #include <ftSwarm.h>
 #include <FastLED.h>
 
-FtSwarmLED *led1;
-FtSwarmLED *led2;
+FtSwarmPixel *led1;
+FtSwarmPixel *led2;
 
 void setup( ) {
-
-  Serial.begin(115200);
 
   // start the swarm
   FtSwarmSerialNumber_t local = ftSwarm.begin( );
   
   // get led instances
-  led1 = new FtSwarmLED( local, FTSWARM_LED1 );
-  led2 = new FtSwarmLED( local, FTSWARM_LED2 );
+  led1 = new FtSwarmPixel( local, FTSWARM_LED1 );
+  led2 = new FtSwarmPixel( local, FTSWARM_LED2 );
   
 }
 
@@ -59,7 +58,7 @@ void loop( ) {
 
 Die Firmware verwendet intern die FastLED-Bibliothek. Der Import **#include "FastLED.h "** wird benötigt, um auf die FastLED Farbdefinitionen wie **CRGB::Blue** zuzugreifen. Die LEDs werden mit den Funktionne  **setColor** und **setBrightness** gesteuert. setColor erwartet eine uint32_t als Farbe [0..0xFFFFFF] und setBrightness setzt die Helligkeit von 0 bis 255.
 
-Aufgrund eines Fehlers in der FastLED-Bibliothek kann die Helligkeit einer LED nicht einzeln eingestellt werden. Ein setBrightness Befehl setzt die Helligkeit aller Leds.
+In älteren Versionen konnte die Helligkeit nur für alle LEDs gesetzt werden. Ab Version 0.7.0 kann die Helligkeit auch für einzelne LEDs gesetzt werden.
 {: .notice--info}
 
 RGB-LEDs haben einen hohen Strombedarf. Eine auf CRGB::White und maximaler Helligkeit geschaltete LED hat einen Stromverbrauch von 60 mA. Zwei LEDs mit maximaler Helligkeit benötigen genauso viel Strom wie der ESP32 Chip mit aktivem WLAN. Reduziert man die Helligkeit auf einen Wert zwischen 16 und 64, so sinkt der Stromverbrauch auf 6%..25%.

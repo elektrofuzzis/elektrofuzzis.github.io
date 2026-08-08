@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Motors -</title>
-<meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
+<meta name="description" content="">
 
 
   <meta name="author" content="The ftSwarm Project">
@@ -23,8 +23,6 @@
 <meta property="og:title" content="Motors">
 <meta property="og:url" content="http://localhost:4000/en/cpp-api/motors/">
 
-
-  <meta property="og:description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
 
@@ -66,8 +64,6 @@
 <!-- end _includes/seo.html -->
 
 
-
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title=" Feed">
 
 
 <!-- https://t.co/dKP3o1e -->
@@ -115,40 +111,75 @@
         </a>
 
         <!-- original stuff 
-        <ul class="visible-links"></ul>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
         end original stuff-->
-
-        <script>
-          function callRef( url ) {
-            if ( location.pathname.startsWith('/en/') ) {
-              location.href='/en/'+url;
-            } else {
-              location.href='/de/'+url;
-            }
-          }
-        </script>
 
         <ul class="visible-links">
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('gettingstarted/gettingstarted')" title="Manual">Manual</a>
+            <a id="gettingstarted" href="/en/gettingstarted/gettingstarted" title="Getting Started">Getting Started</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('cpp-api/index')" title="api">api</a>
+            <a id="programming" href="/en/programming/manual" title="C++ Manual">C++ Manual</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('products/index')" title="Products">Products</a>
+            <a id="remote" href="/en/remote/remote" title="Remote Control">Remote Control</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('faq')" title="FAQ">FAQ</a>
+            <a id="firmware" href="/en/firmware/flash" title="firmware">Firmware</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="api" href="/en/cpp-api/index" title="api">api</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="products" href="/en/products/index" title="Products">Products</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="faq" href="/en/faq" title="FAQ">FAQ</a>
           </li>
         </ul>
 
+        <!-- Translation -->
+        <script>
+          if ( location.pathname.startsWith('/de/') ) {
+
+            const gettingstarted = document.getElementById("gettingstarted");
+            gettingstarted.title = "Inbetriebnahme";
+            gettingstarted.innerHTML = "Inbetriebnahme";
+            gettingstarted.href = "/de/gettingstarted/gettingstarted"
+            
+            const programming = document.getElementById("programming");
+            programming.title = "C++ Handbuch";
+            programming.innerHTML = "C++ Handbuch";
+            programming.href = "/de/programming/manual"
+
+            const remote = document.getElementById("remote");
+            remote.title = "Fernsteuerung";
+            remote.innerHTML = "Fernsteuerung";
+            remote.href = "/de/remote/remote"
+
+            const firmware = document.getElementById("firmware");
+            firmware.href = "/de/firmware/flash"
+
+            const api = document.getElementById("api");
+            api.href = "/de/cpp-api/index"
+
+            const faq = document.getElementById("faq");
+            faq.href = "/de/faq"
+
+            const products = document.getElementById("products");
+            products.title = "Produkte";
+            products.innerHTML = "Produkte";
+            products.href = "/de/products/index"
+                      }
+        </script>
+
 
         <!-- language picker -->
+        <a href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
+        <a href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
 
-        <a class="alang" href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
-        <a class="alang" href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
-        
         <!-- language picker -->
 
         
@@ -197,8 +228,6 @@
         <ul>
           
             <li><a href="/en/cpp-api/index">Overview</a></li>
-          
-            <li><a href="/en/cpp-api/classDiagram">class diagram</a></li>
           
         </ul>
         
@@ -272,8 +301,6 @@
           
             <li><a href="/en/cpp-api/FtSwarmOLED">OLED</a></li>
           
-            <li><a href="/en/cpp-api/FtSwarmPixel">RGB LED</a></li>
-          
         </ul>
         
       </li>
@@ -288,15 +315,25 @@
           
             <li><a href="/en/cpp-api/motors">Overview</a></li>
           
-            <li><a href="/en/cpp-api/FtSwarmEncoderMotor">Encoder Motor</a></li>
+            <li><a href="/en/cpp-api/FtSwarmMiniMotor">Mini-Motor</a></li>
           
-            <li><a href="/en/cpp-api/FtSwarmMotor">Mini-Motor</a></li>
+            <li><a href="/en/cpp-api/FtSwarmMotor">M-Motor</a></li>
           
-            <li><a href="/en/cpp-api/FtSwarmTractorMotor">Tractor Motor</a></li>
+            <li><a href="/en/cpp-api/FtSwarmSMotor">S-Motor</a></li>
           
             <li><a href="/en/cpp-api/FtSwarmXMMotor">XM-Motor</a></li>
           
-            <li><a href="/en/cpp-api/FtSwarmMotor">XS-Motor</a></li>
+            <li><a href="/en/cpp-api/FtSwarmXSMotor">XS-Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmTractorMotor">Traktor Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmEncoderMotor">Encoder Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmStepperMotor">Stepper Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmRCMotor">RC-Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmWheelDrive">Wheel Drive</a></li>
           
         </ul>
         
@@ -318,6 +355,8 @@
           
             <li><a href="/en/cpp-api/FtSwarmServo">Servo</a></li>
           
+            <li><a href="/en/cpp-api/FtSwarmRCServo">RC-Servo</a></li>
+          
             <li><a href="/en/cpp-api/FtSwarmValve">Valve</a></li>
           
         </ul>
@@ -337,78 +376,115 @@
     
       <h1 id="page-title" class="page__title">Motors</h1>
     
-    <p>Both controllers have two independend motor drivers (M1 &amp; M2). They could drive all type of <em>fischertechnik</em> 9V black DC motors. 
-Old grey fischertechnik DC motors or other industrial 9V DC motors could be used, to.</p>
+    <p>Depending on the type, the controllers have between two and eight independent motor outputs (M1 through M8). These can be used to control all black <em>fischertechnik</em> 9V DC motors as well as the gray 6V versions.</p>
 
-<h3 id="speed">Speed</h3>
+<p>The wheel drive (31494) can only be controlled by a ftSwarmRC.</p>
 
-<p>It’s easy to move a motor. <strong>setSpeed</strong> will start or stop your motor:</p>
+<p>Stepper motors can only be used with an ftSwarmPwdDrive.</p>
+
+<h3 id="setspeed--getspeed">setSpeed &amp; getSpeed</h3>
+
+<p>The motor speed is controlled using the <strong>setSpeed</strong> function:</p>
 <ul>
-  <li>Setting a positive speed, the motor will turn.</li>
-  <li>Setting a negative speed, the motor will turn in the other direction.</li>
-  <li>Setting 0, the motor will stop.</li>
+  <li>A positive value between 1 and 100 starts the motor.</li>
+  <li>A negative value between -1 and -100 reverses the motor’s direction of rotation.</li>
+  <li>0 turns the motor off.</li>
 </ul>
 
-<p>Use <strong>getSpeed</strong> to read your speed settings.</p>
+<p>For stepper motors, the speed can be set to values between -4096 and 4096.</p>
 
-<h3 id="brake--coast">Brake &amp; Coast</h3>
+<p><strong>getSpeed</strong> returns the current speed.</p>
 
-<p>There are two general fischertechnik motor categories: spindle or axis.</p>
+<h3 id="setmotiontype">setMotionType</h3>
 
-<p>Using a “spindle” motor and some gear wheels in your robotics, the mechanics is self-locking. 
-Cutting your power supply, the model will stop and the mechanics will keep in position.</p>
+<p><em>fischertechnik</em> uses two different types of motors: those with a drive shaft, such as the tractor motor, and those with a spindle, such as the XS motor.</p>
 
-<p>In case of an axis based motor, the mechanics isn’t self-locking: the weight of your model might turn your motor.
-Using an axis based motor, you have two additional motor commands:</p>
+<p>When spindle motors drive gears, the mechanism is self-locking. If the power is turned off, the model stops and the mechanism remains in its last position.</p>
 
+<p>If motors with drive shafts are used, the drive is not self-locking: when powered off, the weight of the model can move the motor. Therefore, for these motors, the behavior when the power amplifier is turned off can be set via <strong>setMotionType</strong>:</p>
 <ul>
-  <li><strong>coast</strong> stops your motor and releases the motor power. The model could move the motor manually.</li>
-  <li><strong>brake</strong> stops your motor but keeps the motor power on. The motor is blocked and you couldn’t move the motor manually.</li>
+  <li><strong>FTSWARM_COAST</strong> stops the motor and completely turns off the power amplifier. The motor can be turned by hand.</li>
+  <li><strong>FTSWARM_BRAKE</strong> stops the motor but does not turn off the driver. The motor is locked and cannot be turned manually.</li>
 </ul>
 
-<p>In difference to <strong>setSpeed(0)</strong> both commands they will not change your speed setting. Using <strong>setMotionType( FTSWARM_ON )</strong> the motor will move again.</p>
+<p>Unlike <strong>setSpeed(0)</strong>, these two methods do not change the set speed. <strong>setMotionType( FTSWARM_ON )</strong> starts the motor at the previously set speed.</p>
 
 <div class="galleryflex">
   
 	<div class="galleryblock">
-		<a href="/en/cpp-api/FtSwarmMotor/">
-			<img class="galleryimg" src="/assets/img/motor/motor-xs.png" />
-			<p class="gallerytext">XS Motor (137096)</p>
-		</a>
-	</div>
-  
-	<div class="galleryblock">
-		<a href="/en/cpp-api/FtSwarmMotor/">
+		<a href="/en/cpp-api/FtSwarmMiniMotor">
 			<img class="galleryimg" src="/assets/img/motor/motor-mini.png" />
-			<p class="gallerytext">Mini Motor (32293)</p>
+			<p class="gallerytext">old Minimotors<br />(31077, 31062)</p>
 		</a>
 	</div>
   
 	<div class="galleryblock">
-		<a href="/en/cpp-api/FtSwarmXMMotor/">
+		<a href="/en/cpp-api/FtSwarmMMotor">
+			<img class="galleryimg" src="/assets/img/motor/motor-m.png" />
+			<p class="gallerytext">M-Motor<br />(31039 , 32618)</p>
+		</a>
+	</div>
+  
+	<div class="galleryblock">
+		<a href="/en/cpp-api/FtSwarmXSMotor">
+			<img class="galleryimg" src="/assets/img/motor/motor-xs.png" />
+			<p class="gallerytext">XS-Motor<br />(137096)</p>
+		</a>
+	</div>
+  
+	<div class="galleryblock">
+		<a href="/en/cpp-api/FtSwarmSMotor">
+			<img class="galleryimg" src="/assets/img/motor/motor-s.png" />
+			<p class="gallerytext">S-Motor or<br />new Minimotor<br />(32293)</p>
+		</a>
+	</div>
+  
+	<div class="galleryblock">
+		<a href="/en/cpp-api/FtSwarmXMMotor">
 			<img class="galleryimg" src="/assets/img/motor/motor-xm.png" />
-			<p class="gallerytext">XM Motor (135485)</p>
+			<p class="gallerytext">XM-Motor<br />(135485)</p>
 		</a>
 	</div>
   
 	<div class="galleryblock">
-		<a href="/en/cpp-api/FtSwarmTractorMotor/">
+		<a href="/en/cpp-api/FtSwarmTractorMotor">
 			<img class="galleryimg" src="/assets/img/motor/motor-tractor.png" />
-			<p class="gallerytext">Tractor Motor (151178)</p>
+			<p class="gallerytext">Tractor Motor<br />(151178)</p>
 		</a>
 	</div>
   
 	<div class="galleryblock">
-		<a href="/en/cpp-api/FtSwarmEncoderMotor/">
+		<a href="/en/cpp-api/FtSwarmEncoderMotor">
 			<img class="galleryimg" src="/assets/img/motor/motor-encoder.png" />
-			<p class="gallerytext">Encoder Motor (153422)</p>
+			<p class="gallerytext">Encoder Motor<br />(153422)</p>
 		</a>
 	</div>
   
 	<div class="galleryblock">
-		<a href="/en/cpp-api/FtSwarmEncoderMotor/">
+		<a href="/en/cpp-api/FtSwarmEncoderMotor">
 			<img class="galleryimg" src="/assets/img/motor/motor-encoder-competition.png" />
-			<p class="gallerytext">Encoder Motor (186175)</p>
+			<p class="gallerytext">Encoder Motor<br />(186175)</p>
+		</a>
+	</div>
+  
+	<div class="galleryblock">
+		<a href="/en/cpp-api/FtSwarmStepperMotor">
+			<img class="galleryimg" src="/assets/img/motor/motor-stepper.png" />
+			<p class="gallerytext">Stepper Motor</p>
+		</a>
+	</div>
+  
+	<div class="galleryblock">
+		<a href="/en/cpp-api/FtSwarmRCMotor">
+			<img class="galleryimg" src="/assets/img/otherActors/motor-rcservo.png" />
+			<p class="gallerytext">RC-Servo as Motor<br />(31495)</p>
+		</a>
+	</div>
+  
+	<div class="galleryblock">
+		<a href="/en/cpp-api/FtSwarmWheelDrive">
+			<img class="galleryimg" src="/assets/img/motor/wheeldrive.png" />
+			<p class="gallerytext">Wheel Drive<br />(31494)</p>
 		</a>
 	</div>
   
@@ -433,7 +509,7 @@ Using an axis based motor, you have two additional motor commands:</p>
     <div id="footer" class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
-
+<script src="/assets/js/copy-code.js"></script>
 <!-- end custom footer snippets -->
         <div class="page__footer-follow">
   <ul class="social-icons">
@@ -466,12 +542,10 @@ Using an axis based motor, you have two additional motor commands:</p>
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
-    
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2026 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

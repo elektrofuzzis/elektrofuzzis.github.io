@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Ein erster Schwarm -</title>
-<meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
+<meta name="description" content="">
 
 
   <meta name="author" content="The ftSwarm Project">
@@ -23,8 +23,6 @@
 <meta property="og:title" content="Ein erster Schwarm">
 <meta property="og:url" content="http://localhost:4000/de/programming/MotorSwitchSwarm/">
 
-
-  <meta property="og:description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
 
@@ -66,8 +64,6 @@
 <!-- end _includes/seo.html -->
 
 
-
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title=" Feed">
 
 
 <!-- https://t.co/dKP3o1e -->
@@ -115,40 +111,75 @@
         </a>
 
         <!-- original stuff 
-        <ul class="visible-links"></ul>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
         end original stuff-->
-
-        <script>
-          function callRef( url ) {
-            if ( location.pathname.startsWith('/en/') ) {
-              location.href='/en/'+url;
-            } else {
-              location.href='/de/'+url;
-            }
-          }
-        </script>
 
         <ul class="visible-links">
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('gettingstarted/gettingstarted')" title="Manual">Manual</a>
+            <a id="gettingstarted" href="/en/gettingstarted/gettingstarted" title="Getting Started">Getting Started</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('cpp-api/index')" title="api">api</a>
+            <a id="programming" href="/en/programming/manual" title="C++ Manual">C++ Manual</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('products/index')" title="Products">Products</a>
+            <a id="remote" href="/en/remote/remote" title="Remote Control">Remote Control</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('faq')" title="FAQ">FAQ</a>
+            <a id="firmware" href="/en/firmware/flash" title="firmware">Firmware</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="api" href="/en/cpp-api/index" title="api">api</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="products" href="/en/products/index" title="Products">Products</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="faq" href="/en/faq" title="FAQ">FAQ</a>
           </li>
         </ul>
 
+        <!-- Translation -->
+        <script>
+          if ( location.pathname.startsWith('/de/') ) {
+
+            const gettingstarted = document.getElementById("gettingstarted");
+            gettingstarted.title = "Inbetriebnahme";
+            gettingstarted.innerHTML = "Inbetriebnahme";
+            gettingstarted.href = "/de/gettingstarted/gettingstarted"
+            
+            const programming = document.getElementById("programming");
+            programming.title = "C++ Handbuch";
+            programming.innerHTML = "C++ Handbuch";
+            programming.href = "/de/programming/manual"
+
+            const remote = document.getElementById("remote");
+            remote.title = "Fernsteuerung";
+            remote.innerHTML = "Fernsteuerung";
+            remote.href = "/de/remote/remote"
+
+            const firmware = document.getElementById("firmware");
+            firmware.href = "/de/firmware/flash"
+
+            const api = document.getElementById("api");
+            api.href = "/de/cpp-api/index"
+
+            const faq = document.getElementById("faq");
+            faq.href = "/de/faq"
+
+            const products = document.getElementById("products");
+            products.title = "Produkte";
+            products.innerHTML = "Produkte";
+            products.href = "/de/products/index"
+                      }
+        </script>
+
 
         <!-- language picker -->
+        <a href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
+        <a href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
 
-        <a class="alang" href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
-        <a class="alang" href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
-        
         <!-- language picker -->
 
         
@@ -190,27 +221,29 @@
     
       <li>
         
-          <span class="nav__sub-title">Manual</span>
-        
-
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Inbetriebnahme</span>
+          <span class="nav__sub-title">C++ Handbuch</span>
         
 
         
         <ul>
           
-            <li><a href="/de/gettingstarted/pinout">Anschlüsse</a></li>
+            <li><a href="/de/programming/manual">Einleitung</a></li>
           
-            <li><a href="/de/gettingstarted/serial">USB Anschluss</a></li>
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/de/ide/ide"><span class="nav__sub-title">Programmierumgebung</span></a>
+        
+
+        
+        <ul>
           
-            <li><a href="/de/gettingstarted/WebUI">WLAN & Statusseite</a></li>
+            <li><a href="/de/ide/arduino">Arduino</a></li>
           
-            <li><a href="/de/gettingstarted/ide">Installation IDE</a></li>
+            <li><a href="/de/ide/PlatformIO">PlatformIO & VSCode</a></li>
           
         </ul>
         
@@ -234,77 +267,11 @@
           
             <li><a href="/de/programming/switches">Switches & Buttons</a></li>
           
-            <li><a href="/de/programming/RemoteControl">Fernbedienung</a></li>
+            <li><a href="/de/programming/events">Eventprogrammierung</a></li>
           
-            <li><a href="/de/programming/EventControlled">Events</a></li>
+            <li><a href="/de/programming/FtSwarmPixel">FtSwarmPixel</a></li>
           
-            <li><a href="/de/programming/FtSwarmPixel">RGB LEDs & FtSwarmPixel</a></li>
-          
-            <li><a href="/de/programming/FtSwarmOLED">OLED Display</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <a href="/de/rs485/rs485"><span class="nav__sub-title">RS485</span></a>
-        
-
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Extension Port</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/de/extensionPort/index">Einführung</a></li>
-          
-            <li><a href="/de/extensionPort/I2CMaster">I²C Breakout-Boards</a></li>
-          
-            <li><a href="/de/extensionPort/I2CSlave">I²C TX-/TXT Kommunikation</a></li>
-          
-            <li><a href="/de/extensionPort/gyro">Gyro</a></li>
-          
-            <li><a href="/de/extensionPort/outputs">Motorausgänge</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Firmware</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/de/firmware/Configuration">Konfiguration</a></li>
-          
-            <li><a href="/de/firmware/firmware">Firmware & Updates</a></li>
-          
-            <li><a href="/de/firmware/versions">Versionen</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Advanced</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/de/advanced/PlatformIO">PlatformIO & VSCode</a></li>
-          
-            <li><a href="/de/advanced/debugging">Debugging</a></li>
+            <li><a href="/de/programming/debugging">Debugging</a></li>
           
         </ul>
         
@@ -325,67 +292,80 @@
     
     <p>In das “<a href="../MotorSwitch">Das erste Programm</a>” haben Sie ein einfaches Programm geschrieben uns es auf einem Controller gestartet. Doch wie funktioniert eine Applikation im Schwarm? In diesem Beispiel wird nun die gleiche Aufgabe - die Steuerung eines Motors durch einen Taster - mit zwei Controllern realisiert.</p>
 
-<p>Erster Controller (Kelda):</p>
-<ul>
-  <li>Der Taster wird am Eingang A1 angeschlossen.</li>
-  <li>Ein 9V Netzteil wird an PWR angeschlossen.</li>
-  <li>Auf diesem Controller wird Ihr Steuerprogramm laufen.</li>
-</ul>
-
-<p>Zweiter Controller:</p>
-<ul>
-  <li>Ein Motor oder eine Lampe werden am Ausgang M2 angeschlossen.</li>
-  <li>Ein 9V Netzteil wird an PWR angeschlossen.</li>
-  <li>Auf diesem Controller wird die Standardfirmware laufen.</li>
-</ul>
+<p><img src="/assets/img/examples/motor_switch_swarm.png" alt="Home" /></p>
 
 <h3 id="einen-swarm-bilden">Einen Swarm bilden</h3>
 
-<p>Im letzten Beispiel haben Sie bereits einen Controller als Kelda konfiguriert. Dadurch ist bereits ein Swarm entstanden. Ihr zweiter Controller muss diesem Swarm jetzt nur noch beitreten.</p>
+<p>Der zweite Controller muss jetzt dem Swarm hinzugefügt werden. Dazu müssen Sie auf den Controller aus dem ersten Beispiel die <a href="/de/firmware/flash">Standard-Firmware</a> flashen.</p>
 
-<p>Wenn Sie den Namen Ihres Swarms nochmals ändern möchten, müssen Sie auf dem Kelda-Controller das Firmware Menü starten. Dazu müssen Sie die <a href="../firmware">Standardfirmware</a> flashen.</p>
+<p>Verbinden Sie sich nun mit einer seriellen Konsole mit dem Controller und wechseln mit <strong>setup</strong> in die Firmware.</p>
 
-<p>Um den zweiten Controller in dem Swarm aufzunehmen, müssen Sie Ihn via USB an Ihrem PC anschließen. Konfigurieren Sie zunächst das WLAN über <strong>(1) wifi &amp; Web UI</strong>. Danach wechseln Sie zu <strong>(2) swarm configuration</strong>:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>***** Hauptmenü *****
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>swarm configuration
+(w)  WLAN &amp; Lokale Einstellungen
+(s)  Swarm-Konfiguration
+(i)  IO-Konfiguration
+(r)  Remote/Event-Konfiguration
+(f)  Werkseinstellungen
 
-This device is connected to swarm "ftSwarm101" with 1 member(s) online.
-Swarm PIN is 101.
-(1) Kelda:               none
-(2) swarm communication: wifi
-(3) join another swarm
-(4) list swarm members
+(x)  Beenden
 
-(0) exit
-swarm configuration&gt;
+Setup&gt;
 </code></pre></div></div>
 
-<p>Fügen Sie nun diesen Controller mit <strong>(3) join another swarm</strong> dem Swarm hinzu. Dazu müssen Sie den Swarm Namen, den Sie auf der Kelda vergeben haben und den Swarm Pin eingeben. Der Kelda Controller muss selbstverständlich eingeschaltet sein.</p>
+<p>Wählen Sie <strong>“(s)  Swarm-Konfiguration”</strong>.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>***** Swarm-Konfiguration *****
+
+     Swarm Name: ftSwarm1010
+     Kelda: ftSwarm1010
+(w)  WLAN-Kommunikation: an
+     Pin: 1010
+
+     Name         Status   NW-Age    Alias
+( 1) ftSwarm1010  ONLINE   [000022]  
+
+
+(n)  neuen Swarm erstellen
+(+)  Controller hinzufügen
+(a)  Alias-Name
+
+(x)  Beenden
+
+Swarm-Konfiguration&gt;
+</code></pre></div></div>
+
+<p>Fügen Sie mit <strong>”(+)  Controller hinzufügen”</strong> den zweiten Controller zu Ihrem Swarm hinzu.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     Name         Status   NW-Age    Alias
+( 1) ftSwarm1010  ONLINE   [000022]  
+( 2) ftSwarm1011  ONLINE   [000019]  
+
+</code></pre></div></div>
+
+<p class="notice--info">Die Controller kommunizieren über WLAN. Deshalb muss Ihr zweiter Controller ebenfalls das gleiche WLAN verwenden. Hierfür gibt es zwei Möglichkeiten: Sie konfigurieren seine WLAN-Einstellung über die serielle Konsole oder die Kelda überträgt diese an den neuen Swarm-Member. Findet die Kelda den neuen Swarm-Member nicht im WLAN, so sucht sie nach dem Default-WLAN des zweiten Controllers und überträgt so die eigene WLAN-Konfiguration an den neuen Swarm-Member.</p>
 
 <p>Auf der Web-UI der Kelda werden nun beide Controller angezeigt. Der zweite Controller zeigt nur seine eigenen Ein- und Ausgänge an.</p>
 
 <h3 id="eine-verteilte-anwendung">Eine verteilte Anwendung</h3>
 
-<p>Sobald beide Controller einen Schwarm gebildet haben, kann das Biespiel <strong>Examples\ftSwarm\MotorSwitchSwarm</strong> gestartet werden:</p>
+<p>Sobald beide Controller einen Schwarm gebildet haben, kann das folgende Beispiel auf der Kelda gestartet werden. Bitte tragen Sie bei <strong>#define REMOTE 2</strong> die Seriennummer Ihres zweiten Controllers ein:</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;ftSwarmRS.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;ftSwarm.h&gt;</span><span class="cp">
 </span>
 <span class="c1">// serial number of the second controller - change it to your 2nd device serial number</span>
-<span class="cp">#define remote 2
+<span class="cp">#define REMOTE 2
 </span>
 <span class="n">FtSwarmSwitch</span> <span class="o">*</span><span class="n">sw</span><span class="p">;</span>
-<span class="n">FtSwarmMotor</span>  <span class="o">*</span><span class="n">mot</span><span class="p">;</span>
+<span class="n">FtSwarmSMotor</span>  <span class="o">*</span><span class="n">mot</span><span class="p">;</span>
 
 <span class="kt">void</span> <span class="nf">setup</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
-
-  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
 
   <span class="c1">// start the swarm</span>
   <span class="n">FtSwarmSerialNumber_t</span> <span class="n">local</span> <span class="o">=</span> <span class="n">ftSwarm</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span> <span class="p">);</span>
 	
   <span class="c1">// get switch and motor instances</span>
-  <span class="n">sw</span>  <span class="o">=</span> <span class="k">new</span> <span class="n">FtSwarmSwitch</span><span class="p">(</span> <span class="n">local</span><span class="p">,</span> <span class="n">FTSWARM_A1</span> <span class="p">);</span>
-  <span class="n">mot</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FtSwarmMotor</span><span class="p">(</span> <span class="n">remote</span><span class="p">,</span> <span class="n">FTSWARM_M2</span> <span class="p">);</span>
+  <span class="n">sw</span>  <span class="o">=</span> <span class="k">new</span> <span class="n">FtSwarmSwitch</span><span class="p">(</span> <span class="n">REMOTE</span><span class="p">,</span> <span class="n">FTSWARM_A1</span> <span class="p">);</span>
+  <span class="n">mot</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FtSwarmSMotor</span><span class="p">(</span> <span class="n">local</span><span class="p">,</span> <span class="n">FTSWARM_M1</span> <span class="p">);</span>
 
 <span class="p">}</span>
 
@@ -393,7 +373,7 @@ swarm configuration&gt;
 
   <span class="c1">// check if switch is pressed or released</span>
   <span class="k">if</span> <span class="p">(</span> <span class="n">sw</span><span class="o">-&gt;</span><span class="n">isPressed</span><span class="p">()</span> <span class="p">)</span>
-    <span class="n">mot</span><span class="o">-&gt;</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+    <span class="n">mot</span><span class="o">-&gt;</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
   <span class="k">else</span>
     <span class="n">mot</span><span class="o">-&gt;</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 	
@@ -406,15 +386,15 @@ swarm configuration&gt;
 <p>Das Programm unterscheidet sich kaum vom <a href="../MotorSwitch">ersten Programm</a>. Es gibt nur zwei kleine Änderungen:</p>
 
 <ul>
-  <li><strong>#define remote 2</strong> definiert die Seriennummer des zweiten Controllers. Ändern Sie diese entsprechend Ihrer Controller ab.</li>
-  <li><strong>FtSwarmMotor( remote, FTSWARM_M2 );</strong> nutzt nun die Sieriennummer des zweiten Controllers.</li>
+  <li><strong>#define REMOTE 2</strong> definiert die Seriennummer des zweiten Controllers. Ändern Sie diese entsprechend Ihrer Controller ab.</li>
+  <li><strong>FtSwarmSwitch( REMOTE, FTSWARM_A1 );</strong> nutzt nun die Seriennummer des zweiten Controllers.</li>
 </ul>
 
 <h3 id="was-passiert-wenn-der-zweite-controller-nicht-online-ist">Was passiert, wenn der zweite Controller nicht online ist?</h3>
 
-<p>Verbinden sie ein Terminalprogramm mit dem ersten Controller und trennen Sie am zweiten Controller die Stromversorgung. Starten Sie nun den ersten Controller. Bei <strong>FtSwarmMotor( remote, FTSWARM_M2 );</strong> kommt es nun zu einer Warning: <strong><em>Waiting on device</em></strong>. Beide onboard RGB Leds werden blau, da die Firmware darauf wartet, dass der zweite Controller mit dem Motor online geht.</p>
+<p>Verbinden sie ein Terminalprogramm mit dem ersten Controller und trennen Sie am zweiten Controller die Stromversorgung. Starten Sie nun den ersten Controller. Bei <strong>FtSwarmSwitch( REMOTE, FTSWARM_A1 );</strong> kommt es nun zu einer Warning: <strong><em>Waiting on device</em></strong>. Beide onboard RGB Leds werden blau, da die Firmware darauf wartet, dass der zweite Controller mit dem Taster online geht.</p>
 
-<p>Schalten Sie am zweiten Controller die Stromversorgung jetzt wieder ein. Sobald der zweite COntroller gestartet ist, registriert es sich bei der Kelda und das Programm kann fortgesetzt werden.</p>
+<p>Schalten Sie am zweiten Controller die Stromversorgung jetzt wieder ein. Sobald der zweite Controller gestartet ist, registriert er sich bei der Kelda und das Programm kann fortgesetzt werden.</p>
 
 
 
@@ -431,7 +411,7 @@ swarm configuration&gt;
     <div id="footer" class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
-
+<script src="/assets/js/copy-code.js"></script>
 <!-- end custom footer snippets -->
         <div class="page__footer-follow">
   <ul class="social-icons">
@@ -464,12 +444,10 @@ swarm configuration&gt;
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
-    
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2026 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

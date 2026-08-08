@@ -1,5 +1,5 @@
 ---
-title: ftSwarmControl
+title: ftSwarmControlUSBMicro
 layout: category
 lang: en
 classes: wide

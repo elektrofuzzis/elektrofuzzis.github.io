@@ -58,3 +58,7 @@ Set the motor's motion type to **FTSWARM_COAST**.
 #### void brake( void )
 
 Set the motor's motion type to **FTSWARM_BRAKE**.
+
+#### void run( void )
+
+Set the motor's motion type to **FTSWARM_ON**.

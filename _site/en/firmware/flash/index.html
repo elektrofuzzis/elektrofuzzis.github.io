@@ -1,0 +1,737 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Firmware Upload -</title>
+<meta name="description" content="">
+
+
+  <meta name="author" content="The ftSwarm Project">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="">
+<meta property="og:title" content="Firmware Upload">
+<meta property="og:url" content="http://localhost:4000/en/firmware/flash/">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/en/firmware/flash/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "The ftSwarm Project",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--category wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/img/ftSwarm.svg" alt=""></a>
+        
+          <a class="site-title" href="/">
+          
+          
+        </a>
+
+        <!-- original stuff 
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
+        end original stuff-->
+
+        <ul class="visible-links">
+          <li class="masthead__menu-item">
+            <a id="gettingstarted" href="/en/gettingstarted/gettingstarted" title="Getting Started">Getting Started</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="programming" href="/en/programming/manual" title="C++ Manual">C++ Manual</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="remote" href="/en/remote/remote" title="Remote Control">Remote Control</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="firmware" href="/en/firmware/flash" title="firmware">Firmware</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="api" href="/en/cpp-api/index" title="api">api</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="products" href="/en/products/index" title="Products">Products</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="faq" href="/en/faq" title="FAQ">FAQ</a>
+          </li>
+        </ul>
+
+        <!-- Translation -->
+        <script>
+          if ( location.pathname.startsWith('/de/') ) {
+
+            const gettingstarted = document.getElementById("gettingstarted");
+            gettingstarted.title = "Inbetriebnahme";
+            gettingstarted.innerHTML = "Inbetriebnahme";
+            gettingstarted.href = "/de/gettingstarted/gettingstarted"
+            
+            const programming = document.getElementById("programming");
+            programming.title = "C++ Handbuch";
+            programming.innerHTML = "C++ Handbuch";
+            programming.href = "/de/programming/manual"
+
+            const remote = document.getElementById("remote");
+            remote.title = "Fernsteuerung";
+            remote.innerHTML = "Fernsteuerung";
+            remote.href = "/de/remote/remote"
+
+            const firmware = document.getElementById("firmware");
+            firmware.href = "/de/firmware/flash"
+
+            const api = document.getElementById("api");
+            api.href = "/de/cpp-api/index"
+
+            const faq = document.getElementById("faq");
+            faq.href = "/de/faq"
+
+            const products = document.getElementById("products");
+            products.title = "Produkte";
+            products.innerHTML = "Produkte";
+            products.href = "/de/products/index"
+                      }
+        </script>
+
+
+        <!-- language picker -->
+        <a href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
+        <a href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
+
+        <!-- language picker -->
+
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Firmware</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/firmware/flash">Flash Firmware</a></li>
+          
+            <li><a href="/en/firmware/versions">Upgrade guide</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Konfiguration</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/firmware/wifi">Wifi & Local Settings</a></li>
+          
+            <li><a href="/en/firmware/swarm-config">Swarm Configuration</a></li>
+          
+            <li><a href="/en/firmware/io-config">IO Configuration</a></li>
+          
+            <li><a href="/en/firmware/event-config">Remote/Event Configuration</a></li>
+          
+            <li><a href="/en/firmware/factoryreset">Factory Reset</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">ftSwarmControl</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/firmware/ftSwarmControl/gettingstarted">Operation</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/configuration">Configuration</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/calibration">Calibration</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/servo-offset">Servo Offset</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/remote">Remote Control</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/wifi">wifi Settings</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/swarm">Swarm Settings</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/factory-reset">Factory Reset</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">Firmware Upload</h1>
+    
+    <p>Update your ftSwarm controller in three easy steps:</p>
+
+<ol>
+  <li>Connect the controller using a USB cable.</li>
+  <li>Select the version, device type, and firmware language.</li>
+  <li>“Upload Firmware” installs the selected firmware.</li>
+</ol>
+
+<style>
+  /*
+  box-shadow:0 1px 2px rgba(15,23,42,0.08); display:inline-flex; align-items:center; justify-content:center; }
+  */
+  #progress-wrap { width:100%; background:#eef2ff; border-radius:999px; height:14px; overflow:hidden; margin:10px 0; display:none; }
+  #progress-bar { height:100%; width:0%; background:linear-gradient(90deg,#60a5fa,#2563eb); transition:width 0.2s ease; }
+  #progress-text { width:100%; font-size:0.9rem; margin-top:6px; }
+  details#status-details { font-size:0.8em; width:100%; margin-top:14px; border:1px solid #e6eef8; padding:10px; border-radius:10px; background:#fbfdff; }
+  details#status-details[data-state="success"] { border-color:#bbf7d0; background:#ecfdf5; }
+  details#status-details[data-state="error"] { border-color:#fecaca; background:#fff1f2; }
+  #status-summary { font-weight:600; }
+  #status-log { margin:0; font-size:0.8em; }
+
+  .form-container {
+    display: flex;
+    flex-direction: column; /* Richtet die Zeilen von oben nach unten aus */
+    gap: 15px;              /* Abstand zwischen den einzelnen Zeilen */
+    width: max-content;     /* Der Container orientiert sich an der natürlichen Breite von Zeile 1 */
+    max-width: 100%;        /* Verhindert das Herausragen auf kleinen Bildschirmen */
+    align-items: stretch;   /* Zwingt alle Zeilen, exakt dieselbe Breite anzunehmen */
+  }
+
+  .row-inputs {
+    display: flex;
+    flex-direction: row !important;
+    gap: 15px;              /* Abstand zwischen den einzelnen Label/Select-Blöcken */
+  }
+
+  .row-inputs label {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    font-weight:600; 
+    font-size:0.8em;
+  }
+
+  .row-inputs select {
+    width: 100%;
+    margin-top: 5px;
+    min-width: 120px;
+    padding: 5px;
+    border-radius:8px; 
+    border:1px solid #cbd5e1; 
+    background:#fff; 
+    color:#0f172a; 
+    box-shadow:0 1px 2px rgba(15,23,42,0.08);
+  }
+
+  .row-button #btn-flash {
+    width: 100%;            /* Nutzt die durch 'stretch' vorgegebene Gesamtbreite */
+    padding: 10px;
+    cursor: pointer;
+    border-radius:8px; 
+    border:1px solid #cbd5e1; 
+    background:#fff; 
+    color:#0f172a; 
+    font-weight:600; 
+    box-shadow:0 1px 2px rgba(15,23,42,0.08); 
+  }
+
+  #btn-flash:hover { background:#f8fafc; }
+  #btn-flash:disabled { opacity:0.6; cursor:not-allowed; }
+
+  .row-text p {
+    margin: 0;              /* Entfernt Standard-Abstände des Browsers für perfektes Alignment */
+    padding: 10px;
+    border-radius: 4px;
+  }
+
+</style>
+
+<div class="form-container">
+  
+  <div id="browser-alert" class="notice--danger" style="display: none;">
+    <h4>⚠️ Browser nicht unterstützt</h4>
+    <p>Die WebSerial-API wird von diesem Browser nicht unterstützt.<br />Bitte wechsle zu einem Chromium-basierten Desktop-Browser<br />wie Google Chrome oder Microsoft Edge.</p>
+  </div>
+
+  <div class="row-inputs">
+    <label>Version<br /><select id="firmware-version"></select></label>
+    <label>Device<br /><select id="firmware-device"></select></label>
+    <label>Language<br /><select id="firmware-lang"></select></label>
+  </div>
+
+  <div class="row-button">
+    <button id="btn-flash" class="btn">Upload Firmware</button>
+  </div>
+
+  <div class="row-text">
+    <p>Ausgewählte Firmware: <strong id="selected-firmware">Wird geladen...</strong></p>
+  </div>
+
+  <div id="progress-wrap">
+    <div id="progress-bar"></div>
+  </div>
+  
+  <div id="progress-text" aria-live="polite"></div>
+
+  <details id="status-details" data-state="idle">
+    <summary id="status-summary">Bereit</summary>
+    <pre id="status-log" style="white-space: pre-wrap;">Wähle Firmware und klicke auf Flash.</pre>
+  </details>
+
+</div>
+
+<script type="module">
+  import { ESPLoader, Transport } from 'https://unpkg.com/esptool-js@0.5.0/bundle.js';
+  window.ESPLoader = ESPLoader;
+  window.Transport = Transport;
+</script>
+
+<script>
+  let device = null;
+  let transport = null;
+  let esploader = null;
+
+  const FIXED_BAUDRATE = 921600;
+  const PARTITIONS_OFFSET = 0x8000;
+  const FIRMWARE_OFFSET = 0x10000;
+
+  const btnFlash = document.getElementById('btn-flash');
+  const versionSelect = document.getElementById('firmware-version');
+  const deviceSelect = document.getElementById('firmware-device');
+  const langSelect = document.getElementById('firmware-lang');
+  const selectedFirmwareName = document.getElementById('selected-firmware');
+  const statusSummary = document.getElementById('status-summary');
+  const statusLog = document.getElementById('status-log');
+  const statusDetails = document.getElementById('status-details');
+  const progressWrap = document.getElementById('progress-wrap');
+  const progressBar = document.getElementById('progress-bar');
+  const progressText = document.getElementById('progress-text');
+  const FIRMWARE_INDEX_URL = '/assets/firmware/index.json';
+
+  // WebSerial-Kompatibilität prüfen
+  if (!("serial" in navigator)) {
+    document.getElementById('browser-alert').style.display = 'block';
+    btnConnect.disabled = true;
+    btnConnect.style.opacity = "0.4";
+    btnConnect.style.cursor = "not-allowed";
+  }
+
+  function appendLog(line) { statusLog.textContent += '\n' + line; statusLog.scrollTop = statusLog.scrollHeight; }
+  function setSummary(s) { statusSummary.textContent = s; }
+  function clearLog(t) { statusLog.textContent = t || ''; }
+
+  function setSuccess(msg) { statusDetails.setAttribute('data-state','success'); statusDetails.open = true; setSummary('Success'); appendLog(msg); try { progressWrap.style.display = 'none'; } catch(e) {} }
+  function setError(msg) { statusDetails.setAttribute('data-state','error'); statusDetails.open = true; setSummary('Error'); appendLog(msg); try { progressWrap.style.display = 'none'; } catch(e) {} }
+
+  function arrayBufferToBinaryString(buffer) {
+    const bytes = new Uint8Array(buffer);
+    const chunkSize = 0x8000;
+    let binary = '';
+    for (let i = 0; i < bytes.length; i += chunkSize) {
+      binary += String.fromCharCode.apply(null, bytes.subarray(i, i + chunkSize));
+    }
+    return binary;
+  }
+
+  function compareSemanticVersions(a, b) {
+    const aParts = a.split('.').map(Number);
+    const bParts = b.split('.').map(Number);
+    for (let i = 0; i < Math.max(aParts.length, bParts.length); i++) {
+      const aVal = aParts[i] || 0;
+      const bVal = bParts[i] || 0;
+      if (aVal !== bVal) return aVal - bVal;
+    }
+    return 0;
+  }
+
+  function populateSelect(select, values, defaultValue) {
+    select.innerHTML = '';
+    values.forEach(value => {
+      const o = document.createElement('option'); o.value = value; o.textContent = value; select.appendChild(o);
+    });
+    select.value = defaultValue;
+  }
+
+function getLanguage(availableLanguages) {
+  const path = window.location.pathname.toLowerCase();
+
+  if (path.includes('/de/') && availableLanguages.includes('de')) return 'de';
+  if (path.includes('/en/') && availableLanguages.includes('en')) return 'en';
+
+  const candidates = navigator.languages ? [...navigator.languages] : [navigator.language];
+  for (const l of candidates) {
+    const short = l.toLowerCase().split('-')[0];
+    if (availableLanguages.includes(short)) return short;
+  }
+  return availableLanguages[0] || 'en';
+}
+
+  async function loadFirmwareMetadata() {
+    try {
+      const res = await fetch(FIRMWARE_INDEX_URL);
+      if (!res.ok) throw new Error('Index nicht erreichbar');
+      const idx = await res.json();
+      const versions = [...new Set(idx.map(i => i.version))].sort(compareSemanticVersions).reverse();
+      const devices = [...new Set(idx.flatMap(i => i.devices))];
+      const langs = [...new Set(idx.flatMap(i => i.languages))].sort();
+      populateSelect(versionSelect, versions, versions[0]);
+      populateSelect(deviceSelect, devices, devices[0]);
+      populateSelect(langSelect, langs, getLanguage(langs));
+      updateSelectedFirmware();
+      versionSelect.addEventListener('change', updateSelectedFirmware);
+      deviceSelect.addEventListener('change', updateSelectedFirmware);
+      langSelect.addEventListener('change', updateSelectedFirmware);
+    } catch (e) { appendLog('Fehler beim Laden der Firmware-Liste: ' + e.message); }
+  }
+
+  function getSelectedBootloaderFileName() {
+    return `${deviceSelect.value}-${langSelect.value}-${versionSelect.value}-bootloader.bin`;
+  }
+
+  function getSelectedPartitionsFileName() {
+    return `${deviceSelect.value}-${langSelect.value}-${versionSelect.value}-partitions.bin`;
+  }
+
+  function getSelectedFirmwareFileName() {
+    return `${deviceSelect.value}-${langSelect.value}-${versionSelect.value}-firmware.bin`;
+  }
+
+  function updateSelectedFirmware() { selectedFirmwareName.textContent = getSelectedFirmwareFileName(); }
+
+  async function aggressivePortCleanup() {
+    appendLog('Clean up port resources...');
+    if (transport) { try { await transport.disconnect(); } catch(e) {} }
+    if (device) {
+      try {
+        if (device.readable) { const r = device.readable.getReader(); await r.cancel(); r.releaseLock(); }
+        if (device.writable) { const w = device.writable.getWriter(); await w.abort(); w.releaseLock(); }
+        try { await device.close(); } catch(e) {}
+        appendLog('COM-Port closes.');
+      } catch(e) { appendLog('Error during clean up: ' + e.message); }
+    }
+    device = null; transport = null; esploader = null;
+  }
+
+  async function connectToBootloader() {
+    transport = new Transport(device);
+    esploader = new ESPLoader({ transport, baudrate: FIXED_BAUDRATE, terminal: { clean: () => {}, write: (d) => appendLog(String(d)), writeLine: (d) => appendLog(String(d)) } });
+    await esploader.main();
+    await esploader.runStub();
+  }
+
+  btnFlash.addEventListener('click', async () => {
+    btnFlash.disabled = true;
+    clearLog(''); setSummary('Test connection...'); appendLog('Request port selection...');
+
+    try {
+      device = await navigator.serial.requestPort({});
+      await device.open({ baudRate: 115200 });
+      appendLog('Port open (115200). Test in progress...');
+
+      const encoder = new TextEncoder();
+      const decoder = new TextDecoder();
+      const writer = device.writable.getWriter();
+      const reader = device.readable.getReader();
+      await writer.write(encoder.encode('\r'));
+      let buffer = '';
+      const start = Date.now();
+      while (Date.now() - start < 1500) {
+        const r = await Promise.race([reader.read(), new Promise(resolve => setTimeout(() => resolve({ value: null }), 100))]);
+        if (r && r.value) { buffer += decoder.decode(r.value, { stream: true }); if (buffer.includes('>')) break; }
+      }
+      reader.releaseLock(); writer.releaseLock();
+
+      if (buffer.includes('>')) appendLog('Test successful: Prompt detected.'); else appendLog('Prompt not recognized. Try bootloader mode.');
+
+      try {
+        appendLog('Close the temporary test port to enable the bootloader connection...');
+        try { await device.close(); appendLog('Port for the bootloader is closed.'); } catch(e) { appendLog('Error closing (may already be closed): ' + e.message); }
+      } catch (e) {
+        appendLog('Error closing the test port: ' + e.message);
+      }
+
+      setSummary('Bootloader'); appendLog('Connect using the bootloader...');
+      await connectToBootloader();
+
+      // Bootloader Offset dynamisch je nach Chip ermitteln
+      const chipName = esploader.chip ? esploader.chip.CHIP_NAME : '';
+      let bootloaderOffset = 0x0;
+      if (chipName.includes('ESP32') && !chipName.includes('ESP32-S') && !chipName.includes('ESP32-C') && !chipName.includes('ESP32-H') && !chipName.includes('ESP32-P')) {
+        bootloaderOffset = 0x1000; // ESP32 (Original)
+      } else {
+        bootloaderOffset = 0x0;    // ESP32-S3, ESP32-C3, etc.
+      }
+      appendLog(`Chip detected: ${chipName || 'unkown'} (Bootloader Offset: 0x${bootloaderOffset.toString(16)})`);
+
+      setSummary('Flashing'); appendLog('Downloading the bootloader, partition table, and firmware from the server...');
+
+      const bootFileName = getSelectedBootloaderFileName();
+      const partFileName = getSelectedPartitionsFileName();
+      const fwFileName = getSelectedFirmwareFileName();
+      selectedFirmwareName.textContent = fwFileName;
+
+      const bootUrl = `/assets/firmware/${bootFileName}`;
+      const partUrl = `/assets/firmware/${partFileName}`;
+      const fwUrl = `/assets/firmware/${fwFileName}`;
+
+      const [bootResp, partResp, fwResp] = await Promise.all([
+        fetch(bootUrl),
+        fetch(partUrl),
+        fetch(fwUrl)
+      ]);
+
+      if (!bootResp.ok) throw new Error(`Bootloader file not found: ${bootFileName}`);
+      if (!partResp.ok) throw new Error(`Partition table file not found: ${partFileName}`);
+      if (!fwResp.ok) throw new Error(`Firmware file not found: ${fwFileName}`);
+
+      const bootAb = await bootResp.arrayBuffer();
+      const partAb = await partResp.arrayBuffer();
+      const fwAb = await fwResp.arrayBuffer();
+
+      const bootBinStr = arrayBufferToBinaryString(bootAb);
+      const partBinStr = arrayBufferToBinaryString(partAb);
+      const fwBinStr = arrayBufferToBinaryString(fwAb);
+
+      appendLog(`Start flashing (Bootloader @ 0x${bootloaderOffset.toString(16)}, Partition Table @ 0x${PARTITIONS_OFFSET.toString(16)} & Firmware @ 0x${FIRMWARE_OFFSET.toString(16)})...`);
+      progressWrap.style.display = 'block'; 
+      progressBar.style.width = '0%'; 
+      progressText.textContent = '';
+
+      await esploader.writeFlash({ 
+        fileArray: [
+          { data: bootBinStr, address: bootloaderOffset },
+          { data: partBinStr, address: PARTITIONS_OFFSET },
+          { data: fwBinStr, address: FIRMWARE_OFFSET }
+        ], 
+        flashSize: 'keep', 
+        flashMode: 'keep', 
+        flashFreq: 'keep', 
+        compress: true, 
+        reportProgress: (i, written, total) => { 
+          const p = Math.floor((written / total) * 100); 
+          progressBar.style.width = `${p}%`; 
+          progressText.textContent = `Flashing: ${p}% (${written}/${total} bytes)`; 
+          if (p % 10 === 0 || p === 100) appendLog(`Progress: ${p}% (${written}/${total})`); 
+        } 
+      });
+
+      appendLog('Flash complete. Reboot...');
+      await esploader.hardReset();
+      setSuccess('Bootloader, partition table, and firmware successfully flashed. Device is restarting.');
+
+    } catch (err) {
+      const msg = (err && err.message) ? err.message : String(err);
+      setError('Fehler: ' + msg);
+      progressWrap.style.display = 'none';
+    } finally {
+      try { await aggressivePortCleanup(); } catch (e) { appendLog('Cleanup-Error: ' + e.message); }
+      progressWrap.style.display = 'none';
+      btnFlash.disabled = false;
+    }
+  });
+
+  loadFirmwareMetadata();
+</script>
+
+
+
+
+<div class="entries-list">
+  
+</div>
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<script src="/assets/js/copy-code.js"></script>
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/elektrofuzzis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://instagram.com/elektrofuzzies" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+        
+          <li><a href="mailto:ftpi@gmx.de" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,446 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Swarm Configuration -</title>
+<meta name="description" content="">
+
+
+  <meta name="author" content="The ftSwarm Project">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="">
+<meta property="og:title" content="Swarm Configuration">
+<meta property="og:url" content="http://localhost:4000/en/firmware/swarm-config/">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/en/firmware/swarm-config/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "The ftSwarm Project",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--category wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/img/ftSwarm.svg" alt=""></a>
+        
+          <a class="site-title" href="/">
+          
+          
+        </a>
+
+        <!-- original stuff 
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
+        end original stuff-->
+
+        <ul class="visible-links">
+          <li class="masthead__menu-item">
+            <a id="gettingstarted" href="/en/gettingstarted/gettingstarted" title="Getting Started">Getting Started</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="programming" href="/en/programming/manual" title="C++ Manual">C++ Manual</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="remote" href="/en/remote/remote" title="Remote Control">Remote Control</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="firmware" href="/en/firmware/flash" title="firmware">Firmware</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="api" href="/en/cpp-api/index" title="api">api</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="products" href="/en/products/index" title="Products">Products</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="faq" href="/en/faq" title="FAQ">FAQ</a>
+          </li>
+        </ul>
+
+        <!-- Translation -->
+        <script>
+          if ( location.pathname.startsWith('/de/') ) {
+
+            const gettingstarted = document.getElementById("gettingstarted");
+            gettingstarted.title = "Inbetriebnahme";
+            gettingstarted.innerHTML = "Inbetriebnahme";
+            gettingstarted.href = "/de/gettingstarted/gettingstarted"
+            
+            const programming = document.getElementById("programming");
+            programming.title = "C++ Handbuch";
+            programming.innerHTML = "C++ Handbuch";
+            programming.href = "/de/programming/manual"
+
+            const remote = document.getElementById("remote");
+            remote.title = "Fernsteuerung";
+            remote.innerHTML = "Fernsteuerung";
+            remote.href = "/de/remote/remote"
+
+            const firmware = document.getElementById("firmware");
+            firmware.href = "/de/firmware/flash"
+
+            const api = document.getElementById("api");
+            api.href = "/de/cpp-api/index"
+
+            const faq = document.getElementById("faq");
+            faq.href = "/de/faq"
+
+            const products = document.getElementById("products");
+            products.title = "Produkte";
+            products.innerHTML = "Produkte";
+            products.href = "/de/products/index"
+                      }
+        </script>
+
+
+        <!-- language picker -->
+        <a href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
+        <a href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
+
+        <!-- language picker -->
+
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Firmware</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/firmware/flash">Flash Firmware</a></li>
+          
+            <li><a href="/en/firmware/versions">Upgrade guide</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Konfiguration</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/firmware/wifi">Wifi & Local Settings</a></li>
+          
+            <li><a href="/en/firmware/swarm-config">Swarm Configuration</a></li>
+          
+            <li><a href="/en/firmware/io-config">IO Configuration</a></li>
+          
+            <li><a href="/en/firmware/event-config">Remote/Event Configuration</a></li>
+          
+            <li><a href="/en/firmware/factoryreset">Factory Reset</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">ftSwarmControl</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/firmware/ftSwarmControl/gettingstarted">Operation</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/configuration">Configuration</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/calibration">Calibration</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/servo-offset">Servo Offset</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/remote">Remote Control</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/wifi">wifi Settings</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/swarm">Swarm Settings</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/factory-reset">Factory Reset</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">Swarm Configuration</h1>
+    
+    <p>This section manages the swarm.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>***** Swarm Configuration *****
+
+     Swarm Name: ftSwarm1010
+     Kelda: ftSwarm1010
+(w)  Communication WIFI: on
+(r)  Communication RS485: off
+     Pin: 1010
+
+     Name         Status   NW-Age    Alias
+( 1) ftSwarm1010  ONLINE   [000004]  
+
+(n)  create new swarm
+(+)  add a controller to my swarm
+(-)  revoke a controller from my swarm
+(a)  set alias name
+
+(x)  Exit
+</code></pre></div></div>
+
+<h3 id="wifi--and-rs485-communication">WIFI- and RS485-communication</h3>
+
+<p>These two options allow you to specify whether the controller’s swarm communication should take place via Wi-Fi and/or RS485.</p>
+
+<p>The RS485 option is only available for the ftSwarmRS, ftSwarmXL, ftSwarmDuino, and ftSwarmPwrDrive controllers.</p>
+
+<p>If you have selected the RS485 option, you can also set the transmission speed. 4 is the highest speed, which supports up to 16 controllers with a maximum cable length of 50 m. If you encounter problems with the cable length, reduce the swarm speed in increments. At a value of 0, you can use a cable length of up to 4,000 m, but you are limited to a maximum of 4 controllers.</p>
+
+<h3 id="list-of-swarm-members">List of swarm members</h3>
+
+<p>This list displays all Swarm members. On the Kelda, all controllers are displayed; on a Swarm member, only the Kelda and the local controller are shown.</p>
+
+<ul>
+  <li>Status indicates whether a controller is ONLINE or OFFLINE</li>
+  <li>NW-Age indicates how many milliseconds ago the controller’s last status packet was received.</li>
+  <li>If a controller has an alias, it is also displayed.</li>
+</ul>
+
+<p>If you are connected to the Kelda, you can access the controller’s IO configuration.</p>
+
+<h3 id="create-new-swarm">Create new swarm</h3>
+
+<p>Creates a new swarm and sets Kelda mode on this controller. You will be prompted to enter the name and PIN for the new swarm. Afterward, this controller will be the first and only controller in the new swarm.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>New Swarm Name [min. 5 chars]: Elektrofuzzis
+"New Swarm Pin [1..9999]: 1234
+Destroy the existing swarm and create a new one? [Y/N]  j
+</code></pre></div></div>
+
+<p class="notice--info">After a factory reset, each controller becomes a Kelda and forms its own swarm. To create a swarm from multiple controllers, you should create a new swarm on your designated Kelda. A new PIN will be assigned, which you’ll need when logging in to the Wi-Fi status page. If you use the default settings, anyone can guess the PIN—it’s the Kelda’s serial number.</p>
+
+<div class="notice--info">
+  Deleting the swarm is not communicated to the other swarm controllers. 
+  <ul>
+    <li>If a new swarm is created on a Kelda, the swarm members remain in the old swarm. This swarm no longer serves any purpose, since the Kelda no longer exists. If such a member is queried by a new Kelda, it joins the swarm of the querying Kelda.</li>
+    <li>If a new swarm is created on a member and the old Kelda is still online, the old Kelda will automatically pull the member back into its swarm. Therefore, first delete the member on the old Kelda and then create the new swarm on the member.</li>
+  </ul>
+</div>
+
+<h3 id="add-a-controller-to-my-swarm">Add a controller to my swarm</h3>
+
+<p>Select this option to add another controller to the swarm. This option is only available on the Kelda.</p>
+
+<p>The requested controller will accept the request as long as it is not connected to other controllers in a swarm.</p>
+
+<p class="notice--info">If the controllers communicate via Wi-Fi, both controllers must use the same Wi-Fi network. There are two options for the second controller: You can configure its Wi-Fi settings via the serial console, or the Kelda can transfer these settings to the new swarm member. If the Kelda cannot find the new swarm member on the Wi-Fi network, it will search for the second controller’s default Wi-Fi network and transfer its own Wi-Fi configuration to the new swarm member.</p>
+
+<h3 id="revoke-a-controller-from-my-swarm">Revoke a controller from my swarm</h3>
+
+<p>Removes a controller from the swarm. This option is available only on the Kelda.</p>
+
+<h3 id="set-alias-name">Set alias name</h3>
+
+<p>Sets an alias for one of the controllers in the swarm.</p>
+
+
+
+<div class="entries-list">
+  
+</div>
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<script src="/assets/js/copy-code.js"></script>
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/elektrofuzzis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://instagram.com/elektrofuzzies" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+        
+          <li><a href="mailto:ftpi@gmx.de" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -44,7 +44,7 @@ Ursprünglich enstand das Projekt als möglichst kleine *fischertechnik*-Control
     </div>
     <div>
         <div><a class="linkfree" href="products/ftSwarmControl"><img class="zoom" src="/assets/img/ftSwarmControl.png"></a></div>
-        <div><p class="headline">ftSwarmControl</p></div>
+        <div><p class="headline">ftSwarmControlUSBMicro</p></div>
         <div>
             <p class="pdetail">
                 Als Bedienfeld verfügt der ftSwarmControl neben zwei Joysticks, acht Tasten und einem LCD-Display über die Möglichkeit zwei DC-Motoren zu steuern und vier digitale Sensoren auszulesen. Im Fernbedienungsmodus können einfache Modelle ohne Programmierung gesteuert werden.

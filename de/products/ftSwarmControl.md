@@ -1,5 +1,5 @@
 ---
-title: ftSwarmControl
+title: ftSwarmControlUDBMicro
 layout: category
 lang: de
 classes: wide

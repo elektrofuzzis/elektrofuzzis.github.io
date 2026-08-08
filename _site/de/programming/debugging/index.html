@@ -1,0 +1,425 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Debugging -</title>
+<meta name="description" content="">
+
+
+  <meta name="author" content="The ftSwarm Project">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="">
+<meta property="og:title" content="Debugging">
+<meta property="og:url" content="http://localhost:4000/de/programming/debugging/">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/de/programming/debugging/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "The ftSwarm Project",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--category wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/img/ftSwarm.svg" alt=""></a>
+        
+          <a class="site-title" href="/">
+          
+          
+        </a>
+
+        <!-- original stuff 
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
+        end original stuff-->
+
+        <ul class="visible-links">
+          <li class="masthead__menu-item">
+            <a id="gettingstarted" href="/en/gettingstarted/gettingstarted" title="Getting Started">Getting Started</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="programming" href="/en/programming/manual" title="C++ Manual">C++ Manual</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="remote" href="/en/remote/remote" title="Remote Control">Remote Control</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="firmware" href="/en/firmware/flash" title="firmware">Firmware</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="api" href="/en/cpp-api/index" title="api">api</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="products" href="/en/products/index" title="Products">Products</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="faq" href="/en/faq" title="FAQ">FAQ</a>
+          </li>
+        </ul>
+
+        <!-- Translation -->
+        <script>
+          if ( location.pathname.startsWith('/de/') ) {
+
+            const gettingstarted = document.getElementById("gettingstarted");
+            gettingstarted.title = "Inbetriebnahme";
+            gettingstarted.innerHTML = "Inbetriebnahme";
+            gettingstarted.href = "/de/gettingstarted/gettingstarted"
+            
+            const programming = document.getElementById("programming");
+            programming.title = "C++ Handbuch";
+            programming.innerHTML = "C++ Handbuch";
+            programming.href = "/de/programming/manual"
+
+            const remote = document.getElementById("remote");
+            remote.title = "Fernsteuerung";
+            remote.innerHTML = "Fernsteuerung";
+            remote.href = "/de/remote/remote"
+
+            const firmware = document.getElementById("firmware");
+            firmware.href = "/de/firmware/flash"
+
+            const api = document.getElementById("api");
+            api.href = "/de/cpp-api/index"
+
+            const faq = document.getElementById("faq");
+            faq.href = "/de/faq"
+
+            const products = document.getElementById("products");
+            products.title = "Produkte";
+            products.innerHTML = "Produkte";
+            products.href = "/de/products/index"
+                      }
+        </script>
+
+
+        <!-- language picker -->
+        <a href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
+        <a href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
+
+        <!-- language picker -->
+
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">C++ Handbuch</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/de/programming/manual">Einleitung</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/de/ide/ide"><span class="nav__sub-title">Programmierumgebung</span></a>
+        
+
+        
+        <ul>
+          
+            <li><a href="/de/ide/arduino">Arduino</a></li>
+          
+            <li><a href="/de/ide/PlatformIO">PlatformIO & VSCode</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Programmierung</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/de/programming/MotorSwitch">Das erste Programm</a></li>
+          
+            <li><a href="/de/programming/kelda">Das Kelda Prinzip</a></li>
+          
+            <li><a href="/de/programming/MotorSwitchSwarm">Ein erster Schwarm</a></li>
+          
+            <li><a href="/de/programming/MotorSwitchAlias">Alias Namen</a></li>
+          
+            <li><a href="/de/programming/switches">Switches & Buttons</a></li>
+          
+            <li><a href="/de/programming/events">Eventprogrammierung</a></li>
+          
+            <li><a href="/de/programming/FtSwarmPixel">FtSwarmPixel</a></li>
+          
+            <li><a href="/de/programming/debugging">Debugging</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">Debugging</h1>
+    
+    <p>Es gibt mehrere Möglichkeiten Kelda-Applikation zu debuggen. Die einfachste Variante ist, sich die Werte auf der <a href="/de/gettingstarted/WebUI">status page</a> des Controllers anzuzeigen. Sie zeigt den Status aller Ein- und Ausgänge an; die Ausgänge können über die Statuspage auch verändert werden.</p>
+
+<p>Zusätzlich können Debugausgaben auf der seriellen Konsole / Terminal Programm ausgegeben werden. Dazu muss zwar das Programm angepasst werden, die Debugausgaben sind aber viel aussagekräftiger.</p>
+
+<h3 id="debugausgaben">Debugausgaben</h3>
+
+<p>In der Arduinoumgebung gibt es zwei einfache Funktionen um Daten auf der seriellen Konsole auszugeben. <strong>Serial.print</strong> gibt das Argument an, <strong>Serial.println</strong> zusätzlich mit CR/LF und wechselt so in die nächste Ausgabezeile. Verwenden Sie printf, wenn die Ausgabe sehr gut formattiert werden muss.</p>
+
+<h3 id="stdout--printf">stdout &amp; printf</h3>
+
+<p>Printf gibt das Ergebenis ebenfalls auf der seriellen Konsole aus. Damit können Daten mit <strong>printf</strong> wie gewohnt formattiert ausgegeben werden. Allerdings ist die serielle Konsole ein “buffered device”, so dass <strong>printf(“Hello world”);</strong> nicht sofort ausgegeben wird. Um die direkte Ausgabe zu erzwingen muss entweder <strong>fflush( stdout );</strong> verwendet werden oder mit <strong>/n</strong> in eine neue Zeile gewechselt werden.</p>
+
+<h3 id="swarm_lopgx">SWARM_LOPGx</h3>
+
+<p>Die ftSwarm-Firmware hat eigene Log-Funktionen. Diese können Sie auch zum Debugging Ihres Modells verwenden. Es stehen 5 Debuggingfunktionen zur Verfügung:</p>
+
+<ul>
+  <li><strong>SWARM_LOG_INFO</strong> Schreibt eine [INFO] Meldung.</li>
+  <li><strong>SWARM_LOG_WARN</strong> Schreibt eine [WARINING] Meldung.</li>
+  <li><strong>SWARM_LOG_WAIT</strong> Schreibt eine [WAITING] Meldung und setzt die LEDs auf blau - warte auf Hardware.</li>
+  <li><strong>SWARM_LOG_ERROR</strong> Schreibt eine [ERROR] Meldung und setzt die LEDs auf rot - Fehler.</li>
+  <li><strong>SWARM_LOG_FATAL</strong> Schreibt eine [FATAL] Meldung inklusive des Filenamens und der Quelltextzeile. Alle Motoren werden angehalten und die Programmausführung gestoppt. Die LEDs werden auf pink gesetzt.</li>
+</ul>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">SWARM_LOG_INFO</span><span class="p">(</span><span class="s">"SWARM_LOG_INFO funktioniert wie printf. %d*%d=%s"</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s">"zweiundvierzig"</span><span class="p">);</span>
+
+<span class="n">Ausgabe</span><span class="o">:</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span> <span class="n">SWARM_LOG_INFO</span> <span class="n">funktioniert</span> <span class="n">wie</span> <span class="n">printf</span><span class="p">.</span> <span class="mi">6</span><span class="o">*</span><span class="mi">7</span><span class="o">=</span><span class="n">zweiundvierzig</span>
+</code></pre></div></div>
+
+<h3 id="esp_logx">ESP_LOGx</h3>
+
+<p>ESP stellt ein Logging-Macro <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/system/log.html">ESP_LOGx</a> zur Verfügung. Zur Compile-Zeit lässt sich dann für ein Programm festlegen, welche Loggingtiefe ausgegeben werden soll. In der Arduino IDE kann das Logginglevel über <strong>Tools\Core Debug Level</strong> eingestellt werden. In PlatformIO wird das Logginglevelin der Konfiguratonsdatei des Projektes angegeben: <strong>build_flags = -DCORE_DEBUG_LEVEL=5</strong></p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;ftSwarm.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;esp_log.h&gt;</span><span class="cp">
+</span>
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">(</span>  <span class="p">)</span> <span class="p">{</span>
+
+	<span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span> <span class="mi">115200</span> <span class="p">);</span>
+	<span class="n">ftSwarm</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+	
+	<span class="kt">int</span> <span class="n">p1</span> <span class="o">=</span> <span class="mi">17</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">p2</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+	
+	<span class="c1">// Serial</span>
+	<span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"p1="</span><span class="p">);</span>   <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">p1</span><span class="p">);</span>
+	<span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">", p2="</span><span class="p">);</span> <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">p2</span><span class="p">);</span>
+	
+	<span class="c1">// printf</span>
+	<span class="n">printf</span><span class="p">(</span> <span class="s">"p1=%d p2=%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span> <span class="p">);</span>
+
+	<span class="c1">// debug message</span>
+	<span class="n">ESP_LOGD</span><span class="p">(</span> <span class="s">"MYTAG"</span><span class="p">,</span> <span class="s">"p1=%d p2=%s"</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span> <span class="p">);</span>
+	
+	<span class="c1">// error message</span>
+	<span class="n">ESP_LOGE</span><span class="p">(</span> <span class="s">"MYTAG"</span><span class="p">,</span> <span class="s">"unexpected behaviour"</span> <span class="p">);</span>
+
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{}</span>
+</code></pre></div></div>
+
+
+
+<div class="entries-list">
+  
+</div>
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<script src="/assets/js/copy-code.js"></script>
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/elektrofuzzis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://instagram.com/elektrofuzzies" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+        
+          <li><a href="mailto:ftpi@gmx.de" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

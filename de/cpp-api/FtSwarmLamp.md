@@ -38,3 +38,20 @@ Schaltet die Lampe bzw. die LED ein. Die Helligkeit kann über den Parameter pow
 #### void off( void )
 
 Schaltet die Lampe ode LED aus. Identisch zu **on(0)**.
+
+#### void setBlink( uint32_t periodMS, uint8_t signal, uint8_t duty, uint8_t pause, uint8_t b1, uint8_t b2, uint8_t b3 )
+
+Schaltet den Blinkeffekt der Lampe ein.
+
+- periodMS: Taktzeit in ms
+- signal: Anzahl der Signaltakte
+- pause: Anzahl der Pausentakte
+- b1: Helligkeit/Brightness der Lampe beim Signal
+- b2: Helligkeit/Brightness der Lampe in der Signalpause
+- b3: Helligkeit/Brightness der Lampe in den Pausentakten
+
+![Home](/assets/img/examples/blink-de.png)
+
+#### void revokeEffect( uint8_t brightness )
+
+Schaltet den Blinkeffect wieder aus und setzt die Helligkeit auf brightness.

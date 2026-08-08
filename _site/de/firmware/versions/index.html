@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Versionen -</title>
-<meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
+<!-- begin _includes/seo.html --><title>Upgrade guide -</title>
+<meta name="description" content="">
 
 
   <meta name="author" content="The ftSwarm Project">
@@ -20,11 +20,9 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="">
-<meta property="og:title" content="Versionen">
+<meta property="og:title" content="Upgrade guide">
 <meta property="og:url" content="http://localhost:4000/de/firmware/versions/">
 
-
-  <meta property="og:description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
 
@@ -66,8 +64,6 @@
 <!-- end _includes/seo.html -->
 
 
-
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title=" Feed">
 
 
 <!-- https://t.co/dKP3o1e -->
@@ -115,40 +111,75 @@
         </a>
 
         <!-- original stuff 
-        <ul class="visible-links"></ul>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
         end original stuff-->
-
-        <script>
-          function callRef( url ) {
-            if ( location.pathname.startsWith('/en/') ) {
-              location.href='/en/'+url;
-            } else {
-              location.href='/de/'+url;
-            }
-          }
-        </script>
 
         <ul class="visible-links">
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('gettingstarted/gettingstarted')" title="Manual">Manual</a>
+            <a id="gettingstarted" href="/en/gettingstarted/gettingstarted" title="Getting Started">Getting Started</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('cpp-api/index')" title="api">api</a>
+            <a id="programming" href="/en/programming/manual" title="C++ Manual">C++ Manual</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('products/index')" title="Products">Products</a>
+            <a id="remote" href="/en/remote/remote" title="Remote Control">Remote Control</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('faq')" title="FAQ">FAQ</a>
+            <a id="firmware" href="/en/firmware/flash" title="firmware">Firmware</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="api" href="/en/cpp-api/index" title="api">api</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="products" href="/en/products/index" title="Products">Products</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="faq" href="/en/faq" title="FAQ">FAQ</a>
           </li>
         </ul>
 
+        <!-- Translation -->
+        <script>
+          if ( location.pathname.startsWith('/de/') ) {
+
+            const gettingstarted = document.getElementById("gettingstarted");
+            gettingstarted.title = "Inbetriebnahme";
+            gettingstarted.innerHTML = "Inbetriebnahme";
+            gettingstarted.href = "/de/gettingstarted/gettingstarted"
+            
+            const programming = document.getElementById("programming");
+            programming.title = "C++ Handbuch";
+            programming.innerHTML = "C++ Handbuch";
+            programming.href = "/de/programming/manual"
+
+            const remote = document.getElementById("remote");
+            remote.title = "Fernsteuerung";
+            remote.innerHTML = "Fernsteuerung";
+            remote.href = "/de/remote/remote"
+
+            const firmware = document.getElementById("firmware");
+            firmware.href = "/de/firmware/flash"
+
+            const api = document.getElementById("api");
+            api.href = "/de/cpp-api/index"
+
+            const faq = document.getElementById("faq");
+            faq.href = "/de/faq"
+
+            const products = document.getElementById("products");
+            products.title = "Produkte";
+            products.innerHTML = "Produkte";
+            products.href = "/de/products/index"
+                      }
+        </script>
+
 
         <!-- language picker -->
+        <a href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
+        <a href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
 
-        <a class="alang" href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
-        <a class="alang" href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
-        
         <!-- language picker -->
 
         
@@ -190,105 +221,15 @@
     
       <li>
         
-          <span class="nav__sub-title">Manual</span>
-        
-
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Inbetriebnahme</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/de/gettingstarted/pinout">Anschlüsse</a></li>
-          
-            <li><a href="/de/gettingstarted/serial">USB Anschluss</a></li>
-          
-            <li><a href="/de/gettingstarted/WebUI">WLAN & Statusseite</a></li>
-          
-            <li><a href="/de/gettingstarted/ide">Installation IDE</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Programmierung</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/de/programming/MotorSwitch">Das erste Programm</a></li>
-          
-            <li><a href="/de/programming/kelda">Das Kelda Prinzip</a></li>
-          
-            <li><a href="/de/programming/MotorSwitchSwarm">Ein erster Schwarm</a></li>
-          
-            <li><a href="/de/programming/MotorSwitchAlias">Alias Namen</a></li>
-          
-            <li><a href="/de/programming/switches">Switches & Buttons</a></li>
-          
-            <li><a href="/de/programming/RemoteControl">Fernbedienung</a></li>
-          
-            <li><a href="/de/programming/EventControlled">Events</a></li>
-          
-            <li><a href="/de/programming/FtSwarmPixel">RGB LEDs & FtSwarmPixel</a></li>
-          
-            <li><a href="/de/programming/FtSwarmOLED">OLED Display</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <a href="/de/rs485/rs485"><span class="nav__sub-title">RS485</span></a>
-        
-
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Extension Port</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/de/extensionPort/index">Einführung</a></li>
-          
-            <li><a href="/de/extensionPort/I2CMaster">I²C Breakout-Boards</a></li>
-          
-            <li><a href="/de/extensionPort/I2CSlave">I²C TX-/TXT Kommunikation</a></li>
-          
-            <li><a href="/de/extensionPort/gyro">Gyro</a></li>
-          
-            <li><a href="/de/extensionPort/outputs">Motorausgänge</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
           <span class="nav__sub-title">Firmware</span>
         
 
         
         <ul>
           
-            <li><a href="/de/firmware/Configuration">Konfiguration</a></li>
+            <li><a href="/de/firmware/flash">Firmware flashen</a></li>
           
-            <li><a href="/de/firmware/firmware">Firmware & Updates</a></li>
-          
-            <li><a href="/de/firmware/versions">Versionen</a></li>
+            <li><a href="/de/firmware/versions">Upgrade guide</a></li>
           
         </ul>
         
@@ -296,15 +237,49 @@
     
       <li>
         
-          <span class="nav__sub-title">Advanced</span>
+          <span class="nav__sub-title">serielle Konfiguration</span>
         
 
         
         <ul>
           
-            <li><a href="/de/advanced/PlatformIO">PlatformIO & VSCode</a></li>
+            <li><a href="/de/firmware/wifi">WLAN & Lokale Einstellungen</a></li>
           
-            <li><a href="/de/advanced/debugging">Debugging</a></li>
+            <li><a href="/de/firmware/swarm-config">Swarm-Konfiguration</a></li>
+          
+            <li><a href="/de/firmware/io-config">IO-Konfiguration</a></li>
+          
+            <li><a href="/de/firmware/event-config">Remote/Event-Konfiguration</a></li>
+          
+            <li><a href="/de/firmware/factoryreset">Werkseinstellungen</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">ftSwarmControl</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/de/firmware/ftSwarmControl/gettingstarted">Bedienung</a></li>
+          
+            <li><a href="/de/firmware/ftSwarmControl/configuration">Konfiguration</a></li>
+          
+            <li><a href="/de/firmware/ftSwarmControl/calibration">Kalibrieren</a></li>
+          
+            <li><a href="/de/firmware/ftSwarmControl/servo-offset">Servo Offset</a></li>
+          
+            <li><a href="/de/firmware/ftSwarmControl/remote">Fernsteuerung</a></li>
+          
+            <li><a href="/de/firmware/ftSwarmControl/wifi">WLAN Einstellungen</a></li>
+          
+            <li><a href="/de/firmware/ftSwarmControl/swarm">Swarm Einstellungen</a></li>
+          
+            <li><a href="/de/firmware/ftSwarmControl/factory-reset">Werkseinstellungen</a></li>
           
         </ul>
         
@@ -321,9 +296,37 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">Versionen</h1>
+      <h1 id="page-title" class="page__title">Upgrade guide</h1>
     
-    <h3 id="version-062-052024">Version 0.6.2 05/2024</h3>
+    <p>Mit Version 0.7.0 verändert sich die Handhabung der Controller in einigen wesentlichen Punkten:</p>
+
+<ul>
+  <li>Bislang wurde der Controllertyp über die entsprechende Bibliothek, z.B. ftSwarm-rs ausgewählt. Mit der neuen Version sind die Controller als Boards in Arduino bzw. PlatformIO vorhanden und verwenden nur noch eine gemeinsame ftSwarm-Bibliothek. Bitte richten Sie Ihre <a href="../../ide/arduino">Arduino-IDE</a> bzw. <a href="../../ide/platformio">VSCode/Platform-IDE</a> entsprechend ein.</li>
+  <li>Die Firmware für die Swarm Member muss nicht mehr selbst compiliert werden. Flashen Sie die Firmware bequem über diese <a href="../flash">Webseite</a>. Beim Upgrade auf Version 0.7.0 werden aus technischen Gründen nur die WLAN- und Swarmeinstellungen übernommen.</li>
+  <li>Motoren werden nun mit Geschwindigkeiten zwischen “-100” und “100” angesteuert. Jede Motorklasse, wie z.B. FtSwarmXSMotor, hat eine hinterlegte Motorkennlinie, so dass ein mechanisch nicht belasteter Motor bereits mit der Geschwindigkeit “1” startet. Es ist deshalb wichtig, die richtige Motorklasse zu verwenden. Bei Schrittmotoren gilt weiterhin der Bereich von -4096 bis 4096.</li>
+  <li>Am ftSwarmControl lassen sich fast alle Einstellungen auch über das OLED-Display durchführen. Im neuen <a href="../../remote/remote">Fernsteuerungsmodus</a> können Standardmodelle ohne Programmierung konfiguriert werden.</li>
+  <li>Blinkeffekt bei Lampen und ftPixeln.</li>
+</ul>
+
+<h3 id="version-070-082026">Version 0.7.0 08/2026</h3>
+
+<p>Features:</p>
+<ul>
+  <li>Umstellung auf offizielle Arduino/PIO-Boards</li>
+  <li>Firmware Updates über die WebSeite</li>
+  <li>Motorkennlinien: Motoren werden nun im Bereich von -100..100 (Ausnahme Schrittmotoren -4096/4096) angesteuert. Durch eine Motorkennlinie dreht der Motor ohne mechanische Lsst bereits ab Geschwindigkeit 1.</li>
+  <li>ftSwarmControl: Firmware kann über das eingebaute OLED Display konfiguriert werden</li>
+  <li>WLAN-Passwort</li>
+  <li>Neue Statusseite/WebUI</li>
+  <li>Controller ohne serielle Konsole auf Werkseinstellungen zurücksetzen</li>
+  <li>OLED Menüs</li>
+  <li>neue Controllertypen ftSwarmRC und ftSwarmControlUSBC</li>
+  <li>neuer Servotyp RC-Servo</li>
+  <li>neuer Motortypen RC-Motor, Radantrieb</li>
+  <li>Blinken bei Lampen und ftPixeln.</li>
+</ul>
+
+<h3 id="version-062-052024">Version 0.6.2 05/2024</h3>
 
 <p>Features:</p>
 <ul>
@@ -499,7 +502,7 @@ Die Kelda muss natürlich alle Swarm Member kennen und zeigt in der Firmware die
     <div id="footer" class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
-
+<script src="/assets/js/copy-code.js"></script>
 <!-- end custom footer snippets -->
         <div class="page__footer-follow">
   <ul class="social-icons">
@@ -532,12 +535,10 @@ Die Kelda muss natürlich alle Swarm Member kennen und zeigt in der Firmware die
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
-    
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2026 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

@@ -1,5 +1,5 @@
 ---
-title: ftSwarm
+title: ftSwarmJST
 layout: category
 lang: de
 classes: wide

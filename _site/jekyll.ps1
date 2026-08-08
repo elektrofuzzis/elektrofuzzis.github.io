@@ -1,0 +1,1 @@
+$env:SSL_CERT_FILE="C:\Ruby40-x64\cacert.pem"; jekyll clean; jekyll serve --watch

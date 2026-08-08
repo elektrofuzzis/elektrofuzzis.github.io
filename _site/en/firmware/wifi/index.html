@@ -1,0 +1,513 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Wifi &amp; Local Settings -</title>
+<meta name="description" content="">
+
+
+  <meta name="author" content="The ftSwarm Project">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="">
+<meta property="og:title" content="Wifi &amp; Local Settings">
+<meta property="og:url" content="http://localhost:4000/en/firmware/wifi/">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/en/firmware/wifi/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "The ftSwarm Project",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--category wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/img/ftSwarm.svg" alt=""></a>
+        
+          <a class="site-title" href="/">
+          
+          
+        </a>
+
+        <!-- original stuff 
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
+        end original stuff-->
+
+        <ul class="visible-links">
+          <li class="masthead__menu-item">
+            <a id="gettingstarted" href="/en/gettingstarted/gettingstarted" title="Getting Started">Getting Started</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="programming" href="/en/programming/manual" title="C++ Manual">C++ Manual</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="remote" href="/en/remote/remote" title="Remote Control">Remote Control</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="firmware" href="/en/firmware/flash" title="firmware">Firmware</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="api" href="/en/cpp-api/index" title="api">api</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="products" href="/en/products/index" title="Products">Products</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="faq" href="/en/faq" title="FAQ">FAQ</a>
+          </li>
+        </ul>
+
+        <!-- Translation -->
+        <script>
+          if ( location.pathname.startsWith('/de/') ) {
+
+            const gettingstarted = document.getElementById("gettingstarted");
+            gettingstarted.title = "Inbetriebnahme";
+            gettingstarted.innerHTML = "Inbetriebnahme";
+            gettingstarted.href = "/de/gettingstarted/gettingstarted"
+            
+            const programming = document.getElementById("programming");
+            programming.title = "C++ Handbuch";
+            programming.innerHTML = "C++ Handbuch";
+            programming.href = "/de/programming/manual"
+
+            const remote = document.getElementById("remote");
+            remote.title = "Fernsteuerung";
+            remote.innerHTML = "Fernsteuerung";
+            remote.href = "/de/remote/remote"
+
+            const firmware = document.getElementById("firmware");
+            firmware.href = "/de/firmware/flash"
+
+            const api = document.getElementById("api");
+            api.href = "/de/cpp-api/index"
+
+            const faq = document.getElementById("faq");
+            faq.href = "/de/faq"
+
+            const products = document.getElementById("products");
+            products.title = "Produkte";
+            products.innerHTML = "Produkte";
+            products.href = "/de/products/index"
+                      }
+        </script>
+
+
+        <!-- language picker -->
+        <a href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
+        <a href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
+
+        <!-- language picker -->
+
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Firmware</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/firmware/flash">Flash Firmware</a></li>
+          
+            <li><a href="/en/firmware/versions">Upgrade guide</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Konfiguration</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/firmware/wifi">Wifi & Local Settings</a></li>
+          
+            <li><a href="/en/firmware/swarm-config">Swarm Configuration</a></li>
+          
+            <li><a href="/en/firmware/io-config">IO Configuration</a></li>
+          
+            <li><a href="/en/firmware/event-config">Remote/Event Configuration</a></li>
+          
+            <li><a href="/en/firmware/factoryreset">Factory Reset</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">ftSwarmControl</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/firmware/ftSwarmControl/gettingstarted">Operation</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/configuration">Configuration</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/calibration">Calibration</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/servo-offset">Servo Offset</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/remote">Remote Control</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/wifi">wifi Settings</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/swarm">Swarm Settings</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/factory-reset">Factory Reset</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">Wifi & Local Settings</h1>
+    
+    <p>In this section, you can configure the Wi-Fi settings and set up the controller’s local hardware.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>***** Wifi &amp; Local Settings *****
+
+hostname:            ftSwarm125
+ip-address:          172.16.16.41
+
+(w)  wifi mode: Client-Mode
+(s)  SSID: Elektrofuzzis24
+(p)  Password: *****
+(c)  Channel: 1
+(u)  Web UI: an
+(f)  ftPixels in UI: 2
+(e)  Extension Port: off
+(g)  Gyro: off
+
+(x)  Exit
+</code></pre></div></div>
+
+<h3 id="wifi-modus">wifi-Modus</h3>
+
+<ul>
+  <li>CLIENT MODE uses an existing Wi-Fi network. This is usually the Wi-Fi network provided by your internet router.</li>
+  <li>AP MODE does not require a router; the ftSwarm controller creates its own Wi-Fi network.</li>
+  <li>OFF turns Wi-Fi off and significantly reduces power consumption.</li>
+</ul>
+
+<p>If Wi-Fi is already available, you should definitely use it. Please note that ESP32 processors support only the 2.4 GHz band.</p>
+
+<p>If your Wi-Fi network has multiple repeaters or access points, each access point will broadcast your SSID on a different channel. This can lead to communication problems within the swarm, if the controllers connect to different access points. One possible solution is to provide a dedicated SSID for your swarm using only one access point. If that is not possible, use AP mode.</p>
+
+<p>AP mode is enabled on only one controller. That controller then functions as an access point, and all other controllers in the swarm operate in client mode. Please note that in this case, there can be a maximum of 10 devices on the Wi-Fi network.</p>
+
+<p>Turn off Wi-Fi only if you have just one controller in the swarm or if communication is handled entirely via RS485.</p>
+
+<h3 id="ssid">SSID</h3>
+
+<p>Enter the name of your Wi-Fi network here.</p>
+
+<h3 id="passwort">Passwort</h3>
+
+<p>Enter your Wi-Fi password here. If the controller is in AP mode, you must set a password that is at least 8 characters long starting with firmware version 0.7.0.</p>
+
+<h3 id="channel">Channel</h3>
+
+<p>This option is available only when the controller is in AP mode.</p>
+
+<p class="notice--info">You share Wi-Fi channels with other Wi-Fi networks. That’s why it’s important to select the “right” channel. ESP32 processors use the 2.4 GHz band. This band is divided into 11 channels, and adjacent channels overlap. If two adjacent channels are used by two Wi-Fi networks, they will interfere with each other. That’s why, on the 2.4 GHz band, it’s best if all Wi-Fi networks use only channels 1, 6, and 11. Ideally, there should be an unused channel. If one isn’t available, use a channel that’s already in use but whose adjacent channels are not in use. You can check which channels are already in use on most internet routers. You can also analyze this using your smartphone with the <a href="https://play.google.com/store/apps/details?id=com.ubnt.usurvey&amp;hl=de&amp;gl=US&amp;pli=1">wifiman</a> app.</p>
+
+<h3 id="webui">WebUI</h3>
+
+<p>This option allows you to enable or disable the WebUI/status page.</p>
+
+<h3 id="ftpixels-in-ui">ftPixels in UI</h3>
+
+<p>This option allows you to specify how many ftPixels are displayed in the WebUI/status page. This is intended solely to improve the clarity of the status page. You can still control all connected ftPixels independently through your program.</p>
+
+<h3 id="extension-port">Extension Port</h3>
+
+<p>Some of the controllers have an extension port to which external hardware can be connected.</p>
+
+<p>Unlike the controller’s other connections, this connection is not protected against overvoltage or reverse polarity.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Controller</th>
+      <th style="text-align: center">I2C-Master</th>
+      <th style="text-align: center">I2C-Slave</th>
+      <th style="text-align: center">Output</th>
+      <th style="text-align: center">Servo</th>
+      <th style="text-align: center">Lidar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ftSwarmJST</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center">X</td>
+    </tr>
+    <tr>
+      <td>ftSwarmRS</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center">X</td>
+    </tr>
+    <tr>
+      <td>ftSwarmXL</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center">X</td>
+    </tr>
+    <tr>
+      <td>ftSwarmControlUSBMicro</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td>ftSwarmControlUSBC</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Mode</strong> sets the operating mode of the extension port.</p>
+<ul>
+  <li><strong>off</strong> turns the port off.</li>
+  <li><strong>I2C Master</strong> configures the port as an I²C bus. The controller acts as the bus master. Use this option if you want to connect your own I²C sensors. Wire.begin is executed by the firmware, so you do not need to perform any initialization.</li>
+  <li><strong>I2C Slave</strong> also configures the port as an I²C bus. In this case, the controller acts as the slave. This function can only be used to exchange data with a TXT controller.</li>
+  <li><strong>Outputs</strong> The two I/O pins of the extension port can then be configured via software as motor outputs. A PWM signal corresponding to the set speed value of the motor output is then present at the I/O pins. Please note that the I/O pin only provides a 3.3V logic level and cannot switch any actuators without additional hardware.</li>
+  <li><strong>Servo</strong> The two I/O pins of the extension port can then be configured via software as servo outputs. A PWM signal corresponding to the set servo position is then present at the IO pins. Please note that the provided 3.3V and 5V supply voltages cannot be used for the additional servos.</li>
+  <li><strong>Lida</strong> Connection of an external lidar sensor for distance measurement. This option is not yet stable.</li>
+</ul>
+
+<p>If you have selected I2C slave mode, the following additional options are available:</p>
+<ul>
+  <li><strong>I2C Slave Address</strong>: The I2C address to which your controller responds</li>
+  <li><strong>Interrupt Output</strong>: When new data is available for the TXT, this motor output signals to the TXT that it must retrieve the data.</li>
+  <li><strong>Interrupt Value for 0</strong>: This value is set for the output when no interrupt is pending.</li>
+  <li><strong>Interrupt Value for 1</strong>: This value is set for the output when an interrupt is pending.</li>
+  <li><strong>I2C Registers</strong>: Number of I2C registers provided by the client.</li>
+</ul>
+
+<h3 id="gyro">Gyro</h3>
+
+<p>If your controller has a gyro, it is turned off by default due to its power consumption. If you want to use the gyro, you must enable it using this option.</p>
+
+<p>If you want to use an MPU6040 gyro with the ftSwarmJST or ftSwarmControlUSBMicro, set the “Extension Port” option to “I2C Master” and the ‘Gyro’ option to “On.”</p>
+
+
+
+<div class="entries-list">
+  
+</div>
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<script src="/assets/js/copy-code.js"></script>
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/elektrofuzzis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://instagram.com/elektrofuzzies" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+        
+          <li><a href="mailto:ftpi@gmx.de" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

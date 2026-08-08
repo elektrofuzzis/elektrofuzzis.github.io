@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>RGB LEDs &amp; ftPixel -</title>
-<meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
+<!-- begin _includes/seo.html --><title>ftPixel -</title>
+<meta name="description" content="">
 
 
   <meta name="author" content="The ftSwarm Project">
@@ -20,11 +20,9 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="">
-<meta property="og:title" content="RGB LEDs &amp; ftPixel">
+<meta property="og:title" content="ftPixel">
 <meta property="og:url" content="http://localhost:4000/de/programming/FtSwarmPixel/">
 
-
-  <meta property="og:description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
 
@@ -66,8 +64,6 @@
 <!-- end _includes/seo.html -->
 
 
-
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title=" Feed">
 
 
 <!-- https://t.co/dKP3o1e -->
@@ -115,40 +111,75 @@
         </a>
 
         <!-- original stuff 
-        <ul class="visible-links"></ul>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
         end original stuff-->
-
-        <script>
-          function callRef( url ) {
-            if ( location.pathname.startsWith('/en/') ) {
-              location.href='/en/'+url;
-            } else {
-              location.href='/de/'+url;
-            }
-          }
-        </script>
 
         <ul class="visible-links">
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('gettingstarted/gettingstarted')" title="Manual">Manual</a>
+            <a id="gettingstarted" href="/en/gettingstarted/gettingstarted" title="Getting Started">Getting Started</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('cpp-api/index')" title="api">api</a>
+            <a id="programming" href="/en/programming/manual" title="C++ Manual">C++ Manual</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('products/index')" title="Products">Products</a>
+            <a id="remote" href="/en/remote/remote" title="Remote Control">Remote Control</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('faq')" title="FAQ">FAQ</a>
+            <a id="firmware" href="/en/firmware/flash" title="firmware">Firmware</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="api" href="/en/cpp-api/index" title="api">api</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="products" href="/en/products/index" title="Products">Products</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="faq" href="/en/faq" title="FAQ">FAQ</a>
           </li>
         </ul>
 
+        <!-- Translation -->
+        <script>
+          if ( location.pathname.startsWith('/de/') ) {
+
+            const gettingstarted = document.getElementById("gettingstarted");
+            gettingstarted.title = "Inbetriebnahme";
+            gettingstarted.innerHTML = "Inbetriebnahme";
+            gettingstarted.href = "/de/gettingstarted/gettingstarted"
+            
+            const programming = document.getElementById("programming");
+            programming.title = "C++ Handbuch";
+            programming.innerHTML = "C++ Handbuch";
+            programming.href = "/de/programming/manual"
+
+            const remote = document.getElementById("remote");
+            remote.title = "Fernsteuerung";
+            remote.innerHTML = "Fernsteuerung";
+            remote.href = "/de/remote/remote"
+
+            const firmware = document.getElementById("firmware");
+            firmware.href = "/de/firmware/flash"
+
+            const api = document.getElementById("api");
+            api.href = "/de/cpp-api/index"
+
+            const faq = document.getElementById("faq");
+            faq.href = "/de/faq"
+
+            const products = document.getElementById("products");
+            products.title = "Produkte";
+            products.innerHTML = "Produkte";
+            products.href = "/de/products/index"
+                      }
+        </script>
+
 
         <!-- language picker -->
+        <a href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
+        <a href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
 
-        <a class="alang" href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
-        <a class="alang" href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
-        
         <!-- language picker -->
 
         
@@ -190,27 +221,29 @@
     
       <li>
         
-          <span class="nav__sub-title">Manual</span>
-        
-
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Inbetriebnahme</span>
+          <span class="nav__sub-title">C++ Handbuch</span>
         
 
         
         <ul>
           
-            <li><a href="/de/gettingstarted/pinout">Anschlüsse</a></li>
+            <li><a href="/de/programming/manual">Einleitung</a></li>
           
-            <li><a href="/de/gettingstarted/serial">USB Anschluss</a></li>
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/de/ide/ide"><span class="nav__sub-title">Programmierumgebung</span></a>
+        
+
+        
+        <ul>
           
-            <li><a href="/de/gettingstarted/WebUI">WLAN & Statusseite</a></li>
+            <li><a href="/de/ide/arduino">Arduino</a></li>
           
-            <li><a href="/de/gettingstarted/ide">Installation IDE</a></li>
+            <li><a href="/de/ide/PlatformIO">PlatformIO & VSCode</a></li>
           
         </ul>
         
@@ -234,77 +267,11 @@
           
             <li><a href="/de/programming/switches">Switches & Buttons</a></li>
           
-            <li><a href="/de/programming/RemoteControl">Fernbedienung</a></li>
+            <li><a href="/de/programming/events">Eventprogrammierung</a></li>
           
-            <li><a href="/de/programming/EventControlled">Events</a></li>
+            <li><a href="/de/programming/FtSwarmPixel">FtSwarmPixel</a></li>
           
-            <li><a href="/de/programming/FtSwarmPixel">RGB LEDs & FtSwarmPixel</a></li>
-          
-            <li><a href="/de/programming/FtSwarmOLED">OLED Display</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <a href="/de/rs485/rs485"><span class="nav__sub-title">RS485</span></a>
-        
-
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Extension Port</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/de/extensionPort/index">Einführung</a></li>
-          
-            <li><a href="/de/extensionPort/I2CMaster">I²C Breakout-Boards</a></li>
-          
-            <li><a href="/de/extensionPort/I2CSlave">I²C TX-/TXT Kommunikation</a></li>
-          
-            <li><a href="/de/extensionPort/gyro">Gyro</a></li>
-          
-            <li><a href="/de/extensionPort/outputs">Motorausgänge</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Firmware</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/de/firmware/Configuration">Konfiguration</a></li>
-          
-            <li><a href="/de/firmware/firmware">Firmware & Updates</a></li>
-          
-            <li><a href="/de/firmware/versions">Versionen</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Advanced</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/de/advanced/PlatformIO">PlatformIO & VSCode</a></li>
-          
-            <li><a href="/de/advanced/debugging">Debugging</a></li>
+            <li><a href="/de/programming/debugging">Debugging</a></li>
           
         </ul>
         
@@ -321,30 +288,28 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">RGB LEDs & ftPixel</h1>
+      <h1 id="page-title" class="page__title">ftPixel</h1>
     
     <p>Der ftSwarm hat zwei eingebaute RGB-LEDs, um den Betriebszustand anzeigen. Die LEDs können aber auch über das Steuerprogramm geschaltet werden. Bis zu 16 ftPixels können  zusätzliche extern an den LED-Port angeschlossen werden.</p>
 
-<p>Die Einrichtung der Hardware ist einfach: Sie benötigen lediglich einen ftSwarm-Controller, der mit einem USB-Kabel an Ihren PC angeschlossen ist, und ein Netzteil.</p>
+<p><img src="/assets/img/examples/ftPixel.png" alt="Home" /></p>
 
-<p class="notice--info">ftPixel können nur mit dem ftSwarm oder dem ftSwarmRS verwendet werden.</p>
+<p class="notice--info">Externe ftPixel können nur an den ftSwarmJST, den ftSwarmRS und ftSwarmRC angeschlossen werden.</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;ftSwarm.h&gt;
-#include &lt;FastLED.h&gt;
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;ftSwarm.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;FastLED.h&gt;</span><span class="cp">
 </span>
-<span class="n">FtSwarmLED</span> <span class="o">*</span><span class="n">led1</span><span class="p">;</span>
-<span class="n">FtSwarmLED</span> <span class="o">*</span><span class="n">led2</span><span class="p">;</span>
+<span class="n">FtSwarmPixel</span> <span class="o">*</span><span class="n">led1</span><span class="p">;</span>
+<span class="n">FtSwarmPixel</span> <span class="o">*</span><span class="n">led2</span><span class="p">;</span>
 
 <span class="kt">void</span> <span class="nf">setup</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
-
-  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
 
   <span class="c1">// start the swarm</span>
   <span class="n">FtSwarmSerialNumber_t</span> <span class="n">local</span> <span class="o">=</span> <span class="n">ftSwarm</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span> <span class="p">);</span>
   
   <span class="c1">// get led instances</span>
-  <span class="n">led1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FtSwarmLED</span><span class="p">(</span> <span class="n">local</span><span class="p">,</span> <span class="n">FTSWARM_LED1</span> <span class="p">);</span>
-  <span class="n">led2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FtSwarmLED</span><span class="p">(</span> <span class="n">local</span><span class="p">,</span> <span class="n">FTSWARM_LED2</span> <span class="p">);</span>
+  <span class="n">led1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FtSwarmPixel</span><span class="p">(</span> <span class="n">local</span><span class="p">,</span> <span class="n">FTSWARM_LED1</span> <span class="p">);</span>
+  <span class="n">led2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FtSwarmPixel</span><span class="p">(</span> <span class="n">local</span><span class="p">,</span> <span class="n">FTSWARM_LED2</span> <span class="p">);</span>
   
 <span class="p">}</span>
 
@@ -374,7 +339,7 @@
 
 <p>Die Firmware verwendet intern die FastLED-Bibliothek. Der Import <strong>#include “FastLED.h “</strong> wird benötigt, um auf die FastLED Farbdefinitionen wie <strong>CRGB::Blue</strong> zuzugreifen. Die LEDs werden mit den Funktionne  <strong>setColor</strong> und <strong>setBrightness</strong> gesteuert. setColor erwartet eine uint32_t als Farbe [0..0xFFFFFF] und setBrightness setzt die Helligkeit von 0 bis 255.</p>
 
-<p class="notice--info">Aufgrund eines Fehlers in der FastLED-Bibliothek kann die Helligkeit einer LED nicht einzeln eingestellt werden. Ein setBrightness Befehl setzt die Helligkeit aller Leds.</p>
+<p class="notice--info">In älteren Versionen konnte die Helligkeit nur für alle LEDs gesetzt werden. Ab Version 0.7.0 kann die Helligkeit auch für einzelne LEDs gesetzt werden.</p>
 
 <p class="notice--info">RGB-LEDs haben einen hohen Strombedarf. Eine auf CRGB::White und maximaler Helligkeit geschaltete LED hat einen Stromverbrauch von 60 mA. Zwei LEDs mit maximaler Helligkeit benötigen genauso viel Strom wie der ESP32 Chip mit aktivem WLAN. Reduziert man die Helligkeit auf einen Wert zwischen 16 und 64, so sinkt der Stromverbrauch auf 6%..25%.</p>
 
@@ -393,7 +358,7 @@
     <div id="footer" class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
-
+<script src="/assets/js/copy-code.js"></script>
 <!-- end custom footer snippets -->
         <div class="page__footer-follow">
   <ul class="social-icons">
@@ -426,12 +391,10 @@
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
-    
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2026 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

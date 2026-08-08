@@ -1,16 +1,16 @@
 ---
-title: Anschlüsse
+title: Pinout
 layout: category
 lang: de
 classes: wide
 sidebar:
-    nav: manual-de
+    nav: gettingstarted-de
 ---
 Jeder Controller hat einen USB-Anschluß, über den Sie die Firmware oder Ihr Steuerprogramm flashen können. Dies wird auf der nächsten Seite im Detail beschieben.
 
 Der Controller kann zwar über den USB-Port gebootet werden; um die Ein- und Ausgänge des Controllers nutzen zu können, muss unbedingt die externe 9V-Versorgung aktiv sein. 
 
-Die Sensoren im Modell werden an die Eingänge A1 bis A8 der Controller angeschlossen. An diese Anschlüsse können verschiedene analoge oder digitale Sensoren angeschlossen werden (z.B. Taster, Reedkontakte, Fototransistoren, Temperatursensoren ). Der Sensor wird einfach an die <span class="plus">rote</span> und die <span class="minus">grüne</span> Klemme angeschlossen. Bei einigen Sensoren muss auf die Polung geachtet werden, dann wird das am Sensor markierte Kabel an die <span class="plus">rote</span> Klemme aufgelegt. Die <span class="minus">grün</span> markierten Klemmen sind GND bzw. der fischertechnik "-"-Anschluss.
+Die Sensoren im Modell werden an die Eingänge A1 bis A8 der Controller angeschlossen. An diese Anschlüsse können verschiedene analoge oder digitale Sensoren angeschlossen werden (z.B. Taster, Reedkontakte, Fototransistoren, Temperatursensoren ). Der Sensor wird einfach an die <span class="red">rote</span> und die <span class="green">grüne</span> Klemme angeschlossen. Bei einigen Sensoren muss auf die Polung geachtet werden, dann wird das am Sensor markierte Kabel an die <span class="red">rote</span> Klemme aufgelegt. Die <span class="green">grün</span> markierten Klemmen sind GND bzw. der fischertechnik "-"-Anschluss.
 
 Die meisten Sensoren können an allen Eingängen angeschlossen werden. Je nach Controller und Eingang gibt es einzelne Einschränkungen - so kann z.B. ein Ultraschallsensor nur an A1 der Controllertypen ftSwarm und ftSwarmRS angeschlossen werden. Dies können Sie im Detail bei der Beschreibung der einzelnen Sensorklassen in der API-Referenz nachlesen.
 
@@ -68,7 +68,7 @@ Einige Controller verfügen über einen RS485-Anschluss um die Swarm-Kommunikati
     <div><a href="../../products/ftSwarmDuino">ftSwarmDuino</a></div>
     <div><img class="zoom" src="/assets/img/ftSwarmDuinoPinout.svg"></div>
     <div><p class="pdetail">Der Controller wird auf den I²C-Bus des ftPwrDive aufgesteckt und stellt dann die Motorausgänge des ftDuino als M1 bis M4 und die Eingänge als A1 bis A8 im Swarm bereit.<br><br>
-    Für die 9V-Stromversorgung reicht es aus, die <span class="plus">rote 9V-Klemme</span> mit dem daneben liegenden 9V-Ausgang des ftDuino zu verbinden. Der GND/Minusanschluß erfolgt automatisch über den I²C-Stecker.<br><br>
+    Für die 9V-Stromversorgung reicht es aus, die <span class="red">rote 9V-Klemme</span> mit dem daneben liegenden 9V-Ausgang des ftDuino zu verbinden. Der GND/Minusanschluß erfolgt automatisch über den I²C-Stecker.<br><br>
     Auf dem ftDuino selbst muss der Sketch ftDuino.ino geflashed werden. Laden Sie hierfür arduino-firmware.zip von der Release-Seite auf github herunter.
     </p></div>
   </div>

@@ -56,3 +56,7 @@ Stellt die Endstufe in den **FTSWARM_COAST** Modus.
 #### void brake( void )
 
 Stellt die Endstufe in den **FTSWARM_BRAKE** Modus.
+
+#### void run( void )
+
+Stellt die Endstufe in den **FTSWARM_ON** Modus.

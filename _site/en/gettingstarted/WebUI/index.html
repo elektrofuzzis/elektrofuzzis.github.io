@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>wifi &amp; status page -</title>
-<meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
+<meta name="description" content="">
 
 
   <meta name="author" content="The ftSwarm Project">
@@ -23,8 +23,6 @@
 <meta property="og:title" content="wifi &amp; status page">
 <meta property="og:url" content="http://localhost:4000/en/gettingstarted/WebUI/">
 
-
-  <meta property="og:description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
 
@@ -66,8 +64,6 @@
 <!-- end _includes/seo.html -->
 
 
-
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title=" Feed">
 
 
 <!-- https://t.co/dKP3o1e -->
@@ -115,40 +111,75 @@
         </a>
 
         <!-- original stuff 
-        <ul class="visible-links"></ul>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
         end original stuff-->
-
-        <script>
-          function callRef( url ) {
-            if ( location.pathname.startsWith('/en/') ) {
-              location.href='/en/'+url;
-            } else {
-              location.href='/de/'+url;
-            }
-          }
-        </script>
 
         <ul class="visible-links">
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('gettingstarted/gettingstarted')" title="Manual">Manual</a>
+            <a id="gettingstarted" href="/en/gettingstarted/gettingstarted" title="Getting Started">Getting Started</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('cpp-api/index')" title="api">api</a>
+            <a id="programming" href="/en/programming/manual" title="C++ Manual">C++ Manual</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('products/index')" title="Products">Products</a>
+            <a id="remote" href="/en/remote/remote" title="Remote Control">Remote Control</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('faq')" title="FAQ">FAQ</a>
+            <a id="firmware" href="/en/firmware/flash" title="firmware">Firmware</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="api" href="/en/cpp-api/index" title="api">api</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="products" href="/en/products/index" title="Products">Products</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="faq" href="/en/faq" title="FAQ">FAQ</a>
           </li>
         </ul>
 
+        <!-- Translation -->
+        <script>
+          if ( location.pathname.startsWith('/de/') ) {
+
+            const gettingstarted = document.getElementById("gettingstarted");
+            gettingstarted.title = "Inbetriebnahme";
+            gettingstarted.innerHTML = "Inbetriebnahme";
+            gettingstarted.href = "/de/gettingstarted/gettingstarted"
+            
+            const programming = document.getElementById("programming");
+            programming.title = "C++ Handbuch";
+            programming.innerHTML = "C++ Handbuch";
+            programming.href = "/de/programming/manual"
+
+            const remote = document.getElementById("remote");
+            remote.title = "Fernsteuerung";
+            remote.innerHTML = "Fernsteuerung";
+            remote.href = "/de/remote/remote"
+
+            const firmware = document.getElementById("firmware");
+            firmware.href = "/de/firmware/flash"
+
+            const api = document.getElementById("api");
+            api.href = "/de/cpp-api/index"
+
+            const faq = document.getElementById("faq");
+            faq.href = "/de/faq"
+
+            const products = document.getElementById("products");
+            products.title = "Produkte";
+            products.innerHTML = "Produkte";
+            products.href = "/de/products/index"
+                      }
+        </script>
+
 
         <!-- language picker -->
+        <a href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
+        <a href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
 
-        <a class="alang" href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
-        <a class="alang" href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
-        
         <!-- language picker -->
 
         
@@ -190,121 +221,23 @@
     
       <li>
         
-          <span class="nav__sub-title">Manual</span>
-        
-
-        
-      </li>
-    
-      <li>
-        
           <span class="nav__sub-title">Gettting started</span>
         
 
         
         <ul>
           
-            <li><a href="/en/gettingstarted/pinout">Connectors</a></li>
+            <li><a href="/en/gettingstarted/gettingstarted">Introduction</a></li>
+          
+            <li><a href="/en/gettingstarted/pinout">Pinout</a></li>
           
             <li><a href="/en/gettingstarted/serial">USB/Serial Connection</a></li>
           
+            <li><a href="/en/gettingstarted/ledstatus">LED Status Indicator</a></li>
+          
             <li><a href="/en/gettingstarted/WebUI">wifi & status page</a></li>
           
-            <li><a href="/en/gettingstarted/ide">Install IDE</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Programming</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/en/programming/MotorSwitch">My First Application</a></li>
-          
-            <li><a href="/en/programming/kelda">The Kelda Principle</a></li>
-          
-            <li><a href="/en/programming/MotorSwitchSwarm">A first Swarm</a></li>
-          
-            <li><a href="/en/programming/MotorSwitchAlias">Alias Names</a></li>
-          
-            <li><a href="/en/programming/switches">Switches & Buttons</a></li>
-          
-            <li><a href="/en/programming/RemoteControl">Remote Control</a></li>
-          
-            <li><a href="/en/programming/EventControlled">Events</a></li>
-          
-            <li><a href="/en/programming/FtSwarmPixel">RGB LEDs & FtSwarmPixel</a></li>
-          
-            <li><a href="/en/programming/FtSwarmOLED">OLED Display</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <a href="/en/rs485/rs485"><span class="nav__sub-title">RS485</span></a>
-        
-
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Extension Port</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/en/extensionPort/index">Overview</a></li>
-          
-            <li><a href="/en/extensionPort/I2CMaster">I²C Breakout-Boards</a></li>
-          
-            <li><a href="/en/extensionPort/I2CSlave">I²C TX-/TXT Communication</a></li>
-          
-            <li><a href="/en/extensionPort/gyro">Gyro</a></li>
-          
-            <li><a href="/en/extensionPort/outputs">Motor Outputs</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Firmware</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/en/firmware/Configuration">Konfiguration</a></li>
-          
-            <li><a href="/en/firmware/firmware">Firmware & Updates</a></li>
-          
-            <li><a href="/en/firmware/versions">Versionen</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Advanced</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/en/advanced/PlatformIO">PlatformIO & VSCode</a></li>
-          
-            <li><a href="/en/advanced/debugging">Debugging</a></li>
+            <li><a href="/en/gettingstarted/rs485">RS485</a></li>
           
         </ul>
         
@@ -327,52 +260,48 @@
 
 <p>Wifi configuration needs a USB connection. Start a terminal program as described before and boot the controller via the reset button.</p>
 
-<p>The controller now shows its boot message. Press any key, so that you enter the configuration menu of the ftSwarm firmware:</p>
+<p>The controller now shows its boot message. Enter <strong>setup</strong>, to start the configuration menu of the ftSwarm firmware:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ftSwarmOS 0.5.0
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>***** Main Menu *****
 
-(C) Christian Bergschneider &amp; Stefan Fuss
+(w)  Wifi &amp; Local Settings
+(s)  Swarm Configuration
+(i)  IO Configuration
+(r)  Remote/Event Configuration
+(f)  Factory Reset
 
-Main Menu
+(x)  Exit
 
-(1) wifi &amp; Web UI
-(2) swarm configuration
-(3) alias names
-(4) factory reset
-(5) remoteControl
-(6) extention port
-
-(0) exit
-main&gt;
+setup&gt;
 </code></pre></div></div>
 
-<p>Choose  <strong>(1) Wifi &amp; WebUI</strong>. Configure <em>CLIENT-MODE</em> and add you wifi’s credentials:</p>
+<p>Choose  <strong>(w) Wifi &amp; Local Settings</strong>.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Wifi &amp; WebUI
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>***** Wifi &amp; Local Settings *****
 
-(1) wifi:           CLIENT-MODE
-(2) SSID:           &lt;WLAN-Name/SSID&gt;
-(3) Password:       &lt;WLAN-Passwort&gt;
-(4) Web UI:         on
-(5) ftPixels in UI: 2
+hostname:            ftSwarm1010
+ip-address:          172.16.16.111
 
-(0) exit
-Wifi &amp; WebUI&gt;
+(w)  wifi mode: Client-Mode
+(s)  SSID: Elektrofuzzis24
+(p)  Password: *****
+(u)  Web UI: on
+(g)  Gyro: off
+
+(x)  Exit
+
+wifi&gt;
 </code></pre></div></div>
 
-<p>Use <strong>(0)</strong> to save your changes. The controller will restart and connect to your local wifi..</p>
+<p>set <strong>“(w) wifi mode”</strong> to <strong>Client-Mode</strong>. Enter your wifi credentials using <strong>“(s) SSID”</strong> and <strong>“(p) Password”</strong>.</p>
 
-<p>You could now access the statuspage by <strong><code class="language-plaintext highlighter-rouge">http:\\ftSwarm&lt;SerialNumber&gt;</code></strong>. Replace <SerialNumber> with the serial number of your ftSwarm controller.</SerialNumber></p>
+<p>Use <strong>“(x) Exit”</strong> to save your changes. The controller will restart and connect to your local wifi.</p>
+
+<p>You could now access the statuspage by <strong><code class="language-plaintext highlighter-rouge">http:\\ftSwarm&lt;SerialNumber&gt;</code></strong>. Replace <SerialNumber> with the serial number of your ftSwarm controller. You could use the show IP address as well.</SerialNumber></p>
 
 <p><img src="/assets/img/ftSwarm_Monitor.png" alt="Monitoring ftSwarm" /></p>
 
-<p><em>In case of any problem, please check</em></p>
-<ul>
-  <li><em>if your browser has java script enabled</em></li>
-  <li><em>and your wifi allows a direct peer-to-peer communication.</em></li>
-</ul>
-
-<p>To operate the actuators such as motors, you need to log in to the controller using the LOGIN button. Thereby the swarm pin is requested, by default this is the 4-digit serial number of the controller (in the example 0100).</p>
+<p>To operate the actuators such as motors, you need to log in to the controller using the LOGIN button. Thereby the swarm pin is requested, by default this is the 4-digit serial number of the controller (in the example 1010).</p>
 
 
 
@@ -389,7 +318,7 @@ Wifi &amp; WebUI&gt;
     <div id="footer" class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
-
+<script src="/assets/js/copy-code.js"></script>
 <!-- end custom footer snippets -->
         <div class="page__footer-follow">
   <ul class="social-icons">
@@ -422,12 +351,10 @@ Wifi &amp; WebUI&gt;
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
-    
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2026 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

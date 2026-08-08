@@ -1,0 +1,440 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>IO Configuration -</title>
+<meta name="description" content="">
+
+
+  <meta name="author" content="The ftSwarm Project">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="">
+<meta property="og:title" content="IO Configuration">
+<meta property="og:url" content="http://localhost:4000/en/firmware/io-config/">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/en/firmware/io-config/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "The ftSwarm Project",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--category wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/img/ftSwarm.svg" alt=""></a>
+        
+          <a class="site-title" href="/">
+          
+          
+        </a>
+
+        <!-- original stuff 
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
+        end original stuff-->
+
+        <ul class="visible-links">
+          <li class="masthead__menu-item">
+            <a id="gettingstarted" href="/en/gettingstarted/gettingstarted" title="Getting Started">Getting Started</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="programming" href="/en/programming/manual" title="C++ Manual">C++ Manual</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="remote" href="/en/remote/remote" title="Remote Control">Remote Control</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="firmware" href="/en/firmware/flash" title="firmware">Firmware</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="api" href="/en/cpp-api/index" title="api">api</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="products" href="/en/products/index" title="Products">Products</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="faq" href="/en/faq" title="FAQ">FAQ</a>
+          </li>
+        </ul>
+
+        <!-- Translation -->
+        <script>
+          if ( location.pathname.startsWith('/de/') ) {
+
+            const gettingstarted = document.getElementById("gettingstarted");
+            gettingstarted.title = "Inbetriebnahme";
+            gettingstarted.innerHTML = "Inbetriebnahme";
+            gettingstarted.href = "/de/gettingstarted/gettingstarted"
+            
+            const programming = document.getElementById("programming");
+            programming.title = "C++ Handbuch";
+            programming.innerHTML = "C++ Handbuch";
+            programming.href = "/de/programming/manual"
+
+            const remote = document.getElementById("remote");
+            remote.title = "Fernsteuerung";
+            remote.innerHTML = "Fernsteuerung";
+            remote.href = "/de/remote/remote"
+
+            const firmware = document.getElementById("firmware");
+            firmware.href = "/de/firmware/flash"
+
+            const api = document.getElementById("api");
+            api.href = "/de/cpp-api/index"
+
+            const faq = document.getElementById("faq");
+            faq.href = "/de/faq"
+
+            const products = document.getElementById("products");
+            products.title = "Produkte";
+            products.innerHTML = "Produkte";
+            products.href = "/de/products/index"
+                      }
+        </script>
+
+
+        <!-- language picker -->
+        <a href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
+        <a href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
+
+        <!-- language picker -->
+
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Firmware</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/firmware/flash">Flash Firmware</a></li>
+          
+            <li><a href="/en/firmware/versions">Upgrade guide</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Konfiguration</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/firmware/wifi">Wifi & Local Settings</a></li>
+          
+            <li><a href="/en/firmware/swarm-config">Swarm Configuration</a></li>
+          
+            <li><a href="/en/firmware/io-config">IO Configuration</a></li>
+          
+            <li><a href="/en/firmware/event-config">Remote/Event Configuration</a></li>
+          
+            <li><a href="/en/firmware/factoryreset">Factory Reset</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">ftSwarmControl</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/firmware/ftSwarmControl/gettingstarted">Operation</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/configuration">Configuration</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/calibration">Calibration</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/servo-offset">Servo Offset</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/remote">Remote Control</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/wifi">wifi Settings</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/swarm">Swarm Settings</a></li>
+          
+            <li><a href="/en/firmware/ftSwarmControl/factory-reset">Factory Reset</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">IO Configuration</h1>
+    
+    <p>The IO configuration allows you to set the IO type and alias name for your IOs in Swarm.</p>
+
+<ul>
+  <li>Alias names simplify programming but are not required. IOs with an alias name are displayed as active IOs on the status page under mySwarm.</li>
+  <li>Assign the correct sensor or motor type to the IOs so that you can control your model via the status page even during assembly, without programming.</li>
+  <li>Selecting the correct motor type is important. Each fischertechnik motor has its own characteristic curve and requires a different starting voltage to start. These characteristic curves are stored in the firmware, so that the motor rotates at a speed of 1 even without a mechanical load.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>***** IO configuration *****
+
+     Name               Type            Events Alias
+( 1) A1                 DigitalInput    0        
+( 2) A2                 DigitalInput    0        
+( 3) A3                 DigitalInput    0        
+( 4) A4                 DigitalInput    0        
+( 5) A5                 DigitalInput    0        
+( 6) A6                 DigitalInput    0        
+( 7) PWRCTL             Powersensor     0        
+( 8) ftSwarm1011.A1     DigitalInput    0        
+( 9) ftSwarm1011.A2     DigitalInput    0        
+(10) ftSwarm1011.A3     DigitalInput    0        
+(11) ftSwarm1011.A4     DigitalInput    0        
+(12) ftSwarm1011.A5     DigitalInput    0        
+(13) ftSwarm1011.A6     DigitalInput    0        
+(14) ftSwarm1011.PWRCTL Powersensor     0        
+
+(a)  show actors
+(p)  show pixels
+
+(x)  Exit
+</code></pre></div></div>
+
+<p>If you access the IO configuration from the main menu, it displays the IOs for the entire swarm. If you access it from the swarm configuration, you will see only the IOs for the selected controller.</p>
+
+<p>Since even a swarm consisting of just a few controllers has a large number of sensors and actors, only one base type is displayed at a time. Use <strong>“(s) show sensors”</strong>, <strong>“(a) show actors”</strong>, and <strong>“(p) pixels”</strong> to switch between the individual types. Use <strong>“(&lt;) Previous Page”</strong> and <strong>“(&gt;) Next Page”</strong> to scroll through the displayed type. A maximum of 18 IOs are displayed per page.</p>
+
+<p>If you exit the menu with <strong>“(x) Exit”</strong> after making changes to individual I/Os, you can save the configuration to the controller.</p>
+
+<h3 id="configuring-an-io">Configuring an I/O</h3>
+
+<p>To configure an IO, enter the IO number from the list displayed:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>***** A1 *****
+
+     Name:       A1
+(t)  IO type:     DigitalInput
+(a)  alias
+
+(+)  add event
+(s)  switch configuration
+
+(x)  Exit
+</code></pre></div></div>
+
+<p>If events have already been assigned to the IO, they are displayed as a list.</p>
+
+<p><strong>“(t) IO type”</strong> selects the type of the IO.</p>
+
+<p><strong>“(a) alias”</strong> assigns an alias name to the IO. The IO is now displayed in the mySwarm overview on the status page.</p>
+
+<p><strong>“(+) add event”</strong> creates a new event. Events can be deleted using <strong>“(-) delete event”</strong>.</p>
+
+<p><strong>“(s) switch configuration”</strong> allows you to switch between 4 configurations.</p>
+
+<p>If you use an ftSwarmControl, for example, to control a vehicle, you’ll assign speed to the left joystick and steering to the right joystick. If you want to control multiple vehicles one after another — for example, an excavator and a dump truck — it would be convenient to use just one remote control and be able to switch between the vehicles.</p>
+
+<p>This is made possible by the 4 configurations. When you define an event, it is automatically assigned to the currently active configuration. For example, in Configuration #1, you can assign the left joystick to the excavator’s drive motor, and in Configuration #2, to the dump truck’s drive motor. On the ftSwarmControl, you can switch between the two configurations using the SET button.</p>
+
+<p><strong>“(l) Label”</strong> assigns a label to an IO, which is then displayed in the ftSwarmControl status display. This allows assigned functions — e.g. S1 turns on the light — to be displayed on the screen with the label “LIGHT.” Like events, labels are also tied to a configuration. Labels can only be assigned to the buttons and joysticks of the local ftSwarmControl.</p>
+
+
+
+<div class="entries-list">
+  
+</div>
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<script src="/assets/js/copy-code.js"></script>
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/elektrofuzzis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://instagram.com/elektrofuzzies" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+        
+          <li><a href="mailto:ftpi@gmx.de" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -20,7 +20,7 @@ Bitte lesen Sie auch die Erklärung zu Speed, Coast & Brake in der [Motorübersi
 Constructor um ein FtSwarmXMMotor Objekt zu erzeugen. Ist der angesprochene Controller nicht online, so wartet die Firmware solange bis der entsprechende Controller gestartet wird.
 
 - serialNumber: Seriennummer des ftSwarm-Controllers.
-- port: **FTSWARM_M1** oder **FTSWARM_M2**
+- port: Je nach Controllertyp von **FTSWARM_M1** bis **FTSWARM_M8**
 
 #### FtSwarmXMMotor( const char *name )
 
@@ -32,7 +32,7 @@ Constructor um ein FtSwarmXMMotor Objekt zu erzeugen. Ist der angesprochene Cont
 
 Setzt die Motorgeschwindigkeit.
 
-- speed: Geschwindigkeit im Bereich von -256 bis 256.
+- speed: Geschwindigkeit im Bereich von -100 bis 100.
 
 #### uint16_t getSpeed()
 

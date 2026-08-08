@@ -1,0 +1,562 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Remote Control -</title>
+<meta name="description" content="">
+
+
+  <meta name="author" content="The ftSwarm Project">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="">
+<meta property="og:title" content="Remote Control">
+<meta property="og:url" content="http://localhost:4000/en/remote/remote/">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/en/remote/remote/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "The ftSwarm Project",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--category wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/img/ftSwarm.svg" alt=""></a>
+        
+          <a class="site-title" href="/">
+          
+          
+        </a>
+
+        <!-- original stuff 
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
+        end original stuff-->
+
+        <ul class="visible-links">
+          <li class="masthead__menu-item">
+            <a id="gettingstarted" href="/en/gettingstarted/gettingstarted" title="Getting Started">Getting Started</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="programming" href="/en/programming/manual" title="C++ Manual">C++ Manual</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="remote" href="/en/remote/remote" title="Remote Control">Remote Control</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="firmware" href="/en/firmware/flash" title="firmware">Firmware</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="api" href="/en/cpp-api/index" title="api">api</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="products" href="/en/products/index" title="Products">Products</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="faq" href="/en/faq" title="FAQ">FAQ</a>
+          </li>
+        </ul>
+
+        <!-- Translation -->
+        <script>
+          if ( location.pathname.startsWith('/de/') ) {
+
+            const gettingstarted = document.getElementById("gettingstarted");
+            gettingstarted.title = "Inbetriebnahme";
+            gettingstarted.innerHTML = "Inbetriebnahme";
+            gettingstarted.href = "/de/gettingstarted/gettingstarted"
+            
+            const programming = document.getElementById("programming");
+            programming.title = "C++ Handbuch";
+            programming.innerHTML = "C++ Handbuch";
+            programming.href = "/de/programming/manual"
+
+            const remote = document.getElementById("remote");
+            remote.title = "Fernsteuerung";
+            remote.innerHTML = "Fernsteuerung";
+            remote.href = "/de/remote/remote"
+
+            const firmware = document.getElementById("firmware");
+            firmware.href = "/de/firmware/flash"
+
+            const api = document.getElementById("api");
+            api.href = "/de/cpp-api/index"
+
+            const faq = document.getElementById("faq");
+            faq.href = "/de/faq"
+
+            const products = document.getElementById("products");
+            products.title = "Produkte";
+            products.innerHTML = "Produkte";
+            products.href = "/de/products/index"
+                      }
+        </script>
+
+
+        <!-- language picker -->
+        <a href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
+        <a href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
+
+        <!-- language picker -->
+
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Remote Control</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/remote/remote">Introduction</a></li>
+          
+            <li><a href="/en/remote/remote/#step-by-step-instructions">Step-By-Step Instructions</a></li>
+          
+            <li><a href="/en/remote/remote/#firmware-version">Firmware Version</a></li>
+          
+            <li><a href="/en/remote/remote/#wifi-setup">Wifi Setup</a></li>
+          
+            <li><a href="/en/remote/remote/#connect-the-receiver">Connect the receiver</a></li>
+          
+            <li><a href="/en/remote/remote/#specify-function">Specify Function</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">Remote Control</h1>
+    
+    <p>The ftSwarmControl can be used very easily as a remote control. In this setup, the ftSwarmControl acts as the “yellow” remote control, and a second ftSwarm controller acts as the receiver. As with the “red” IR Control Set from fischertechnik, the mapping of which control element controls which motor is predefined.</p>
+
+<p><img src="/assets/img/ftSwarmControl/remote/example-en.png" alt="Home" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Control Element</th>
+      <th style="text-align: center">Actor</th>
+      <th>Function</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>left joystick</td>
+      <td style="text-align: center">Motor M1</td>
+      <td>The engine can be used to power a vehicle.</td>
+    </tr>
+    <tr>
+      <td>right joystick</td>
+      <td style="text-align: center">Servo</td>
+      <td>The servo can be used to implement the steering system.</td>
+    </tr>
+    <tr>
+      <td>function+/-</td>
+      <td style="text-align: center">Motor M2</td>
+      <td>When the <strong>Function+</strong> button is pressed, motor M2 runs at a constant speed. Pressing the <strong>Function-</strong> button causes the motor to rotate in the opposite direction. This motor can be used, for example, to tilt the bed of a truck.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>To control different model types, you can choose from four different control configurations:</p>
+<ul>
+  <li><strong>Car</strong>: The left joystick controls M1, and the right joystick controls a servo — propulsion and steering. The F1/F2 buttons can control an additional function, such as a dump bed. The S1/S2/S3 buttons can be used to control headlights, turn signals and backlights using ftPixels.</li>
+  <li><strong>Catapillar</strong>: The two joysticks control motors M1 and M2. This allows you to build crawler-driven vehicles such as bulldozers or tanks.</li>
+  <li><strong>Crane</strong>: The left joystick controls the crane hook via M1; the right joystick rotates the crane via M2. F1 and F2 control either the trolley on a tower crane or the luffing mechanism of a truck crane. (Only for controllers with at least 4 motor outputs.)</li>
+  <li><strong>Trailer</strong>: The F1/F2 keys control a motor, e.g., the support wheel of a trailer.</li>
+</ul>
+
+<p><em>The available functions depend on the receiver used. For example, an ftSwarmRS has “only” 2 motor outputs but one servo output. The ftSwarmXL has 8 motor outputs but no servo output. The exact pin assignments are shown at the bottom of the page.</em></p>
+
+<p>You can save up to four different configurations on the ftSwarmControl. This allows you, for example, to control up to four different vehicles with a single remote control or to switch back and forth between different operating modes on a single vehicle. For a truck crane, one configuration can be set up for driving, and a second configuration for operating the crane.</p>
+
+<p>The remote control requires no programming; the function is set up via the ftSwarmControl display.</p>
+
+<h3 id="step-by-step-instructions">Step-by-Step Instructions</h3>
+
+<p>Turn on the ftSwarmController using the <strong>ON</strong> switch. A boot message will appear on the display, and shortly thereafter, the screen will switch to the status screen:</p>
+
+<p><img src="/assets/img/ftSwarmControl/main.png" alt="Home" class="align-center" style="width: 25%;" /></p>
+
+<p>Now press the <strong>SET</strong> button or S4 to access the ftSwarmControl settings.</p>
+
+<p><img src="/assets/img/ftSwarmControl/config-en.png" alt="Home" class="align-center" style="width: 25%;" /></p>
+
+<p>You can now use the ftSwarmControl controls to navigate the menus:</p>
+<ul>
+  <li>Use the left joystick to navigate the screen.</li>
+  <li>Press the joystick (button J1) to select a highlighted option.</li>
+  <li>The F2 button always acts as the “Escape” key and exits the current menu. This function is indicated by the ^ symbol in the upper-right corner.</li>
+  <li>When buttons S1 through S4 are used, their functions are displayed at the bottom of the screen.</li>
+</ul>
+
+<h3 id="firmware-version">Firmware Version</h3>
+
+<p>All controllers must always have the same firmware version. You can <a href="../../firmware/flash">flash</a> the firmware directly from this website.</p>
+
+<h3 id="wifi-setup">Wifi Setup</h3>
+
+<p>The controllers communicate with each other via wifi. Therefore, the next step is to configure the wifi settings for your ftSwarmControl. To do this, select the <strong>Wifi Settings</strong> menu item in <strong>Setup</strong>:</p>
+
+<p><img src="/assets/img/ftSwarmControl/wifi/wifi-en.png" alt="Home" class="align-center" style="width: 25%;" /></p>
+
+<p>Set the wifi mode to <strong>Client</strong> when you are at home. <strong>AP</strong> is best when you are outdoors or at an exhibition. In AP mode, the ftSwarmControl provides an own wifi network.</p>
+
+<p>Then select the <strong>SSID</strong> and enter your wifi <strong>password</strong>.</p>
+
+<p>Click <strong>Save</strong> to save the settings. The controller will restart.</p>
+
+<p>Wifi only needs to be configured on the remote control, the ftSwarmControl. If you wish, you can also configure the wifi on the receivers. This is done via the serial console. When connecting the controllers in the next step, the ftSwarmControl can do that job and transfer the wifi settings to the receivers.</p>
+
+<p>For more information on configuring the wifi, see <a href="../../firmware/ftSwarmControl/wifi">here</a>.</p>
+
+<h3 id="connect-the-receiver">Connect the receiver</h3>
+
+<p>To control one or more receivers, they must be connected to the ftSwarmControl. They then form a swarm.</p>
+
+<p>Go to <strong>Setup</strong> and select the <strong>Swarm Config</strong> menu item. The swarm configuration screen displays the members of the swarm:</p>
+
+<p><img src="/assets/img/ftSwarmControl/swarm/list-en.png" alt="Home" class="align-center" style="width: 25%;" /></p>
+
+<p>Use the <strong>add</strong> and <strong>del</strong> buttons to add or delete additional controllers/receivers.</p>
+
+<p>If the new controller’s wifi has not yet been configured, ftSwarmControl can transfer wifi settings to the receiver. To do this, the receiver must be in its default state (<a href="../../firmware/factoryreset">Factory Settings</a>). During this process, the wifi password is transmitted once in plain text.</p>
+
+<p>For more information on configuring the Swarm, see <a href="../../firmware/ftSwarmControl/swarm">here</a>.</p>
+
+<h3 id="specify-function">Specify Function</h3>
+
+<p>In the final step, you must assign a function to your controller — which control element of the ftSwarmControl should control which motor, servo, or LED?</p>
+
+<p>Go to <strong>Settings</strong> and select the <strong>Remote Control</strong> menu item:</p>
+
+<p><img src="/assets/img/ftSwarmControl/remote/remote-en.png" alt="Home" class="align-center" style="width: 25%;" /></p>
+
+<p>Press <strong>SET</strong> to change the function. First, select the controller for which you want to assign a function:</p>
+
+<p><img src="/assets/img/ftSwarmControl/remote/controller.png" alt="Home" class="align-center" style="width: 25%;" /></p>
+
+<p>Next, select the controller’s function:</p>
+
+<p><img src="/assets/img/ftSwarmControl/remote/type-en.png" alt="Home" class="align-center" style="width: 25%;" /></p>
+
+<p>The firmware now determines which motor is controlled by which control element.</p>
+
+<hr />
+
+<style>
+  .options-group { display: flex; gap: 20px; margin-bottom: 20px; justify-content: center; }
+  .options-group label { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+  .vehicle-content { display: flex; flex-wrap: wrap; gap: 20px; }
+  .vehicle-content div { flex: 0 0 calc((100% - (2 * 20px)) / 3); }
+  .vehicle-content img { width: 100%; height: auto; display: block; }
+  .vehicle-content img:hover { transform: scale(1.5); }
+  .hidden { display: none !important; }
+</style>
+
+<div class="options-group">
+  <p>Select the desired model function:</p>
+  <label><input type="radio" name="vehicle" value="IDCAR" onclick="toggleVehicle(this.value)" checked="" /><p>Car</p></label>
+  <label><input type="radio" name="vehicle" value="IDCATAPILLAR" onclick="toggleVehicle(this.value)" /><p>Catapillar</p></label>
+  <label><input type="radio" name="vehicle" value="IDCRANE" onclick="toggleVehicle(this.value)" /><p>Crane</p></label>
+  <label><input type="radio" name="vehicle" value="IDTRAILER" onclick="toggleVehicle(this.value)" /><p>Trailer</p></label>
+</div>
+
+<div id="IDCAR" class="vehicle-content">
+  <div>
+    <div><img src="/assets/img/ftSwarmControl/remote/car-rs.png" /></div>
+    <div><p class="headline">ftSwarmRS</p></div>
+  </div>
+  <div>
+    <div><img src="/assets/img/ftSwarmControl/remote/car-rc.png" /></div>
+    <div><p class="headline">ftSwarmRC</p></div>
+  </div>
+  <div>
+    <div><img src="/assets/img/ftSwarmControl/remote/car-jst.png" /></div>
+    <div><p class="headline">ftSwarmJST</p></div>
+  </div>
+</div>
+
+<div id="IDCATAPILLAR" class="vehicle-content hidden">
+  <div>
+    <div><img src="/assets/img/ftSwarmControl/remote/catapillar-rs.png" /></div>
+    <div><p class="headline">ftSwarmRS</p></div>
+  </div>
+  <div>
+    <div><img src="/assets/img/ftSwarmControl/remote/catapillar-rc.png" /></div>
+    <div><p class="headline">ftSwarmRC</p></div>
+  </div>
+  <div>
+    <div><img src="/assets/img/ftSwarmControl/remote/catapillar-xl.png" /></div>
+    <div><p class="headline">ftSwarmXL</p></div>
+  </div>
+  <div>
+    <div><img src="/assets/img/ftSwarmControl/remote/catapillar-jst.png" /></div>
+    <div><p class="headline">ftSwarmJST</p></div>
+  </div>
+  <div>
+    <div><img src="/assets/img/ftSwarmControl/remote/catapillar-duino.png" /></div>
+    <div><p class="headline">ftSwarmDuino</p></div>
+  </div>
+</div>
+
+<div id="IDCRANE" class="vehicle-content hidden">
+  <div>
+    <div><img src="/assets/img/ftSwarmControl/remote/crane-rs.png" /></div>
+    <div><p class="headline">ftSwarmRS</p></div>
+  </div>
+  <div>
+    <div><img src="/assets/img/ftSwarmControl/remote/crane-rc.png" /></div>
+    <div><p class="headline">ftSwarmRC</p></div>
+  </div>
+  <div>
+    <div><img src="/assets/img/ftSwarmControl/remote/crane-xl.png" /></div>
+    <div><p class="headline">ftSwarmXL</p></div>
+  </div>
+  <div>
+    <div><img src="/assets/img/ftSwarmControl/remote/crane-jst.png" /></div>
+    <div><p class="headline">ftSwarmJST</p></div>
+  </div>
+  <div>
+    <div><img src="/assets/img/ftSwarmControl/remote/crane-duino.png" /></div>
+    <div><p class="headline">ftSwarmDuino</p></div>
+  </div>
+</div>
+
+<div id="IDTRAILER" class="vehicle-content hidden">
+  <div>
+    <div><img src="/assets/img/ftSwarmControl/remote/trailer-rs.png" /></div>
+    <div><p class="headline">ftSwarmRS</p></div>
+  </div>
+  <div>
+    <div><img src="/assets/img/ftSwarmControl/remote/trailer-rc.png" /></div>
+    <div><p class="headline">ftSwarmRC</p></div>
+  </div>
+  <div>
+    <div><img src="/assets/img/ftSwarmControl/remote/trailer-xl.png" /></div>
+    <div><p class="headline">ftSwarmXL</p></div>
+  </div>
+  <div>
+    <div><img src="/assets/img/ftSwarmControl/remote/trailer-jst.png" /></div>
+    <div><p class="headline">ftSwarmJST</p></div>
+  </div>
+  <div>
+    <div><img src="/assets/img/ftSwarmControl/remote/trailer-duino.png" /></div>
+    <div><p class="headline">ftSwarmDuino</p></div>
+  </div>
+</div>
+
+<script>
+function toggleVehicle(selectedId) {
+  const panels = document.querySelectorAll('.vehicle-content');
+            
+  panels.forEach(panel => {
+    if (panel.id === selectedId) {
+      panel.classList.remove('hidden');
+    } else {
+      panel.classList.add('hidden');
+    }
+  });
+}
+</script>
+
+
+
+
+<div class="entries-list">
+  
+</div>
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<script src="/assets/js/copy-code.js"></script>
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/elektrofuzzis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://instagram.com/elektrofuzzies" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+        
+          <li><a href="mailto:ftpi@gmx.de" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

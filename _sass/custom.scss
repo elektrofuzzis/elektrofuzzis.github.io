@@ -321,13 +321,53 @@ details p {
 	transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
-.plus {
+.black {
+	color: black;
+	font-weight: bold;
+}
+
+.red {
 	color: red;
 	font-weight: bold;
 }
 
-.minus {
+.green {
 	color: green;
+	font-weight: bold;
+}
+
+.blue {
+	color: blue($color: #000000);
+	font-weight: bold;
+}
+
+.yellow {
+	color: yellow;
+	font-weight: bold;
+}
+
+.orange {
+	color: darkorange;
+	font-weight: bold;
+}
+
+.cyan {
+	color: cyan;
+	font-weight: bold;
+}
+
+.pink {
+	color: pink;
+	font-weight: bold;
+}
+
+.magenta {
+	color: magenta;
+	font-weight: bold;
+}
+
+.gray {
+	color: lightgray;
 	font-weight: bold;
 }
 
@@ -342,4 +382,79 @@ details p {
 
 .centershock {
 	text-align: center;
+}
+
+/* Codeblock-Copy-Button */
+
+.code-block-wrapper {
+  position: relative;
+  margin-bottom: 1.25em;
+}
+
+.code-block-wrapper .highlight {
+  margin-bottom: 0;
+}
+
+.copy-code-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.15s ease, background-color 0.15s ease;
+  z-index: 10;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.copy-code-button:focus,
+.copy-code-button:focus-visible,
+.copy-code-button:active {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.copy-code-button:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.copy-code-button:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.copy-code-button svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+/* keyboard element, e.g. <strg> */
+
+kbd {
+  display: inline-block;
+  padding: 3px 6px;
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.8em;
+  font-weight: 600;
+  line-height: 1;
+  color: #c9d1d9;
+  background-color: #21262d;
+  border: 1px solid #30363d;
+  border-bottom-color: #8b949e; /* Dezent dunklerer/dickerer Unterrand für 3D-Effekt */
+  border-radius: 4px;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
 }

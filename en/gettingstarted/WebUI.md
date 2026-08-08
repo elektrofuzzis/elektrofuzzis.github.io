@@ -4,56 +4,54 @@ lang:  en
 classes: wide
 layout: category
 sidebar:
-    nav: manual-en
+    nav: gettingstarted-en
 ---
 
 To get several ftSwarm controllers to act as a swarm, they must communicate with each other. This usually takes place via wifi, the ftSwarmRS is able to communicate via RS485, too. Additionally the status page of the controller can be accessed via wifi. Here the the input signals are shown; motors, servos and LEDs can be controlled manually.
 
 Wifi configuration needs a USB connection. Start a terminal program as described before and boot the controller via the reset button.
 
-The controller now shows its boot message. Press any key, so that you enter the configuration menu of the ftSwarm firmware:
+The controller now shows its boot message. Enter **setup**, to start the configuration menu of the ftSwarm firmware:
 
 ```
-ftSwarmOS 0.5.0
+***** Main Menu *****
 
-(C) Christian Bergschneider & Stefan Fuss
+(w)  Wifi & Local Settings
+(s)  Swarm Configuration
+(i)  IO Configuration
+(r)  Remote/Event Configuration
+(f)  Factory Reset
 
-Main Menu
+(x)  Exit
 
-(1) wifi & Web UI
-(2) swarm configuration
-(3) alias names
-(4) factory reset
-(5) remoteControl
-(6) extention port
-
-(0) exit
-main>
+setup>
 ```
 
-Choose  **(1) Wifi & WebUI**. Configure *CLIENT-MODE* and add you wifi's credentials:
+Choose  **(w) Wifi & Local Settings**.
 
 ```
-Wifi & WebUI
+***** Wifi & Local Settings *****
 
-(1) wifi:           CLIENT-MODE
-(2) SSID:           <WLAN-Name/SSID>
-(3) Password:       <WLAN-Passwort>
-(4) Web UI:         on
-(5) ftPixels in UI: 2
+hostname:            ftSwarm1010
+ip-address:          172.16.16.111
 
-(0) exit
-Wifi & WebUI>
+(w)  wifi mode: Client-Mode
+(s)  SSID: Elektrofuzzis24
+(p)  Password: *****
+(u)  Web UI: on
+(g)  Gyro: off
+
+(x)  Exit
+
+wifi>
 ```
 
-Use **(0)** to save your changes. The controller will restart and connect to your local wifi..
+set **"(w) wifi mode"** to **Client-Mode**. Enter your wifi credentials using **"(s) SSID"** and **"(p) Password"**.
 
-You could now access the statuspage by **`http:\\ftSwarm<SerialNumber>`**. Replace <SerialNumber> with the serial number of your ftSwarm controller.
+Use **"(x) Exit"** to save your changes. The controller will restart and connect to your local wifi.
 
-![Monitoring ftSwarm](../../assets/img/ftSwarm_Monitor.png)
+You could now access the statuspage by **`http:\\ftSwarm<SerialNumber>`**. Replace <SerialNumber> with the serial number of your ftSwarm controller. You could use the show IP address as well.
 
-*In case of any problem, please check*
-- *if your browser has java script enabled*
-- *and your wifi allows a direct peer-to-peer communication.*
+![Monitoring ftSwarm](/assets/img/ftSwarm_Monitor.png)
 
-To operate the actuators such as motors, you need to log in to the controller using the LOGIN button. Thereby the swarm pin is requested, by default this is the 4-digit serial number of the controller (in the example 0100).
+To operate the actuators such as motors, you need to log in to the controller using the LOGIN button. Thereby the swarm pin is requested, by default this is the 4-digit serial number of the controller (in the example 1010).

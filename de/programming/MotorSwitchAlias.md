@@ -1,5 +1,5 @@
 ---
-title: Alias Names
+title: Alias Namen
 layout: category
 lang: de
 classes: wide
@@ -16,54 +16,95 @@ Bislang wurden die IOs in den Beispielen über die Seriennummer des ftSwarm und 
 
 Das Beispiel nutzt den gleichen Aufbau wie zuvor:
 
-Erster Controller:
-- Der Taster wird am Eingang A1 angeschlossen.
-- Ein 9V Netzteil wird an PWR angeschlossen.
+![Home](/assets/img/examples/motor_switch_swarm.png)
 
-Zweiter Controller:
-- Ein Motor oder eine Lampe werden am Ausgang M2 angeschlossen.
-- Ein 9V Netzteil wird an PWR angeschlossen.
-
-Es müssen nun zunächst Aliasnamen für den Switch und den Motor vergeben werden. Dazu muss die Standradfirmware geladen sein. Über die die Terminalemulation im Hautpmenü **(3) alias names** auswählen:
+Es müssen nun zunächst Aliasnamen für den Switch und den Motor vergeben werden. Dazu muss die Standradfirmware geladen sein. Starten Sie eine serielle Konsole und wechseln mit **setup** in die Firmware. Wählen Sie dort **"(i)  IO-Konfiguration"**.
 
 ```
-alias controler menu:
+***** IO-Konfiguration *****
 
-( 1) hostname ftSwarm100 - 
-( 2) A1   - switch                                 
-( 3) A2   -                                 
-( 4) A3   -                                 
-( 5) A4   -                                 
-( 6) A5   -                                 
-( 7) A6   -                                 
-( 8) M1   -                                 
-( 9) M2   -                                 
-(10) LED1 -                                 
-(11) LED2 -                                 
-(12) SERVO -                                 
+     Name               Typ             Events Alias
+( 1) A1                 DigitalInput    0        
+( 2) A2                 DigitalInput    0        
+( 3) A3                 DigitalInput    0        
+( 4) A4                 DigitalInput    0        
+( 5) A5                 DigitalInput    0        
+( 6) A6                 DigitalInput    0        
+( 8) PWRCTL             Powersensor     0        
+( 9) ftSwarm1011.A1     DigitalInput    0        
+(10) ftSwarm1011.A2     DigitalInput    0        
+(11) ftSwarm1011.A3     DigitalInput    0        
+(12) ftSwarm1011.A4     DigitalInput    0        
+(13) ftSwarm1011.A5     DigitalInput    0        
+(14) ftSwarm1011.A6     DigitalInput    0        
+(15) ftSwarm1011.PWRCTL Powersensor     0   
 
-(0) exit
-alias>
+(a)  Aktoren
+(p)  Pixel/LEDs
+
+(x)  Beenden
+
+IO-Konfiguration>
 ```
 
- Am ersten Controller muss für **A1** der Name **switch** eingestellt werden, am zweiten Controller für **M2** der Name **motor**. Das Beispielprogramm kann von **Example/MotorSwitchAlias** übernommen werden:
+Am zweiten Controller muss für **A1** der Name **switch** eingestellt werden. Wählen Sie deshalb **"( 9) ftSwarm1011.A1"** um den Port zu konfigurieren.
+
+```
+***** A1 *****
+
+     Name:       A1
+(t)  IO-Typ:     DigitalInput
+(a)  Alias
+
+(+)  neues Event
+(s)  Konfiguration wechseln
+
+(x)  Beenden
+
+IO-Konfiguration/A1>
+```
+
+Wählen Sie **"("a)  Alias"** und vergeben den Alias-Namen **switch**. Kehren Sie mit **(x)  Beenden** in das Menu **IO Konfiguration zurück**.
+
+Am ersten Controller muss nun der Motor **M2** den Alias-Namen **motor** bekommen. Schalten Sie mit **"(a)  Aktoren"** die Darstellung von den Sensoren auf die Aktoren um:
+
+```
+***** IO-Konfiguration *****
+
+     Name               Typ             Events Alias
+( 1) M1                 Motor           0        
+( 2) M2                 Motor           0        
+( 3) SERVO1             Servo           0        
+( 4) SERVO2             Servo           0        
+( 5) ftSwarm1011.M1     Motor           0        
+( 6) ftSwarm1011.M2     Motor           0        
+( 7) ftSwarm1011.SERVO1 Servo           0        
+( 8) ftSwarm1011.SERVO2 Servo           0        
+
+(i)  Eingänge
+(p)  Pixel/LEDs
+
+(x)  Beenden
+
+IO-Konfiguration>
+```
+
+Wählen Sie mit **"( 1) M1"** den Motor aus und vergeben den Alias-Namen **motor**. Beenden Sie mit zweimal **(x)  Beenden** die Port- und die IO-Konfiguration. Beim Verlassen der IO-Konfiguration bestätigen Sie **"Änderungen speichern? (J/N)?"** mit "**J**.
 
 ```cpp
-#include <ftSwarmRS.h>
+#include <ftSwarm.h>
 
 FtSwarmSwitch *sw;
-FtSwarmMotor  *mot;
+FtSwarmSMotor *mot;
 
 void setup( ) {
-
-  Serial.begin(115200);
 
   // start the swarm
   FtSwarmSerialNumber_t local = ftSwarm.begin( );
   
   // get switch and motor instances
   sw  = new FtSwarmSwitch( "switch" );
-  mot = new FtSwarmMotor( "motor" );
+  mot = new FtSwarmSMotor( "motor" );
 
 }
 
@@ -71,7 +112,7 @@ void loop( ) {
 
   // check if switch is pressed or released
   if ( sw->isPressed() )
-    mot->setSpeed(255);
+    mot->setSpeed(100);
   else
     mot->setSpeed(0);
   

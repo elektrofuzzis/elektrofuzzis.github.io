@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Manual -</title>
-<meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
+<!-- begin _includes/seo.html --><title>Inbetriebnahme -</title>
+<meta name="description" content="">
 
 
   <meta name="author" content="The ftSwarm Project">
@@ -20,11 +20,9 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="">
-<meta property="og:title" content="Manual">
+<meta property="og:title" content="Inbetriebnahme">
 <meta property="og:url" content="http://localhost:4000/de/gettingstarted/gettingstarted/">
 
-
-  <meta property="og:description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
 
@@ -66,8 +64,6 @@
 <!-- end _includes/seo.html -->
 
 
-
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title=" Feed">
 
 
 <!-- https://t.co/dKP3o1e -->
@@ -115,40 +111,75 @@
         </a>
 
         <!-- original stuff 
-        <ul class="visible-links"></ul>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
         end original stuff-->
-
-        <script>
-          function callRef( url ) {
-            if ( location.pathname.startsWith('/en/') ) {
-              location.href='/en/'+url;
-            } else {
-              location.href='/de/'+url;
-            }
-          }
-        </script>
 
         <ul class="visible-links">
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('gettingstarted/gettingstarted')" title="Manual">Manual</a>
+            <a id="gettingstarted" href="/en/gettingstarted/gettingstarted" title="Getting Started">Getting Started</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('cpp-api/index')" title="api">api</a>
+            <a id="programming" href="/en/programming/manual" title="C++ Manual">C++ Manual</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('products/index')" title="Products">Products</a>
+            <a id="remote" href="/en/remote/remote" title="Remote Control">Remote Control</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('faq')" title="FAQ">FAQ</a>
+            <a id="firmware" href="/en/firmware/flash" title="firmware">Firmware</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="api" href="/en/cpp-api/index" title="api">api</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="products" href="/en/products/index" title="Products">Products</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="faq" href="/en/faq" title="FAQ">FAQ</a>
           </li>
         </ul>
 
+        <!-- Translation -->
+        <script>
+          if ( location.pathname.startsWith('/de/') ) {
+
+            const gettingstarted = document.getElementById("gettingstarted");
+            gettingstarted.title = "Inbetriebnahme";
+            gettingstarted.innerHTML = "Inbetriebnahme";
+            gettingstarted.href = "/de/gettingstarted/gettingstarted"
+            
+            const programming = document.getElementById("programming");
+            programming.title = "C++ Handbuch";
+            programming.innerHTML = "C++ Handbuch";
+            programming.href = "/de/programming/manual"
+
+            const remote = document.getElementById("remote");
+            remote.title = "Fernsteuerung";
+            remote.innerHTML = "Fernsteuerung";
+            remote.href = "/de/remote/remote"
+
+            const firmware = document.getElementById("firmware");
+            firmware.href = "/de/firmware/flash"
+
+            const api = document.getElementById("api");
+            api.href = "/de/cpp-api/index"
+
+            const faq = document.getElementById("faq");
+            faq.href = "/de/faq"
+
+            const products = document.getElementById("products");
+            products.title = "Produkte";
+            products.innerHTML = "Produkte";
+            products.href = "/de/products/index"
+                      }
+        </script>
+
 
         <!-- language picker -->
+        <a href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
+        <a href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
 
-        <a class="alang" href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
-        <a class="alang" href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
-        
         <!-- language picker -->
 
         
@@ -190,121 +221,23 @@
     
       <li>
         
-          <span class="nav__sub-title">Manual</span>
-        
-
-        
-      </li>
-    
-      <li>
-        
           <span class="nav__sub-title">Inbetriebnahme</span>
         
 
         
         <ul>
           
-            <li><a href="/de/gettingstarted/pinout">Anschlüsse</a></li>
+            <li><a href="/de/gettingstarted/gettingstarted">Einleitung</a></li>
+          
+            <li><a href="/de/gettingstarted/pinout">Pinout</a></li>
           
             <li><a href="/de/gettingstarted/serial">USB Anschluss</a></li>
           
+            <li><a href="/de/gettingstarted/ledstatus">LED Statusanzeige</a></li>
+          
             <li><a href="/de/gettingstarted/WebUI">WLAN & Statusseite</a></li>
           
-            <li><a href="/de/gettingstarted/ide">Installation IDE</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Programmierung</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/de/programming/MotorSwitch">Das erste Programm</a></li>
-          
-            <li><a href="/de/programming/kelda">Das Kelda Prinzip</a></li>
-          
-            <li><a href="/de/programming/MotorSwitchSwarm">Ein erster Schwarm</a></li>
-          
-            <li><a href="/de/programming/MotorSwitchAlias">Alias Namen</a></li>
-          
-            <li><a href="/de/programming/switches">Switches & Buttons</a></li>
-          
-            <li><a href="/de/programming/RemoteControl">Fernbedienung</a></li>
-          
-            <li><a href="/de/programming/EventControlled">Events</a></li>
-          
-            <li><a href="/de/programming/FtSwarmPixel">RGB LEDs & FtSwarmPixel</a></li>
-          
-            <li><a href="/de/programming/FtSwarmOLED">OLED Display</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <a href="/de/rs485/rs485"><span class="nav__sub-title">RS485</span></a>
-        
-
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Extension Port</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/de/extensionPort/index">Einführung</a></li>
-          
-            <li><a href="/de/extensionPort/I2CMaster">I²C Breakout-Boards</a></li>
-          
-            <li><a href="/de/extensionPort/I2CSlave">I²C TX-/TXT Kommunikation</a></li>
-          
-            <li><a href="/de/extensionPort/gyro">Gyro</a></li>
-          
-            <li><a href="/de/extensionPort/outputs">Motorausgänge</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Firmware</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/de/firmware/Configuration">Konfiguration</a></li>
-          
-            <li><a href="/de/firmware/firmware">Firmware & Updates</a></li>
-          
-            <li><a href="/de/firmware/versions">Versionen</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Advanced</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/de/advanced/PlatformIO">PlatformIO & VSCode</a></li>
-          
-            <li><a href="/de/advanced/debugging">Debugging</a></li>
+            <li><a href="/de/gettingstarted/rs485">RS485</a></li>
           
         </ul>
         
@@ -321,58 +254,23 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">Manual</h1>
+      <h1 id="page-title" class="page__title">Inbetriebnahme</h1>
     
-    <p>Dieses Manual erklärt die grundlegende Benutzung und Programmierung der ftSwarm-Controller. Wir empfehlen deshalb, zunächst das Manual Kapitel für Kapitel zu lesen und die Beispiele nachzustellen. In der <a href="../../cpp-api/index">API-Referenz</a> werden die verschiedenen Klassen im Detail sowie das Anschlussschema der verschiedenen Sensoren und Aktoren erklärt.</p>
+    <p>Bevor Sie Ihren ftSwarm-Controller in Ihrem Modell einsetzen, sollten Sie sich zunächst mit der grundsätzlichen Benutzung der Controller auseinandersetzen:</p>
 
-<ol>
-  <li>Inbetriebnahme
-    <ul>
-      <li><a href="../pinout">Lerne die Anschlüsse der ftSwarm-Familie kennen.</a></li>
-      <li><a href="../serial">Den ftSwarm-Controller über USB mit dem PC verbinden</a></li>
-      <li><a href="../WebUI">Das WLAN konfigurieren und die Statusseite benutzen</a></li>
-      <li><a href="../ide">Installation der IDE</a></li>
-    </ul>
-  </li>
-  <li>Programmierung in C++
-    <ul>
-      <li><a href="../../programming/MotorSwitch">Das erste Programm auf einem ftSwarm Controller</a></li>
-      <li><a href="../../programming/kelda">Das Kelda Prinzip</a></li>
-      <li><a href="../../programming/MotorSwitchSwarm">Der erste Schwarm</a></li>
-      <li><a href="../../programming/MotorSwitchAlias">Aliasnamen machen das Programm lesbarer</a></li>
-      <li><a href="../../programming/switches">Buttons, Switches und Toggles</a></li>
-      <li><a href="../../programming/RemoteControl">Eine Fernbedienung ohne eine Zeile Code</a></li>
-      <li><a href="../../programming/EventControlled">Einfache Programmierung durch Events</a></li>
-      <li><a href="../../programming/FtSwarmPixel">RGB LEDs &amp; ftPixel</a></li>
-      <li><a href="../../programming/FtSwarmOLED">OLED Display</a></li>
-    </ul>
-  </li>
-  <li>
-    <p><a href="../../rs485/rs485">Den ftSwarm über RS485 verbinden</a></p>
-  </li>
-  <li>Extension Port
-    <ul>
-      <li><a href="../../extensionPort/index">Einführung</a></li>
-      <li><a href="../../extensionPort/I2CMaster">I²C Breakout Boards</a></li>
-      <li><a href="../../extensionPort/I2CSlave">I²C TX-/TXT-Kommunikation</a></li>
-      <li><a href="../../extensionPort/gyro">Gyro</a></li>
-      <li><a href="../../extensionPort/outputs">Motorausgänge</a></li>
-    </ul>
-  </li>
-  <li>Firmware &amp; Versionen
-    <ul>
-      <li><a href="../../firmware/Configuration">Konfiguration komplett</a></li>
-      <li><a href="../../firmware/firmware">Firmware &amp; Updates</a></li>
-      <li><a href="../../firmware/versions">Versionen</a></li>
-    </ul>
-  </li>
-  <li>Advanced
-    <ul>
-      <li><a href="../../advanced/PlatformIO">Programmierung mit PlatformIO &amp; VSCode</a></li>
-      <li><a href="../../advanced/debugging">Programme auf dem ftSwarm debuggen</a></li>
-    </ul>
-  </li>
-</ol>
+<ul>
+  <li><a href="../pinout">Lernen Sie die Anschlüsse der ftSwarm-Familie kennen.</a></li>
+  <li><a href="../serial">Verbinden Sie ftSwarm-Controller über USB mit dem PC</a></li>
+  <li><a href="../ledstatus">Verstehen Sie die Statusanzeige über die RGB-LEDs</a></li>
+  <li><a href="../WebUI">Konfigurieren Sie das WLAN und benutzen Sie die Statusseite</a></li>
+</ul>
+
+<p>Wie geht es weiter?</p>
+<ul>
+  <li>Im <a href="../../programming/manual">C++ Handbuch</a> wird anhand einfacher Beispielmodelle die Programmierung erklärt. Die <a href="../../cpp-api/index">api Referenz</a> beschreibt die Programmierung aller Sensoren und Aktoren im Detail.</li>
+  <li>Sie möchten mit dem ftSwarmControl ohne Programmierung Ihre Modelle fernsteuern? Dann lesen Sie das Kapitel <a href="../../remote/remote">Fernsteuerung</a>.</li>
+  <li><a href="../../firmware/configuration">Firmware</a> beschreibt die Einstellmöglichkeiten der Firmware im Detail und hilft Ihnen beim <a href="../../firmware/flash">Flashen</a> der Firmware.</li>
+</ul>
 
 <h3 id="einsatzgebiet--gewährleistung">Einsatzgebiet &amp; Gewährleistung</h3>
 
@@ -385,7 +283,7 @@
   <li>Bitte testen Sie die zur Verfügung gestellte Soft- und Hardware um sicherzustellen, dass sie den Anforderungen Ihres Projektes gerecht werden.</li>
 </ul>
 
-<p class="notice--info">Die ftSwam Controller sind als Hobbyprojekt entstanden. Entsprechend gibt es Einschränkungen und Fehler. Jede Gewährleistung auf die hier vorgestellte Soft- und Hardware ist ausgeschlossen.</p>
+<p class="notice--info">Die ftSwam-Controller sind als Hobbyprojekt entstanden. Entsprechend gibt es Einschränkungen und Fehler. Jede Gewährleistung auf die hier vorgestellte Soft- und Hardware ist ausgeschlossen.</p>
 
 
 
@@ -402,7 +300,7 @@
     <div id="footer" class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
-
+<script src="/assets/js/copy-code.js"></script>
 <!-- end custom footer snippets -->
         <div class="page__footer-follow">
   <ul class="social-icons">
@@ -435,12 +333,10 @@
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
-    
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2026 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

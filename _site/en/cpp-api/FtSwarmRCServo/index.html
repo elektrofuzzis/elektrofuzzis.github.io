@@ -1,0 +1,505 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>FtSwarmRCServo -</title>
+<meta name="description" content="">
+
+
+  <meta name="author" content="The ftSwarm Project">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="">
+<meta property="og:title" content="FtSwarmRCServo">
+<meta property="og:url" content="http://localhost:4000/en/cpp-api/FtSwarmRCServo/">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/en/cpp-api/FtSwarmRCServo/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "The ftSwarm Project",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--category wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/img/ftSwarm.svg" alt=""></a>
+        
+          <a class="site-title" href="/">
+          
+          
+        </a>
+
+        <!-- original stuff 
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
+        end original stuff-->
+
+        <ul class="visible-links">
+          <li class="masthead__menu-item">
+            <a id="gettingstarted" href="/en/gettingstarted/gettingstarted" title="Getting Started">Getting Started</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="programming" href="/en/programming/manual" title="C++ Manual">C++ Manual</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="remote" href="/en/remote/remote" title="Remote Control">Remote Control</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="firmware" href="/en/firmware/flash" title="firmware">Firmware</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="api" href="/en/cpp-api/index" title="api">api</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="products" href="/en/products/index" title="Products">Products</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="faq" href="/en/faq" title="FAQ">FAQ</a>
+          </li>
+        </ul>
+
+        <!-- Translation -->
+        <script>
+          if ( location.pathname.startsWith('/de/') ) {
+
+            const gettingstarted = document.getElementById("gettingstarted");
+            gettingstarted.title = "Inbetriebnahme";
+            gettingstarted.innerHTML = "Inbetriebnahme";
+            gettingstarted.href = "/de/gettingstarted/gettingstarted"
+            
+            const programming = document.getElementById("programming");
+            programming.title = "C++ Handbuch";
+            programming.innerHTML = "C++ Handbuch";
+            programming.href = "/de/programming/manual"
+
+            const remote = document.getElementById("remote");
+            remote.title = "Fernsteuerung";
+            remote.innerHTML = "Fernsteuerung";
+            remote.href = "/de/remote/remote"
+
+            const firmware = document.getElementById("firmware");
+            firmware.href = "/de/firmware/flash"
+
+            const api = document.getElementById("api");
+            api.href = "/de/cpp-api/index"
+
+            const faq = document.getElementById("faq");
+            faq.href = "/de/faq"
+
+            const products = document.getElementById("products");
+            products.title = "Produkte";
+            products.innerHTML = "Produkte";
+            products.href = "/de/products/index"
+                      }
+        </script>
+
+
+        <!-- language picker -->
+        <a href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
+        <a href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
+
+        <!-- language picker -->
+
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">C++ API</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/cpp-api/index">Overview</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Analog Sensors</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/cpp-api/analogSensors">Overview</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmJoystick">Joystick</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmLDR">Phototransistor/Resistor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmOhmmeter">Ohmmeter</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmThermometer">Thermometer</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmVoltmeter">Voltmeter</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Digital Sensors</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/cpp-api/digitalSensors">Overview</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmButton">ftSwarmControl Button</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmLightBarrier">Light Barrier / Photo Transistor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmReedSwitch">Reed Switch</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmSwitch">Switch</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmCounter/">Counter</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmFrequencyMeter/">Frequency</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmRotaryEncoder/">Rotary</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">LEDs, Lamps & Displays</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/cpp-api/leds">Overview</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmPixel">ftPixel</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmLamp">Lamp</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmOLED">OLED</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Motors</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/cpp-api/motors">Overview</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmMiniMotor">Mini-Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmMotor">M-Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmSMotor">S-Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmXMMotor">XM-Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmXSMotor">XS-Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmTractorMotor">Traktor Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmEncoderMotor">Encoder Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmStepperMotor">Stepper Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmRCMotor">RC-Motor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmWheelDrive">Wheel Drive</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Other Actors</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/cpp-api/otherActors">Overview</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmBuzzer">Buzzer</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmCompressor">Compressor</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmServo">Servo</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmRCServo">RC-Servo</a></li>
+          
+            <li><a href="/en/cpp-api/FtSwarmValve">Valve</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">FtSwarmRCServo</h1>
+    
+    <div class="apicontainer">
+    <div class="apileft">
+        This class is used to control a fischertechnik RC servo on the ftSwarmRC.<br /><br />
+        The commands of this class set the angle of the servo lever.<br /><br />
+    </div>
+    <div class="apiright apiimg"><img title="Image source: fischertechnik" src="/assets/img/otherActors/motor-rcservo.png" />RC Servo (31495)</div>
+</div>
+
+<p>RC servos consist of a potentiometer for angle measurement and a motor. Unlike newer servos, control does not take place within the servo itself, but rather via the ftSwarmRC controller. If the RC servo does not respond to control commands, reverse the polarity of the motor control.</p>
+
+<p>To simplify servo control, there are two parameters:</p>
+<ul>
+  <li><strong>Offset</strong> is used to trim the zero position of the servo lever. It is, therefore, the electronic equivalent of the trim wheel on the BT Control Set.</li>
+  <li><strong>Position</strong> is used to actually control the angle within the application.</li>
+</ul>
+
+<h4 id="ftswarmrcservoftswarmserialnumber_t-serialnumber-ftswarmport_t-port">FtSwarmRCServo(FtSwarmSerialNumber_t serialNumber, FtSwarmPort_t port)</h4>
+
+<p>Constructor to create an FtSwarmRCServo object. If the specified controller is not online, the firmware waits until the corresponding controller is started.</p>
+
+<ul>
+  <li>serialNumber: Serial number of the ftSwarm controller.</li>
+  <li>port: <strong>FTSWARM_SERVO1</strong> through <strong>FTSWARM_SERVO4</strong></li>
+</ul>
+
+<h4 id="ftswarmrcservo-const-char-name-">FtSwarmRCServo( const char *name )</h4>
+
+<p>Constructor to create an FtSwarmRCServo object. If the specified controller is not online, the firmware waits until the corresponding controller is started.</p>
+
+<ul>
+  <li>name: Alias name of the I/O port.</li>
+</ul>
+
+<h4 id="void-setposition-int16_t-position-">void setPosition( int16_t position )</h4>
+
+<p>Sets the position or angle of the servo arm.</p>
+
+<ul>
+  <li>position: Value between -45 and 45.</li>
+</ul>
+
+<h4 id="int16_t-getposition">int16_t getPosition()</h4>
+
+<p>Returns the position or angle of the servo arm.</p>
+
+<h4 id="void-setoffset-int16_t-offset-">void setOffset( int16_t offset )</h4>
+
+<p>Sets the zero position of the servo arm. The default value is 45 for a center position.</p>
+
+<ul>
+  <li>offset: Value between 0 and 90.</li>
+</ul>
+
+<h4 id="int16_t-getoffset">int16_t getOffset()</h4>
+
+<p>Returns the offset or zero position of the servo arm.</p>
+
+
+
+<div class="entries-list">
+  
+</div>
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<script src="/assets/js/copy-code.js"></script>
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/elektrofuzzis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://instagram.com/elektrofuzzies" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+        
+          <li><a href="mailto:ftpi@gmx.de" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,15 @@
+[
+  {
+    "version": "0.7.0",
+    "devices": [
+      "ftSwarmRS",
+      "ftSwarmRC",
+      "ftSwarmControlUSBMicro",
+      "ftSwarmControlUSBC",
+      "ftSwarmDuino",
+      "ftSwarmPwrDrive",
+      "ftSwarmJST"
+    ],
+    "languages": ["en", "de"]
+  }
+]

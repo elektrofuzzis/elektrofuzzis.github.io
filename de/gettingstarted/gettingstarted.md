@@ -1,48 +1,23 @@
 ---
-title: Manual
+title: Inbetriebnahme
 Lang:  de
 layout: category
 classes: wide
 sidebar:
-    nav: manual-de
+    nav: gettingstarted-de
 ---
 
-Dieses Manual erklärt die grundlegende Benutzung und Programmierung der ftSwarm-Controller. Wir empfehlen deshalb, zunächst das Manual Kapitel für Kapitel zu lesen und die Beispiele nachzustellen. In der [API-Referenz](../../cpp-api/index) werden die verschiedenen Klassen im Detail sowie das Anschlussschema der verschiedenen Sensoren und Aktoren erklärt.
+Bevor Sie Ihren ftSwarm-Controller in Ihrem Modell einsetzen, sollten Sie sich zunächst mit der grundsätzlichen Benutzung der Controller auseinandersetzen:
 
-1. Inbetriebnahme
-- [Lerne die Anschlüsse der ftSwarm-Familie kennen.](../pinout)
-- [Den ftSwarm-Controller über USB mit dem PC verbinden](../serial)
-- [Das WLAN konfigurieren und die Statusseite benutzen](../WebUI)
-- [Installation der IDE](../ide)
+- [Lernen Sie die Anschlüsse der ftSwarm-Familie kennen.](../pinout)
+- [Verbinden Sie ftSwarm-Controller über USB mit dem PC](../serial)
+- [Verstehen Sie die Statusanzeige über die RGB-LEDs](../ledstatus)
+- [Konfigurieren Sie das WLAN und benutzen Sie die Statusseite](../WebUI)
 
-2. Programmierung in C++
-- [Das erste Programm auf einem ftSwarm Controller](../../programming/MotorSwitch)
-- [Das Kelda Prinzip](../../programming/kelda)
-- [Der erste Schwarm](../../programming/MotorSwitchSwarm)
-- [Aliasnamen machen das Programm lesbarer](../../programming/MotorSwitchAlias)
-- [Buttons, Switches und Toggles](../../programming/switches)
-- [Eine Fernbedienung ohne eine Zeile Code](../../programming/RemoteControl)
-- [Einfache Programmierung durch Events](../../programming/EventControlled)
-- [RGB LEDs & ftPixel](../../programming/FtSwarmPixel)
-- [OLED Display](../../programming/FtSwarmOLED)
-
-3. [Den ftSwarm über RS485 verbinden](../../rs485/rs485)
-
-4. Extension Port
-- [Einführung](../../extensionPort/index)
-- [I²C Breakout Boards](../../extensionPort/I2CMaster)
-- [I²C TX-/TXT-Kommunikation](../../extensionPort/I2CSlave)
-- [Gyro](../../extensionPort/gyro)
-- [Motorausgänge](../../extensionPort/outputs)
-
-5. Firmware & Versionen
-- [Konfiguration komplett](../../firmware/Configuration)
-- [Firmware & Updates](../../firmware/firmware)
-- [Versionen](../../firmware/versions)
-
-4. Advanced
-- [Programmierung mit PlatformIO & VSCode](../../advanced/PlatformIO)
-- [Programme auf dem ftSwarm debuggen](../../advanced/debugging)
+Wie geht es weiter?
+- Im [C++ Handbuch](../../programming/manual) wird anhand einfacher Beispielmodelle die Programmierung erklärt. Die [api Referenz](../../cpp-api/index) beschreibt die Programmierung aller Sensoren und Aktoren im Detail.
+- Sie möchten mit dem ftSwarmControl ohne Programmierung Ihre Modelle fernsteuern? Dann lesen Sie das Kapitel [Fernsteuerung](../../remote/remote).
+- [Firmware](../../firmware/configuration) beschreibt die Einstellmöglichkeiten der Firmware im Detail und hilft Ihnen beim [Flashen](../../firmware/flash) der Firmware.
 
 ### Einsatzgebiet & Gewährleistung
 
@@ -53,5 +28,5 @@ Die ftSwarm Controller sind dafür gedacht, kleine vernetzte Steuerungen für DI
 - ftSwarm Controller sind nicht für professionelle Roboter geeignet.
 - Bitte testen Sie die zur Verfügung gestellte Soft- und Hardware um sicherzustellen, dass sie den Anforderungen Ihres Projektes gerecht werden.
 
-Die ftSwam Controller sind als Hobbyprojekt entstanden. Entsprechend gibt es Einschränkungen und Fehler. Jede Gewährleistung auf die hier vorgestellte Soft- und Hardware ist ausgeschlossen.
+Die ftSwam-Controller sind als Hobbyprojekt entstanden. Entsprechend gibt es Einschränkungen und Fehler. Jede Gewährleistung auf die hier vorgestellte Soft- und Hardware ist ausgeschlossen.
 {: .notice--info}

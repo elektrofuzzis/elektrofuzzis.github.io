@@ -1,11 +1,35 @@
 ---
-title: Versionen
+title: Upgrade guide
 layout: category
 lang: en
 classes: wide
 sidebar:
-    nav: manual-de
+    nav: firmware-de
 ---
+
+Mit Version 0.7.0 verändert sich die Handhabung der Controller in einigen wesentlichen Punkten:
+
+- Bislang wurde der Controllertyp über die entsprechende Bibliothek, z.B. ftSwarm-rs ausgewählt. Mit der neuen Version sind die Controller als Boards in Arduino bzw. PlatformIO vorhanden und verwenden nur noch eine gemeinsame ftSwarm-Bibliothek. Bitte richten Sie Ihre [Arduino-IDE](../../ide/arduino) bzw. [VSCode/Platform-IDE](../../ide/platformio) entsprechend ein.
+- Die Firmware für die Swarm Member muss nicht mehr selbst compiliert werden. Flashen Sie die Firmware bequem über diese [Webseite](../flash). Beim Upgrade auf Version 0.7.0 werden aus technischen Gründen nur die WLAN- und Swarmeinstellungen übernommen.
+- Motoren werden nun mit Geschwindigkeiten zwischen "-100" und "100" angesteuert. Jede Motorklasse, wie z.B. FtSwarmXSMotor, hat eine hinterlegte Motorkennlinie, so dass ein mechanisch nicht belasteter Motor bereits mit der Geschwindigkeit "1" startet. Es ist deshalb wichtig, die richtige Motorklasse zu verwenden. Bei Schrittmotoren gilt weiterhin der Bereich von -4096 bis 4096.
+- Am ftSwarmControl lassen sich fast alle Einstellungen auch über das OLED-Display durchführen. Im neuen [Fernsteuerungsmodus](../../remote/remote) können Standardmodelle ohne Programmierung konfiguriert werden.
+- Blinkeffekt bei Lampen und ftPixeln.
+
+### Version 0.7.0 08/2026
+
+Features:
+- Umstellung auf offizielle Arduino/PIO-Boards
+- Firmware Updates über die WebSeite
+- Motorkennlinien: Motoren werden nun im Bereich von -100..100 (Ausnahme Schrittmotoren -4096/4096) angesteuert. Durch eine Motorkennlinie dreht der Motor ohne mechanische Lsst bereits ab Geschwindigkeit 1.
+- ftSwarmControl: Firmware kann über das eingebaute OLED Display konfiguriert werden
+- WLAN-Passwort
+- Neue Statusseite/WebUI
+- Controller ohne serielle Konsole auf Werkseinstellungen zurücksetzen
+- OLED Menüs
+- neue Controllertypen ftSwarmRC und ftSwarmControlUSBC
+- neuer Servotyp RC-Servo
+- neuer Motortypen RC-Motor, Radantrieb
+- Blinken bei Lampen und ftPixeln.
 
 ### Version 0.6.2 05/2024
 

@@ -1,49 +1,23 @@
 ---
-title: Tutorial
+title: Getting Started
 Lang:  en
 classes: wide
 layout: category
 sidebar:
-    nav: manual-en
+    nav: gettingstarted-en
 ---
 
-This manual explains the basic use and programming of the ftSwarm controller. We therefore recommend that you first read the manual chapter by chapter and reproduce the examples. The [API reference](../../cpp-api/index) explains the various classes in detail as well as the connection diagram for the various sensors and actuators.
+Before you install your ftSwarm controller in your model, you should first familiarize yourself with the basic operation of the controllers:
 
-1. Getting started
-- [Learn about the connectors of the ftSwarm family.](../pinout)
-- [Connect your ftSwarm controller with your PC](../serial)
-- [Configure wifi and use the status page](../WebUI)
-- [Install IDE to run the examples](../ide)
+- [Get to know the pinouts of the ftSwarm family.](../pinout)
+- [Connect ftSwarm controllers to a PC via USB](../serial)
+- [Understand the status indicators shown by the RGB LEDs](../ledstatus)
+- [Configure Wi-Fi and use the status page](../WebUI)
 
-
-2. Programming in C++
-- [Run your first program on a singular controller](../../programming/MotorSwitch)
-- [Understand the kelda principle to run a swarm](../../programming/kelda)
-- [The first swarm](../../programming/MotorSwitchSwarm)
-- [Use alias names to structure your code](../../programming/MotorSwitchAlias)
-- [How to use buttons, switches and toggles](../../programming/switches)
-- [Remote control without a line of code](../../programming/RemoteControl)
-- [Use events to simplfy your code](../../programming/EventControlled)
-- [RGB LEDs & ftPixel](../../programming/tSwarmPixel)
-- [OLED Display](../../programming/FtSwarmOLED)
-
-3. [Connect your Swarm using RS485](../../rs485/rs485)
-
-4. Extension Port
-- [Overview](../../extensionPort/index)
-- [I²C Breakout Boards](../../extensionPort/I2CMaster)
-- [I²C TX-/TXT-Communication](../../extensionPort/I2CSlave)
-- [Gyro](../../extensionPort/gyro)
-- [Motor Outputs](../../extensionPort/outputs)
-
-5. Firmware & Versions
-- [The complete configuration](../../firmware/Configuration)
-- [Firmware & Updates](../../firmware/firmware)
-- [Versions](../../firmware/versions)
-
-4. Advanced
-- [Using PlatformIO & VSCode](../../advanced/PlatformIO)
-- [Debug your code](../../advanced/debugging)
+What’s next?
+- The [C++ Manual](../../programming/manual) explains programming using simple example models. [API Reference](../../cpp-api/index) describes the programming of all sensors and actuators in detail.
+- Would you like to remotely control your models with ftSwarmControl without programming? Then continue with the [Remote Control](../../remote/remote) chapter.
+- [Firmware](../../firmware/configuration) explains all firmware settings in detail and how to [flash](../../firmware/flash) the firmware on your controllers.
 
 
 ### Intended Use & Warranty

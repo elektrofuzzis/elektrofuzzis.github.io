@@ -38,3 +38,20 @@ This function set the lamp or LED "on". Brightness could be specified optionally
 #### void off( void )
 
 Set the lamp or LED off. Same as **on(0)**.
+
+#### void setBlink( uint32_t periodMS, uint8_t signal, uint8_t duty, uint8_t pause, uint8_t b1, uint8_t b2, uint8_t b3 )
+
+Sets the Lamp to blink effect.
+
+- periodMS: Duration of a beat in ms
+- signal: Number of signal beats
+- pause: Number of pause beats
+- b1: Lamp's brightness during signal
+- b2: Lamp's brightness during signal pause
+- b3: Lamp's brightness during pause
+
+![Home](/assets/img/examples/blink-en.png)
+
+#### void revokeEffect( uint8_t brightness )
+
+Revoke the blink effect and set the lamp's brightness.

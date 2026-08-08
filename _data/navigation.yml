@@ -2,13 +2,15 @@ products-en:
   - title: "Products"
   - title: "ftSwarm Family"
     children:
-      - title: "ftSwarm"
+      - title: "ftSwarmJST"
         url: /en/products/ftSwarm
       - title: "ftSwarmRS"
         url: /en/products/ftSwarmRS
       - title: "ftSwarmXL"
+        url: /en/products/ftSwarmRC
+      - title: "ftSwarmRC"
         url: /en/products/ftSwarmXL
-      - title: "ftSwarmControl"
+      - title: "ftSwarmControlUSBMicro"
         url: /en/products/ftSwarmControl
       - title: "ftSwarmPwrDrive"
         url: /en/products/ftSwarmPwrDrive
@@ -19,92 +21,65 @@ products-de:
   - title: "Produkte"
   - title: "ftSwarm Familie"
     children:
-      - title: "ftSwarm"
+      - title: "ftSwarmJST"
         url: /de/products/ftSwarm
       - title: "ftSwarmRS"
         url: /de/products/ftSwarmRS
+      - title: "ftSwarmRC"
+        url: /de/products/ftSwarmRC
       - title: "ftSwarmXL"
         url: /de/products/ftSwarmXL
-      - title: "ftSwarmControl"
+      - title: "ftSwarmControlUSBMicro"
         url: /de/products/ftSwarmControl
       - title: "ftSwarmPwrDrive"
         url: /de/products/ftSwarmPwrDrive
       - title: "ftSwarmDuino"
         url: /de/products/ftSwarmDuino
 
-manual-en:
-  - title: "Manual"
-  - title: "Gettting started"
-    children:
-      - title: "Connectors"
-        url: /en/gettingstarted/pinout
-      - title: "USB/Serial Connection"
-        url: /en/gettingstarted/serial
-      - title: "wifi & status page"
-        url: /en/gettingstarted/WebUI
-      - title: "Install IDE"
-        url: /en/gettingstarted/ide
-  - title: "Programming"
-    children:
-      - title: "My First Application"
-        url: /en/programming/MotorSwitch
-      - title: "The Kelda Principle"
-        url: /en/programming/kelda
-      - title: "A first Swarm"
-        url: /en/programming/MotorSwitchSwarm
-      - title: "Alias Names"
-        url: /en/programming/MotorSwitchAlias
-      - title: "Switches & Buttons"
-        url: /en/programming/switches
-      - title: "Remote Control"
-        url: /en/programming/RemoteControl
-      - title: "Events"
-        url: /en/programming/EventControlled
-      - title: "RGB LEDs & FtSwarmPixel"
-        url: /en/programming/FtSwarmPixel
-      - title: "OLED Display"
-        url: /en/programming/FtSwarmOLED
-  - title: "RS485"
-    url: /en/rs485/rs485
-  - title: "Extension Port"
-    children:
-      - title: "Overview"
-        url: /en/extensionPort/index
-      - title: "I²C Breakout-Boards"
-        url: /en/extensionPort/I2CMaster
-      - title: "I²C TX-/TXT Communication"
-        url: /en/extensionPort/I2CSlave
-      - title: "Gyro"
-        url: /en/extensionPort/gyro
-      - title: "Motor Outputs"
-        url: /en/extensionPort/outputs
-  - title: "Firmware"
-    children:
-      - title: "Konfiguration"
-        url: /en/firmware/Configuration
-      - title: "Firmware & Updates"
-        url: /en/firmware/firmware
-      - title: "Versionen"
-        url: /en/firmware/versions
-  - title: "Advanced"
-    children:
-      - title: "PlatformIO & VSCode"
-        url: /en/advanced/PlatformIO
-      - title: "Debugging"
-        url: /en/advanced/debugging
-
-manual-de:
-  - title: "Manual"
+gettingstarted-de:
   - title: "Inbetriebnahme"
     children:
-      - title: "Anschlüsse"
+      - title: "Einleitung"
+        url: /de/gettingstarted/gettingstarted
+      - title: "Pinout"
         url: /de/gettingstarted/pinout
       - title: "USB Anschluss"
         url: /de/gettingstarted/serial
+      - title: "LED Statusanzeige"
+        url: /de/gettingstarted/ledstatus
       - title: "WLAN & Statusseite"
         url: /de/gettingstarted/WebUI
-      - title: "Installation IDE"
-        url: /de/gettingstarted/ide
+      - title: "RS485"
+        url: /de/gettingstarted/rs485        
+        
+gettingstarted-en:
+  - title: "Gettting started"
+    children:
+      - title: "Introduction"
+        url: /en/gettingstarted/gettingstarted
+      - title: "Pinout"
+        url: /en/gettingstarted/pinout
+      - title: "USB/Serial Connection"
+        url: /en/gettingstarted/serial
+      - title: "LED Status Indicator"
+        url: /en/gettingstarted/ledstatus
+      - title: "wifi & status page"
+        url: /en/gettingstarted/WebUI
+      - title: "RS485"
+        url: /en/gettingstarted/rs485        
+
+manual-de:
+  - title: "C++ Handbuch"
+    children:
+      - title: "Einleitung"
+        url: /de/programming/manual
+  - title: "Programmierumgebung"
+    url: /de/ide/ide
+    children:
+      - title: "Arduino"
+        url: /de/ide/arduino
+      - title: "PlatformIO & VSCode"
+        url: /de/ide/PlatformIO
   - title: "Programmierung"
     children:
       - title: "Das erste Programm"
@@ -117,50 +92,49 @@ manual-de:
         url: /de/programming/MotorSwitchAlias
       - title: "Switches & Buttons"
         url: /de/programming/switches
-      - title: "Fernbedienung"
-        url: /de/programming/RemoteControl
-      - title: "Events"
-        url: /de/programming/EventControlled
-      - title: "RGB LEDs & FtSwarmPixel"
+      - title: "Eventprogrammierung"
+        url: /de/programming/events
+      - title: "FtSwarmPixel"
         url: /de/programming/FtSwarmPixel
-      - title: "OLED Display"
-        url: /de/programming/FtSwarmOLED
-  - title: "RS485"
-    url: /de/rs485/rs485
-  - title: "Extension Port"
-    children:
-      - title: "Einführung"
-        url: /de/extensionPort/index
-      - title: "I²C Breakout-Boards"
-        url: /de/extensionPort/I2CMaster
-      - title: "I²C TX-/TXT Kommunikation"
-        url: /de/extensionPort/I2CSlave
-      - title: "Gyro"
-        url: /de/extensionPort/gyro
-      - title: "Motorausgänge"
-        url: /de/extensionPort/outputs
-  - title: "Firmware"
-    children:
-      - title: "Konfiguration"
-        url: /de/firmware/Configuration
-      - title: "Firmware & Updates"
-        url: /de/firmware/firmware
-      - title: "Versionen"
-        url: /de/firmware/versions
-  - title: "Advanced"
-    children:
-      - title: "PlatformIO & VSCode"
-        url: /de/advanced/PlatformIO
       - title: "Debugging"
-        url: /de/advanced/debugging
+        url: /de/programming/debugging
+
+manual-en:
+  - title: "C++ Manual"
+    children:
+      - title: "Introduction"
+        url: /en/programming/manual
+  - title: "Choose your IDE"
+    url: /en/ide/ide
+    children:
+      - title: "Arduino"
+        url: /en/ide/arduino
+      - title: "PlatformIO & VSCode"
+        url: /en/ide/PlatformIO
+  - title: "Programming"
+    children:
+      - title: "My First Application"
+        url: /en/programming/MotorSwitch
+      - title: "The Kelda Principle"
+        url: /en/programming/kelda
+      - title: "A first Swarm"
+        url: /en/programming/MotorSwitchSwarm
+      - title: "Alias Names"
+        url: /en/programming/MotorSwitchAlias
+      - title: "Switches & Buttons"
+        url: /en/programming/switches
+      - title: "Event Programming"
+        url: /en/programming/events
+      - title: "FtSwarmPixel"
+        url: /en/programming/FtSwarmPixel
+      - title: "Debugging"
+        url: /en/programming/debugging
 
 cppapi-en:
   - title: "C++ API"
     children:
       - title: "Overview"
         url: /en/cpp-api/index
-      - title: "class diagram"
-        url: /en/cpp-api/classDiagram
   - title: "Analog Sensors"
     children:
       - title: "Overview"
@@ -203,22 +177,30 @@ cppapi-en:
         url: /en/cpp-api/FtSwarmLamp
       - title: "OLED"
         url: /en/cpp-api/FtSwarmOLED
-      - title: "RGB LED"
-        url: /en/cpp-api/FtSwarmPixel
   - title: "Motors"
     children:
       - title: "Overview"
         url: /en/cpp-api/motors
-      - title: "Encoder Motor"
-        url: /en/cpp-api/FtSwarmEncoderMotor
       - title: "Mini-Motor"
+        url: /en/cpp-api/FtSwarmMiniMotor
+      - title: "M-Motor"
         url: /en/cpp-api/FtSwarmMotor
-      - title: "Tractor Motor"
-        url: /en/cpp-api/FtSwarmTractorMotor
+      - title: "S-Motor"
+        url: /en/cpp-api/FtSwarmSMotor
       - title: "XM-Motor"
         url: /en/cpp-api/FtSwarmXMMotor
       - title: "XS-Motor"
-        url: /en/cpp-api/FtSwarmMotor
+        url: /en/cpp-api/FtSwarmXSMotor
+      - title: "Traktor Motor"
+        url: /en/cpp-api/FtSwarmTractorMotor
+      - title: "Encoder Motor"
+        url: /en/cpp-api/FtSwarmEncoderMotor
+      - title: "Stepper Motor"
+        url: /en/cpp-api/FtSwarmStepperMotor
+      - title: "RC-Motor"
+        url: /en/cpp-api/FtSwarmRCMotor
+      - title: "Wheel Drive"
+        url: /en/cpp-api/FtSwarmWheelDrive
   - title: "Other Actors"
     children:
       - title: "Overview"
@@ -229,16 +211,15 @@ cppapi-en:
         url: /en/cpp-api/FtSwarmCompressor
       - title: "Servo"
         url: /en/cpp-api/FtSwarmServo
+      - title: "RC-Servo"
+        url: /en/cpp-api/FtSwarmRCServo
       - title: "Valve"
         url: /en/cpp-api/FtSwarmValve
-
 cppapi-de:
   - title: "C++ API"
     children:
       - title: "Übersicht"
         url: /de/cpp-api/index
-      - title: "Klassendiagram"
-        url: /de/cpp-api/classDiagram
   - title: "Analoge Sensoren"
     children:
       - title: "Übersicht"
@@ -281,22 +262,30 @@ cppapi-de:
         url: /de/cpp-api/FtSwarmLamp
       - title: "OLED"
         url: /de/cpp-api/FtSwarmOLED
-      - title: "RGB LED"
-        url: /de/cpp-api/FtSwarmPixel
   - title: "Motoren"
     children:
       - title: "Übersicht"
         url: /de/cpp-api/motors
-      - title: "Encoder Motor"
-        url: /de/cpp-api/FtSwarmEncoderMotor
       - title: "Mini-Motor"
+        url: /de/cpp-api/FtSwarmMiniMotor
+      - title: "M-Motor"
         url: /de/cpp-api/FtSwarmMotor
-      - title: "Traktor Motor"
-        url: /de/cpp-api/FtSwarmTractorMotor
+      - title: "S-Motor"
+        url: /de/cpp-api/FtSwarmSMotor
       - title: "XM-Motor"
         url: /de/cpp-api/FtSwarmXMMotor
       - title: "XS-Motor"
-        url: /de/cpp-api/FtSwarmMotor
+        url: /de/cpp-api/FtSwarmXSMotor
+      - title: "Traktor Motor"
+        url: /de/cpp-api/FtSwarmTractorMotor
+      - title: "Encoder Motor"
+        url: /de/cpp-api/FtSwarmEncoderMotor
+      - title: "Schrittmotor"
+        url: /de/cpp-api/FtSwarmStepperMotor
+      - title: "RC-Motor"
+        url: /de/cpp-api/FtSwarmRCMotor
+      - title: "Radantrieb"
+        url: /de/cpp-api/FtSwarmWheelDrive
   - title: "Sonstige Aktoren"
     children:
       - title: "Übersicht"
@@ -307,6 +296,115 @@ cppapi-de:
         url: /de/cpp-api/FtSwarmCompressor
       - title: "Servo"
         url: /de/cpp-api/FtSwarmServo
+      - title: "RC-Servo"
+        url: /de/cpp-api/FtSwarmRCServo
       - title: "Ventil"
         url: /de/cpp-api/FtSwarmValve
-        
+
+firmware-de:
+  - title: "Firmware"
+    children:
+      - title: "Firmware flashen"
+        url: /de/firmware/flash
+      - title: "Upgrade guide"
+        url: /de/firmware/versions
+  - title: "serielle Konfiguration"
+    children:
+      - title: "WLAN & Lokale Einstellungen"
+        url: /de/firmware/wifi
+      - title: "Swarm-Konfiguration"
+        url: /de/firmware/swarm-config
+      - title: "IO-Konfiguration"
+        url: /de/firmware/io-config
+      - title: "Remote/Event-Konfiguration"
+        url: /de/firmware/event-config
+      - title: "Werkseinstellungen"
+        url: /de/firmware/factoryreset
+  - title: "ftSwarmControl"
+    children:
+      - title: "Bedienung"
+        url: /de/firmware/ftSwarmControl/gettingstarted
+      - title: "Konfiguration"
+        url: /de/firmware/ftSwarmControl/configuration
+      - title: "Kalibrieren"
+        url: /de/firmware/ftSwarmControl/calibration
+      - title: "Servo Offset"
+        url: /de/firmware/ftSwarmControl/servo-offset
+      - title: "Fernsteuerung"
+        url: /de/firmware/ftSwarmControl/remote
+      - title: "WLAN Einstellungen"
+        url: /de/firmware/ftSwarmControl/wifi
+      - title: "Swarm Einstellungen"
+        url: /de/firmware/ftSwarmControl/swarm
+      - title: "Werkseinstellungen"
+        url: /de/firmware/ftSwarmControl/factory-reset
+
+firmware-en:
+  - title: "Firmware"
+    children:
+      - title: "Flash Firmware"
+        url: /en/firmware/flash
+      - title: "Upgrade guide"
+        url: /en/firmware/versions
+  - title: "Konfiguration"
+    children:
+      - title: "Wifi & Local Settings"
+        url: /en/firmware/wifi
+      - title: "Swarm Configuration"
+        url: /en/firmware/swarm-config
+      - title: "IO Configuration"
+        url: /en/firmware/io-config
+      - title: "Remote/Event Configuration"
+        url: /en/firmware/event-config
+      - title: "Factory Reset"
+        url: /en/firmware/factoryreset
+  - title: "ftSwarmControl"
+    children:
+      - title: "Operation"
+        url: /en/firmware/ftSwarmControl/gettingstarted
+      - title: "Configuration"
+        url: /en/firmware/ftSwarmControl/configuration
+      - title: "Calibration"
+        url: /en/firmware/ftSwarmControl/calibration
+      - title: "Servo Offset"
+        url: /en/firmware/ftSwarmControl/servo-offset
+      - title: "Remote Control"
+        url: /en/firmware/ftSwarmControl/remote
+      - title: "wifi Settings"
+        url: /en/firmware/ftSwarmControl/wifi
+      - title: "Swarm Settings"
+        url: /en/firmware/ftSwarmControl/swarm
+      - title: "Factory Reset"
+        url: /en/firmware/ftSwarmControl/factory-reset
+
+remote-de:
+  - title: "Fernsteuerung"
+    children:
+      - title: "Einleitung"
+        url: /de/remote/remote
+      - title: "Step-By-Step Anleitung"
+        url: /de/remote/remote/#step-by-step-anleitung
+      - title: "Firmware Version"
+        url: /de/remote/remote/#firmware-version
+      - title: "WLAN Einstellungen"
+        url: /de/remote/remote/#wlan
+      - title: "Controller verbinden"
+        url: /de/remote/remote/#controller-verbinden
+      - title: "Funktion auswählen"
+        url: /de/remote/remote/#funktion-festlegen
+
+remote-en:
+  - title: "Remote Control"
+    children:
+      - title: "Introduction"
+        url: /en/remote/remote
+      - title: "Step-By-Step Instructions"
+        url: /en/remote/remote/#step-by-step-instructions
+      - title: "Firmware Version"
+        url: /en/remote/remote/#firmware-version
+      - title: "Wifi Setup"
+        url: /en/remote/remote/#wifi-setup
+      - title: "Connect the receiver"
+        url: /en/remote/remote/#connect-the-receiver
+      - title: "Specify Function"
+        url: /en/remote/remote/#specify-function

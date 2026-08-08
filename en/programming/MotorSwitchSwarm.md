@@ -9,65 +9,85 @@ sidebar:
 
 In the "[The first program](../MotorSwitch)" you have written a simple program and started it on a controller. But how does an application work in a swarm? In this example, the same task - controlling a motor using a pushbutton - is implemented with two controllers.
 
-1st Controller:
-- Connect a switch to input A1.
-- Connect a 9V power supply to PWR.
-- Your control program will run on this controller.
-
-2nd Controller:
-- Connect a motor or a lamp to output M2 of your ftSwarm.
-- Connect a 9V power supply to PWR.
-- The standard firmware will run on this controller.
+![Home](/assets/img/examples/motor_switch_swarm.png)
 
 ### Build a swarm
 
-In the last example, you have already configured a controller as a Kelda. This has already created a swarm. Your second controller now only needs to join this swarm.    
+The second controller must now be added to the swarm. To do this, you must flash the [default firmware](/de/firmware/index) onto the controller from the first example. 
 
-If you want to change the name of your swarm again, you need to start the firmware menu on the Kelda controller. To do this, you must flash the [standard firmware](../firmware).
-
-To include the second controller in the Swarm, you must connect it to your PC via USB. First configure the WLAN via **(1) wifi & Web UI**. Then switch to **(2) swarm configuration**:
+Now connect to the controller using a serial console and enter the firmware by typing **setup**.
 
 ```
-swarm configuration
+***** Main Menu *****
 
-This device is connected to swarm "ftSwarm101" with 1 member(s) online.
-Swarm PIN is 101.
-(1) Kelda:               none
-(2) swarm communication: wifi
-(3) join another swarm
-(4) list swarm members
+(w)  Wifi & Local Settings
+(s)  Swarm Configuration
+(i)  IO Configuration
+(r)  Remote/Event Configuration
+(f)  Factory Reset
 
-(0) exit
-swarm configuration>
+(x)  Exit
+
+setup>
 ```
 
-Now add this controller to the swarm with **(3) join another swarm**. To do this, you must enter the swarm name that you have assigned on the Kelda and the swarm pin. The Kelda controller must of course be switched on. 
+Choose **"(s)  Swarm Configuration"**.
+````
+***** Swarm Configuration *****
 
-Both controllers are now displayed on the Kelda's web UI. The second controller only displays its own inputs and outputs.
+     Swarm Name: ftSwarm1010
+     Kelda: ftSwarm1010
+(w)  Communication WIFI: on
+     Pin: 1010
 
-### Run a swarm based program
+     Name         Status   NW-Age    Alias
+( 1) ftSwarm1010  ONLINE   [000022]  
 
-If both controllers are connected to the same swarm, you could use "Examples\ftSwarm\MotorSwitchSwarm":
+
+(n)  create new swarm
+(+)  add a controller to my swarm
+(a)  set alias name
+
+(x)  Exit
+
+Swarm Configuration>
+````
+
+Use **"(+) add a controller to my swarm"** to add the second controller to your swarm.
+
+````
+     Name         Status   NW-Age    Alias
+( 1) ftSwarm1010  ONLINE   [000022]  
+( 2) ftSwarm1011  ONLINE   [000019]  
+
+````
+
+The controllers communicate via wifi. Therefore, your second controller must also use the same wifi network. There are two ways to do this: You can configure its wifi settings via the serial console, or Kelda can transfer these settings to the new Swarm member. If the Kelda cannot find the new swarm member on the wifi network, it will search for the second controller’s default wifi network and transfer its own wifi configuration to the new swarm member.
+{: .notice--info}
+
+Both controllers are now displayed on the Kelda web UI. The second controller displays only its own inputs and outputs.
+
+### A distributed application
+
+Once both controllers have formed a swarm, you can run the following example on the Kelda. Please enter the serial number of your second controller at **#define REMOTE 2**:
 
 ```cpp
-#include <ftSwarmRS.h>
+#include <ftSwarm.h>
 
 // serial number of the second controller - change it to your 2nd device serial number
-#define remote 2
+#define REMOTE 2
 
 FtSwarmSwitch *sw;
-FtSwarmMotor  *mot;
+FtSwarmSMotor *mot;
 
 void setup( ) {
-
-  Serial.begin(115200);
 
   // start the swarm
   FtSwarmSerialNumber_t local = ftSwarm.begin( );
 	
   // get switch and motor instances
-  sw  = new FtSwarmSwitch( local, FTSWARM_A1 );
-  mot = new FtSwarmMotor( remote, FTSWARM_M2 );
+  sw  = new FtSwarmSwitch( REMOTE, FTSWARM_A1 );
+  mot = new FtSwarmSMotor( local, FTSWARM_M1 );
 
 }
 
@@ -75,7 +95,7 @@ void loop( ) {
 
   // check if switch is pressed or released
   if ( sw->isPressed() )
-    mot->setSpeed(255);
+    mot->setSpeed(100);
   else
     mot->setSpeed(0);
 	
@@ -87,13 +107,13 @@ void loop( ) {
 
 Basically, the application is the same as [Your First Application](../MotorSwitch). There are only two changes:
 
-- **#define remote 2** sets the serial number of your 2nd device. Please change the serial number to your 2nd device serial number.
-- **FtSwarmMotor( remote, FTSWARM_M2 );** now uses the remote device serial number instead of the local serial number.
+- **#define REMOTE 2** sets the serial number of your 2nd device. Please change the serial number to your 2nd device serial number.
+- **FtSwarmSwitch( REMOTE, FTSWARM_A1 );** now uses the remote device serial number instead of the local serial number.
 
 
 ### What happens, if the 2nd controller isn't online?
 
 Start the serial monitor and unplug the 9V power supply from the second device. Restart the first one. 
-With **FtSwarmMotor( remote, FTSWARM_M2 );** you will get the debug output **Waiting on device**. Both RGB leds of this controller will be blue.
-The firmware waits for the motor joining the swarm.
+With **FtSwarmSwitch( REMOTE, FTSWARM_A1 );** you will get the debug output **Waiting on device**. Both RGB leds of this controller will be blue.
+The firmware waits for the switch joining the swarm.
 Add the 9V power supply again. Once the second device is started, your application will continue.

@@ -1,0 +1,602 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Event Programmierug -</title>
+<meta name="description" content="">
+
+
+  <meta name="author" content="The ftSwarm Project">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="">
+<meta property="og:title" content="Event Programmierug">
+<meta property="og:url" content="http://localhost:4000/en/programming/events/">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/en/programming/events/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "The ftSwarm Project",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--category wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/img/ftSwarm.svg" alt=""></a>
+        
+          <a class="site-title" href="/">
+          
+          
+        </a>
+
+        <!-- original stuff 
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
+        end original stuff-->
+
+        <ul class="visible-links">
+          <li class="masthead__menu-item">
+            <a id="gettingstarted" href="/en/gettingstarted/gettingstarted" title="Getting Started">Getting Started</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="programming" href="/en/programming/manual" title="C++ Manual">C++ Manual</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="remote" href="/en/remote/remote" title="Remote Control">Remote Control</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="firmware" href="/en/firmware/flash" title="firmware">Firmware</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="api" href="/en/cpp-api/index" title="api">api</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="products" href="/en/products/index" title="Products">Products</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="faq" href="/en/faq" title="FAQ">FAQ</a>
+          </li>
+        </ul>
+
+        <!-- Translation -->
+        <script>
+          if ( location.pathname.startsWith('/de/') ) {
+
+            const gettingstarted = document.getElementById("gettingstarted");
+            gettingstarted.title = "Inbetriebnahme";
+            gettingstarted.innerHTML = "Inbetriebnahme";
+            gettingstarted.href = "/de/gettingstarted/gettingstarted"
+            
+            const programming = document.getElementById("programming");
+            programming.title = "C++ Handbuch";
+            programming.innerHTML = "C++ Handbuch";
+            programming.href = "/de/programming/manual"
+
+            const remote = document.getElementById("remote");
+            remote.title = "Fernsteuerung";
+            remote.innerHTML = "Fernsteuerung";
+            remote.href = "/de/remote/remote"
+
+            const firmware = document.getElementById("firmware");
+            firmware.href = "/de/firmware/flash"
+
+            const api = document.getElementById("api");
+            api.href = "/de/cpp-api/index"
+
+            const faq = document.getElementById("faq");
+            faq.href = "/de/faq"
+
+            const products = document.getElementById("products");
+            products.title = "Produkte";
+            products.innerHTML = "Produkte";
+            products.href = "/de/products/index"
+                      }
+        </script>
+
+
+        <!-- language picker -->
+        <a href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
+        <a href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
+
+        <!-- language picker -->
+
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">C++ Manual</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/programming/manual">Introduction</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/en/ide/ide"><span class="nav__sub-title">Choose your IDE</span></a>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/ide/arduino">Arduino</a></li>
+          
+            <li><a href="/en/ide/PlatformIO">PlatformIO & VSCode</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Programming</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/programming/MotorSwitch">My First Application</a></li>
+          
+            <li><a href="/en/programming/kelda">The Kelda Principle</a></li>
+          
+            <li><a href="/en/programming/MotorSwitchSwarm">A first Swarm</a></li>
+          
+            <li><a href="/en/programming/MotorSwitchAlias">Alias Names</a></li>
+          
+            <li><a href="/en/programming/switches">Switches & Buttons</a></li>
+          
+            <li><a href="/en/programming/events">Event Programming</a></li>
+          
+            <li><a href="/en/programming/FtSwarmPixel">FtSwarmPixel</a></li>
+          
+            <li><a href="/en/programming/debugging">Debugging</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">Event Programmierug</h1>
+    
+    <p>Most models require only very simple programs. Buttons control the motors. Buttons and motors are defined in <strong>setup</strong>. The state of the buttons is monitored in <strong>loop</strong>, and the motors are controlled accordingly.</p>
+
+<p>Every sensor — whether an input, button, or joystick — is polled by the firmware every 25 ms. The firmware detects changes in their signals and can therefore independently control motors, servos, or LEDs.</p>
+
+<h3 id="experiment-1-a-switch-controls-a-motor">Experiment #1: A switch controls a motor</h3>
+
+<p><img src="/assets/img/examples/motor_switch.png" alt="Home" /></p>
+
+<p>Like any sensor, the switch has three trigger events:</p>
+
+<ul>
+  <li><strong>TriggerUp:</strong> This event is triggered when the signal from a digital sensor changes from 0 to 1. For example, when a button or switch is pressed.</li>
+  <li><strong>TriggerDown:</strong> This event is the opposite of TriggerUp. It is triggered when a button or switch is released.</li>
+  <li><strong>ChangeValue:</strong> This signal responds to every status change. It is designed to use analog signals—such as those from a joystick—to control the motor speed.</li>
+</ul>
+
+<p>Each trigger can trigger an action. In our example, we want to control the motor speed. To do this, we need two events. When TriggerUp occurs, the motor should turn on; when TriggerDown occurs, it should turn off again.</p>
+
+<p>If necessary, flash the firmware to the controller, connect to a serial console, and start the firmware using <strong>setup</strong>. From the main menu, select <strong>“(r) Remote/Event Configuration”</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>***** Remote Configuration *****
+
+
+(+)  add event
+(s)  switch configuration
+
+(x)  Exit
+
+Remote Configuration&gt;
+</code></pre></div></div>
+
+<p>Select <strong>“(+) add event”</strong> and enter the following values:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Enter sensor's name: A1
+Enter trigger event - (0) Trigger down  (1) Trigger up  (2) Change Value [0]: 1
+
+ftSwarm1010.A1.TriggerUp
+Enter actor's name: M1
+
+ftSwarm1010.A1.TriggerUp -&gt; ftSwarm1010.M1.setSpeed( 
+Use - (0) fixed value  (1) sensor's value  (2) actor's value: [0] 0
+Enter speed (-100..100) [0]: 100
+
+ftSwarm1010.A1.TriggerUp -&gt; ftSwarm1010.M1.setSpeed( 100
+(1) add (2) subtract (3) multiply another value - (0) done [0]: 0
+</code></pre></div></div>
+
+<p>The event is now as follows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ftSwarm1010.A1.TriggerUp -&gt; ftSwarm1010.M1.setSpeed( 100 )
+</code></pre></div></div>
+
+<p>If button A1 is pressed (TriggerUp), the motor speed is set to 100.</p>
+
+<p>Use <strong>“(+) add event”</strong> to create a second event:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Enter sensor's name: A1
+Enter trigger event - (0) Trigger down  (1) Trigger up  (2) Change Value [0]: 0
+
+ftSwarm1010.A1.TriggerDown
+Enter actor's name: M1
+
+ftSwarm1010.A1.TriggerUp -&gt; ftSwarm1010.M1.setSpeed( 
+Use - (0) fixed value  (1) sensor's value  (2) actor's value [0]: 0
+Enter fixed value [0]: 0
+
+ftSwarm1010.A1.TriggerDown -&gt; ftSwarm1010.M1.setSpeed( 0
+(1) add (2) subtract (3) multiply another value - (0) done [0]: 0
+</code></pre></div></div>
+
+<p>The two events now look like this:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ftSwarm1010.A1.TriggerUp -&gt; ftSwarm1010.M1.setSpeed( 100 )
+ftSwarm1010.A1.TriggerDown -&gt; ftSwarm1010.M1.setSpeed( 0 )
+</code></pre></div></div>
+
+<p>Exit the remote configuration by selecting <strong>“(x) exit”</strong> and save the change.</p>
+
+<p>Press the switch. The motor starts. Release the switch. The motor stops.</p>
+
+<p>You’ve written a program without a single line of code. The firmware does all the work.</p>
+
+<p class="notice--info">Event programming isn’t limited to buttons and motors. All sensors can trigger events, and (almost) all actuators can be controlled. For example, the color of an ftPixel can be adjusted based on the ambient light level measured by a phototransistor.</p>
+
+<h3 id="experiment-2-code">Experiment #2: Code</h3>
+
+<p>In the first example, we defined the events in the firmware. This can also be combined with a separate program. Triggers handle simple tasks, while the program focuses on complex control tasks. Since this approach can quickly become confusing, it is better to define the triggers in the program:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">FtSwarmSwitch</span> <span class="o">*</span><span class="n">sw</span><span class="p">;</span>
+<span class="n">FtSwarmSMotor</span>  <span class="o">*</span><span class="n">mot</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
+
+  <span class="c1">// start the swarm</span>
+  <span class="n">ftSwarm</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span> <span class="p">);</span>
+	
+  <span class="c1">// get switch and motor instances</span>
+  <span class="n">sw</span>  <span class="o">=</span> <span class="k">new</span> <span class="n">FtSwarmSwitch</span><span class="p">(</span> <span class="s">"A1"</span> <span class="p">);</span>
+  <span class="n">mot</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FtSwarmSMotor</span><span class="p">(</span> <span class="s">"M1"</span> <span class="p">);</span>
+
+  <span class="c1">// set triggers</span>
+  <span class="n">sw</span><span class="p">.</span><span class="n">onTrigger</span><span class="p">(</span> <span class="n">FTSWARM_TRIGGERUP</span><span class="p">,</span>   <span class="n">FTSWARM_ASSIGN</span><span class="p">,</span> <span class="n">FTSWARM_CONSTANT</span><span class="p">,</span> <span class="n">FTSWARM_CONSTANT</span><span class="p">,</span> <span class="n">mot</span><span class="p">,</span> <span class="mi">100</span> <span class="p">);</span> 
+  <span class="n">sw</span><span class="p">.</span><span class="n">onTrigger</span><span class="p">(</span> <span class="n">FTSWARM_TRIGGERDOWN</span><span class="p">,</span> <span class="n">FTSWARM_ASSIGN</span><span class="p">,</span> <span class="n">FTSWARM_CONSTANT</span><span class="p">,</span> <span class="n">FTSWARM_CONSTANT</span><span class="p">,</span> <span class="n">mot</span><span class="p">,</span> <span class="mi">0</span> <span class="p">);</span> 
+
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
+
+  <span class="c1">// wait some time</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Here, too, the firmware does all the work. Defining the triggers is all it takes to activate the motor.</p>
+
+<p class="notice--info">Please delete any existing triggers in the firmware before installing the program.</p>
+
+<h3 id="experiment-3-a-joystick-controls-the-motor-speed">Experiment #3: A joystick controls the motor speed</h3>
+
+<p><img src="/assets/img/examples/events.png" alt="Home" /></p>
+
+<p>The motor should now be controlled using the left joystick. In the firmware’s main menu, select <strong>“(r) Remote/Event Configuration”</strong> and create a new event. Be sure to adjust the serial numbers to match your test setup:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Enter sensor's name: ftSwarm1012.JOY1FB
+Enter trigger event: change value.
+Enter actor's name: ftSwarm1010.M1
+
+ftSwarm1012.JOY1FB.ChangeValue -&gt; ftSwarm1010.M1.setSpeed( 
+Use - (0) fixed value  (1) sensor's value  (2) actor's value [0]: 1
+
+ftSwarm1012.JOY1FB.ChangeValue -&gt; ftSwarm1010.M1.setSpeed( ftSwarm1010.JOY1FB.getValue()
+- **Constant**: Here you can enter a fixed value, such as a motor speed, a servo position, or the color of the LED.
+- **Sensor Reading**: Uses the sensor’s current reading. For example, the motor speed can be set using the joystick’s reading (-100..100).
+- **Sensor Delta**: Instead of the sensor reading, the change in the sensor reading is used here. This can be used, for example, to implement caterpillar tracks.
+- **Actuator Setpoint**: This is, for example, the motor speed.
+- **Flashing Effect**: The ftPixel or the lamp is switched to a flashing mode (see above).
+
+You can now process the selected value with a second value:0
+
+ftSwarm1012.JOY1FB.ChangeValue -&gt; ftSwarm1010.M1.setSpeed( ftSwarm1010.JOY1FB.getValue() )
+</code></pre></div></div>
+
+<p>Move the left joystick forward and backward. The motor speed is adjusted according to the joystick’s position. Push the joystick forward to make the motor rotate in one direction. Pull the joystick backward to reverse the direction of rotation.</p>
+
+<h3 id="eexperiment-4-toggling-an-ftpixel">EExperiment #4: Toggling an ftPixel</h3>
+
+<p>We now want to use the S1 button to change the color of an onboard pixel on the ftSwarmRS. You can continue using the setup from Experiment #3. In the firmware, go back to <strong>“(r) Remote/Event Configuration”</strong> and add the following event:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Enter sensor's name: S1     
+Enter trigger event - (0) Trigger down  (1) Trigger up  (2) Change Value [0]: 1
+
+ftSwarm1012.S1.TriggerUp
+Enter actor's name: ftSwarm1010.LED1
+
+ftSwarm1012.S1.TriggerUp -&gt; ftSwarm1010.LED1.setColor( 
+Use - (0) fixed value  (1) sensor's value  (2) actor's value [0]: 0
+Enter RGB value (0..#FFFFFF) [#000000]: #FF0000
+
+ftSwarm1012.S1.TriggerUp -&gt; ftSwarm1010.LED1.setColor( #FF0000
+(1) add (2) subtract (3) multiply another value - (0) done [0]: 0
+
+ftSwarm1012.S1.TriggerUp -&gt; ftSwarm1010.LED1.setColor( #FF0000 )
+</code></pre></div></div>
+
+<p>Create a second trigger on S1 that sets the color to #FF00 when TriggerDown is triggered:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ftSwarm1012.S1.TriggerDown -&gt; ftSwarm1010.LED1.setColor( #00FF00 )
+</code></pre></div></div>
+
+<p>Press the S1 button. The pixel changes color to <span class="red">red</span>. As soon as you release the button, the color changes back to <span class="green">green</span>.</p>
+
+<h3 id="experiment-5-blinking">Experiment #5: Blinking</h3>
+
+<p>We now want to use button S1 to make an onboard pixel on the ftSwarmRS blink. You can continue using the setup from Experiment #3. In the firmware, switch back to <strong>“(r) Remote/Event Configuration”</strong>. Delete all events marked with <strong>“*”</strong> and use <strong>“+”</strong> to add the following events:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Enter sensor's name: S1
+Enter trigger event - (0) trigger down  (1) trigger up  (2) change value [0]: 1
+
+ftSwarm1012.S1.TriggerUp
+Enter actor's name: LED1
+
+ftSwarm1012.S1.TriggerUp -&gt; ftSwarm1010.LED1.setColor( 
+Use - (0) fixed value  (1) sensor's value (2) sensor's delta (3) actor's value (4) blink effect [0]: 4
+Enter the duration of one beat (0.25s .. 7.00s in 0.25 steps) [0]: 2
+Enter number of signal beats (0..15) [0]: 5
+Enter signal duty (0) 25/75 (1) 50/50 (2) 75/25 [0]: 1
+Enter number of pause beats (0..15) [0]: 3
+Enter signal color (0) Black  (1) Red  (2) Green  (3) Blue  (4) Yellow  (5) Orange  (6) Cyan  (7) Pink  (8) Magenta  (9) White  [Black]: 1
+Enter signal pause color (0) Black  (1) Red  (2) Green  (3) Blue  (4) Yellow  (5) Orange  (6) Cyan  (7) Pink  (8) Magenta  (9) White  [Black]: 2
+Enter pause color (0) Black  (1) Red  (2) Green  (3) Blue  (4) Yellow  (5) Orange  (6) Cyan  (7) Pink  (8) Magenta  (9) White  [Black]: 0
+ftSwarm1012.S1.TriggerUp -&gt; ftSwarm1010.LED1.setColor( Blink( period: 2000 ms, signal beats: 5, duty: 1, pause beats: 3, signal color Red, signal pause color: Green, pause color: Black ) )
+</code></pre></div></div>
+
+<p>Create a second trigger on S2 where you set the color to 0 using TriggerDown:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ftSwarm1012.S1.TriggerDown -&gt; ftSwarm1010.LED1.setColor( #000000 )
+</code></pre></div></div>
+
+<p>Press the S1 button. The pixel changes color 5 times from <span class="red">red</span> to <span class="green">green</span>. After that, the LED is off for 3 cycles.</p>
+
+<p>In addition to LEDs, lamps can also flash. In this case, the lamp’s brightness is adjusted instead of its color.</p>
+
+<p><img src="/assets/img/examples/blink-en.png" alt="Home" /></p>
+
+<h3 id="calculate-actors-value">Calculate actor’s value</h3>
+
+<p>After entering the actor’s name, the firmware asks to calculate it’s value:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Use - (0) fixed value  (1) sensor's value (2) sensor's delta (3) actor's value (4) blink effect [0]:
+</code></pre></div></div>
+
+<ul>
+  <li><strong>fixed value</strong>: Here you can enter a fixed value, such as a motor speed, a servo position, or the color of the LED.</li>
+  <li><strong>senso’s value</strong>: Uses the sensor’s current reading. For example, the motor speed can be set using the joystick’s reading (-100..100).</li>
+  <li><strong>sensor’s delta</strong>: Instead of the sensor reading, the change in the sensor reading is used here. This can be used, for example, to implement caterpillar tracks.</li>
+  <li><strong>actor’s value</strong>: This is, for example, the motor speed.</li>
+  <li><strong>blink effect</strong>: The ftPixel or the lamp is switched to a flashing mode (see above).</li>
+</ul>
+
+<p>You can now process the selected value with a second value:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(1) add (2) subtract (3) multiply another value - (0) done [0]:
+
+Use - (0) fixed value  (1) sensor's value (2) sensor's delta (3) actor's value [0]:
+</code></pre></div></div>
+
+<p>For example, the motor speed can be adjusted by pressing buttons:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(1) ftSwarm1012.F1.TriggerUp -&gt; ftSwarm1012.M1.setSpeed( ftSwarm1012.M1.getSpeed() + 10 )
+(2) ftSwarm1012.F2.TriggerUp -&gt; ftSwarm1012.M1.setSpeed( ftSwarm1012.M1.getSpeed() - 10 )
+</code></pre></div></div>
+
+<p>A catapillar drive can be implemented using 4 events:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>( 1) ftSwarm1010.JOY1FB.ChangeValue -&gt; ftSwarm1010.M1.setSpeed( ftSwarm1010.M1.getSpeed() + ftSwarm1010.JOY1FB.getDelta() )
+( 2) ftSwarm1010.JOY2LR.ChangeValue -&gt; ftSwarm1010.M1.setSpeed( ftSwarm1010.M1.getSpeed() + ftSwarm1010.JOY2LR.getDelta() )
+( 3) ftSwarm1010.JOY1FB.ChangeValue -&gt; ftSwarm1010.M2.setSpeed( ftSwarm1010.M2.getSpeed() - ftSwarm1010.JOY1FB.getDelta() )
+( 4) ftSwarm1010.JOY2LR.ChangeValue -&gt; ftSwarm1010.M2.setSpeed( ftSwarm1010.M2.getSpeed() - ftSwarm1010.JOY2LR.getDelta() )
+</code></pre></div></div>
+
+<p>Please note that the flashing effect cannot be processed with other values.</p>
+
+
+
+<div class="entries-list">
+  
+</div>
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<script src="/assets/js/copy-code.js"></script>
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/elektrofuzzis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://instagram.com/elektrofuzzies" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+        
+          <li><a href="mailto:ftpi@gmx.de" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

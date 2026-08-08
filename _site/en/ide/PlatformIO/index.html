@@ -1,0 +1,474 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>PlatformIO with VSCode -</title>
+<meta name="description" content="">
+
+
+  <meta name="author" content="The ftSwarm Project">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="">
+<meta property="og:title" content="PlatformIO with VSCode">
+<meta property="og:url" content="http://localhost:4000/en/ide/PlatformIO/">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/en/ide/PlatformIO/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "The ftSwarm Project",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--category wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/img/ftSwarm.svg" alt=""></a>
+        
+          <a class="site-title" href="/">
+          
+          
+        </a>
+
+        <!-- original stuff 
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
+        end original stuff-->
+
+        <ul class="visible-links">
+          <li class="masthead__menu-item">
+            <a id="gettingstarted" href="/en/gettingstarted/gettingstarted" title="Getting Started">Getting Started</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="programming" href="/en/programming/manual" title="C++ Manual">C++ Manual</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="remote" href="/en/remote/remote" title="Remote Control">Remote Control</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="firmware" href="/en/firmware/flash" title="firmware">Firmware</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="api" href="/en/cpp-api/index" title="api">api</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="products" href="/en/products/index" title="Products">Products</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="faq" href="/en/faq" title="FAQ">FAQ</a>
+          </li>
+        </ul>
+
+        <!-- Translation -->
+        <script>
+          if ( location.pathname.startsWith('/de/') ) {
+
+            const gettingstarted = document.getElementById("gettingstarted");
+            gettingstarted.title = "Inbetriebnahme";
+            gettingstarted.innerHTML = "Inbetriebnahme";
+            gettingstarted.href = "/de/gettingstarted/gettingstarted"
+            
+            const programming = document.getElementById("programming");
+            programming.title = "C++ Handbuch";
+            programming.innerHTML = "C++ Handbuch";
+            programming.href = "/de/programming/manual"
+
+            const remote = document.getElementById("remote");
+            remote.title = "Fernsteuerung";
+            remote.innerHTML = "Fernsteuerung";
+            remote.href = "/de/remote/remote"
+
+            const firmware = document.getElementById("firmware");
+            firmware.href = "/de/firmware/flash"
+
+            const api = document.getElementById("api");
+            api.href = "/de/cpp-api/index"
+
+            const faq = document.getElementById("faq");
+            faq.href = "/de/faq"
+
+            const products = document.getElementById("products");
+            products.title = "Produkte";
+            products.innerHTML = "Produkte";
+            products.href = "/de/products/index"
+                      }
+        </script>
+
+
+        <!-- language picker -->
+        <a href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
+        <a href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
+
+        <!-- language picker -->
+
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">C++ Manual</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/programming/manual">Introduction</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/en/ide/ide"><span class="nav__sub-title">Choose your IDE</span></a>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/ide/arduino">Arduino</a></li>
+          
+            <li><a href="/en/ide/PlatformIO">PlatformIO & VSCode</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Programming</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/en/programming/MotorSwitch">My First Application</a></li>
+          
+            <li><a href="/en/programming/kelda">The Kelda Principle</a></li>
+          
+            <li><a href="/en/programming/MotorSwitchSwarm">A first Swarm</a></li>
+          
+            <li><a href="/en/programming/MotorSwitchAlias">Alias Names</a></li>
+          
+            <li><a href="/en/programming/switches">Switches & Buttons</a></li>
+          
+            <li><a href="/en/programming/events">Event Programming</a></li>
+          
+            <li><a href="/en/programming/FtSwarmPixel">FtSwarmPixel</a></li>
+          
+            <li><a href="/en/programming/debugging">Debugging</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">PlatformIO with VSCode</h1>
+    
+    <style>
+
+.img-and-text {
+  display: grid;
+  /* Die erste Spalte passt sich dem Bild an, die zweite nimmt den Rest */
+  grid-template-columns: max-content 1fr; 
+  /* 10px Abstand zwischen den Spalten (und Zeilen, falls es umbricht) */
+  gap: 10px; 
+  /* Entfernt eventuelle Standard-Rahmen */
+  border: none; 
+  align-items: start;
+}
+
+/* Sorgt dafür, dass das Bild seine natürliche Breite behält */
+.img-and-text img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-and-text ol {
+  margin: 0;
+  padding: 1em;
+  list-style-position: outside;
+  text-align: left;
+}
+
+.img-and-text li {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+</style>
+
+<h3 id="installing-vscode">Installing VSCode</h3>
+
+<p>First, install VSCode:</p>
+
+<ul>
+  <li><strong>Windows:</strong> Install it from the Windows Store</li>
+  <li><strong>Linux:</strong> Follow the instructions at <a href="https://code.visualstudio.com/docs/setup/linux">code.visualstudio.com</a></li>
+  <li><strong>macOS:</strong> Follow the instructions at <a href="https://code.visualstudio.com/docs/setup/mac">code.visualstudio.com</a></li>
+</ul>
+
+<h3 id="installing-platformio">Installing PlatformIO</h3>
+
+<p>To do this, launch VSCode.</p>
+
+<div class="img-and-text">
+  <div>
+    <img src="/assets/img/pio/pio.png" alt="PlatformIO IDE Installation" />
+  </div>
+  <div>
+    <ol>
+      <li>Open the VSCode Extension Manager</li>
+      <li>Search for PlatformIO IDE</li>
+      <li>Install PlatformIO IDE</li>
+      <li>Read the <a href="https://docs.platformio.org/page/ide/vscode.html#quick-start" target="_blank">quick start guide</a></li>
+    </ol>
+  </div>
+</div>
+
+<h3 id="create-your-project">Create Your Project</h3>
+
+<p>To program your model, you now need a new PlatformIO project. Starting with version 0.7.0, the ftSwarm environment uses board definitions. The board definitions are not yet available online in PlatformIO. For the time being, you’ll need to include them locally in your project directory. To avoid errors, the easiest way is to use a ZIP file containing a starter project:</p>
+
+<div class="img-and-text">
+  <div>
+    <img src="/assets/img/pio/pio-pick.png" alt="New Project" />
+  </div>
+  <div>
+    <ol>
+      <li>Download <a href="../../../assets/firmware/pio_ftSwarm.zip">pio_ftSwarm.zip</a></li>
+      <li>Extract the ZIP file to a directory of your choice.</li>
+      <li>Switch to VSCode and click the PlatformIO icon</li>
+      <li>Under “Pick a folder,” select the directory you just created.</li>
+    </ol>
+  </div>
+</div>
+
+<p>As a final step, you must select your controller type. At the bottom of the screen, you’ll find the PIO status bar. Click on the Project Environment and select your controller type:</p>
+
+<p><img src="/assets/img/pio/statusbar.png" alt="Home" /></p>
+
+<p>Each controller type is displayed twice, e.g., ftSwarmRS and ftSwarmRS-DE. The first option compiles English-language firmware, while the second option displays output on the serial console in German.</p>
+
+<h3 id="flashing-a-test-program">Flashing a Test Program</h3>
+
+<p>The ZIP file also contains a ready-to-use main program <em>src/main.cpp</em>. It consists of only a few lines and launches the firmware. Let’s now flash it for testing purposes:</p>
+
+<p><img src="/assets/img/pio/statusbar2.png" alt="Home" /></p>
+
+<ol>
+  <li>Connect the controller to the PC using a USB cable and select the appropriate USB port in the status bar.</li>
+  <li>Click the Upload button. The software will be compiled and flashed to the controller.</li>
+  <li>Open the serial console and press the controller’s reset button. The firmware will initialize.</li>
+</ol>
+
+<p class="notice--info">If you receive the error message <strong>“A fatal error occurred: This chip is ESP32-S3, not ESP32. Wrong –chip argument?“</strong> while flashing your program, or if the firmware displays the error <strong>”FATAL: Incompatible firmware hardware settings.”</strong> in the serial console after starting or resetting the controller, you must select the correct controller in the Project Environment.</p>
+
+<p>The following buttons are available in the status bar:</p>
+
+<style>
+img { vertical-align: middle;important! }
+</style>
+
+<ul>
+  <li><img src="/assets/img/pio/vs_build.png" alt="build" /> or <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>B</kbd> compiles your program.</li>
+  <li><img src="/assets/img/pio/vs_upload.png" alt="upload" /> or <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>U</kbd> flashes your program to the controller.</li>
+  <li><img src="/assets/img/pio/vs_serial.png" alt="serial" /> or <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd> launches the serial monitor.</li>
+</ul>
+
+
+
+<div class="entries-list">
+  
+</div>
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<script src="/assets/js/copy-code.js"></script>
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/elektrofuzzis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://instagram.com/elektrofuzzies" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+        
+          <li><a href="mailto:ftpi@gmx.de" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

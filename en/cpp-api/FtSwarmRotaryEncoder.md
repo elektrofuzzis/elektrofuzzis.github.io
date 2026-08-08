@@ -34,7 +34,7 @@ There are no rotary encoders from fischertechnik available. Although you can use
         <br><br>
         The ftKnob is designed as a rotary control. A suitable stepper motor is already installed in it.
         <br><br>
-        Both sensors must be supplied with 9V, the two connections Q1 and Q2 are connected to the corresponding <span class="plus">red</span> marked inputs on the ftSwarm. The stepper motor is also connected to the ftRotaryEncoder - the first coil is connected to the two upper connections and the lower coil of the stepper motor is connected to the two lower connections.
+        Both sensors must be supplied with 9V, the two connections Q1 and Q2 are connected to the corresponding <span class="red">red</span> marked inputs on the ftSwarm. The stepper motor is also connected to the ftRotaryEncoder - the first coil is connected to the two upper connections and the lower coil of the stepper motor is connected to the two lower connections.
         <br><br>
         Caution! The Q1 and Q2 connections can be destroyed if the polarity is reversed. The stepper motor connections are only suitable for low currents - under no circumstances should the stepper motor be supplied in parallel with the ftRotaryEncoder by a power output stage such as the ftPwrDrive!
       </p>

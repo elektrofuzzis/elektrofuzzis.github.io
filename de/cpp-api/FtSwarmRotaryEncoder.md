@@ -34,7 +34,7 @@ Von fischertechnik gibt es keine RotaryEncoder. Man kann zwar einen Encodermotor
         <br><br>
         Der ftKnob ist als Drehregler gedacht. In ihm ist bereits ein passender Schrittmotor verbaut.
         <br><br>
-        Beide Sensoren müssen mit 9V versorgt werden, die beiden Anschlüsse Q1 und Q2 werden an die entsprechenden <span class="plus">rot</span> markierten Eingänge am ftSwarm angeschlossen. Beim ftRotaryEncoder wird zusätzlich der Schrittmotor angeschlossen - an die beiden oberen Anschlüsse wird die erste Spule, an die beiden unteren Anschlüsse die untere Spule des Schrittmotors.
+        Beide Sensoren müssen mit 9V versorgt werden, die beiden Anschlüsse Q1 und Q2 werden an die entsprechenden <span class="red">rot</span> markierten Eingänge am ftSwarm angeschlossen. Beim ftRotaryEncoder wird zusätzlich der Schrittmotor angeschlossen - an die beiden oberen Anschlüsse wird die erste Spule, an die beiden unteren Anschlüsse die untere Spule des Schrittmotors.
         <br><br>
         Achtung! Die Anschlüsse Q1, Q2 können durch Verpolung zerstört werden. Die Schrittmotoranschlüsse sind nur für kleine Ströme geeignet - in keinem Fall darf zum ftRotaryEncoder der Schrittmotor durch eine Leistungsendstufe wie dem ftPwrDrive parallel versorgt werden!
       </p>

@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Alias Names -</title>
-<meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
+<!-- begin _includes/seo.html --><title>Alias Namen -</title>
+<meta name="description" content="">
 
 
   <meta name="author" content="The ftSwarm Project">
@@ -20,11 +20,9 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="">
-<meta property="og:title" content="Alias Names">
+<meta property="og:title" content="Alias Namen">
 <meta property="og:url" content="http://localhost:4000/de/programming/MotorSwitchAlias/">
 
-
-  <meta property="og:description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
 
@@ -66,8 +64,6 @@
 <!-- end _includes/seo.html -->
 
 
-
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title=" Feed">
 
 
 <!-- https://t.co/dKP3o1e -->
@@ -115,40 +111,75 @@
         </a>
 
         <!-- original stuff 
-        <ul class="visible-links"></ul>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
         end original stuff-->
-
-        <script>
-          function callRef( url ) {
-            if ( location.pathname.startsWith('/en/') ) {
-              location.href='/en/'+url;
-            } else {
-              location.href='/de/'+url;
-            }
-          }
-        </script>
 
         <ul class="visible-links">
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('gettingstarted/gettingstarted')" title="Manual">Manual</a>
+            <a id="gettingstarted" href="/en/gettingstarted/gettingstarted" title="Getting Started">Getting Started</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('cpp-api/index')" title="api">api</a>
+            <a id="programming" href="/en/programming/manual" title="C++ Manual">C++ Manual</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('products/index')" title="Products">Products</a>
+            <a id="remote" href="/en/remote/remote" title="Remote Control">Remote Control</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('faq')" title="FAQ">FAQ</a>
+            <a id="firmware" href="/en/firmware/flash" title="firmware">Firmware</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="api" href="/en/cpp-api/index" title="api">api</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="products" href="/en/products/index" title="Products">Products</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="faq" href="/en/faq" title="FAQ">FAQ</a>
           </li>
         </ul>
 
+        <!-- Translation -->
+        <script>
+          if ( location.pathname.startsWith('/de/') ) {
+
+            const gettingstarted = document.getElementById("gettingstarted");
+            gettingstarted.title = "Inbetriebnahme";
+            gettingstarted.innerHTML = "Inbetriebnahme";
+            gettingstarted.href = "/de/gettingstarted/gettingstarted"
+            
+            const programming = document.getElementById("programming");
+            programming.title = "C++ Handbuch";
+            programming.innerHTML = "C++ Handbuch";
+            programming.href = "/de/programming/manual"
+
+            const remote = document.getElementById("remote");
+            remote.title = "Fernsteuerung";
+            remote.innerHTML = "Fernsteuerung";
+            remote.href = "/de/remote/remote"
+
+            const firmware = document.getElementById("firmware");
+            firmware.href = "/de/firmware/flash"
+
+            const api = document.getElementById("api");
+            api.href = "/de/cpp-api/index"
+
+            const faq = document.getElementById("faq");
+            faq.href = "/de/faq"
+
+            const products = document.getElementById("products");
+            products.title = "Produkte";
+            products.innerHTML = "Produkte";
+            products.href = "/de/products/index"
+                      }
+        </script>
+
 
         <!-- language picker -->
+        <a href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
+        <a href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
 
-        <a class="alang" href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
-        <a class="alang" href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
-        
         <!-- language picker -->
 
         
@@ -190,27 +221,29 @@
     
       <li>
         
-          <span class="nav__sub-title">Manual</span>
-        
-
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Inbetriebnahme</span>
+          <span class="nav__sub-title">C++ Handbuch</span>
         
 
         
         <ul>
           
-            <li><a href="/de/gettingstarted/pinout">Anschlüsse</a></li>
+            <li><a href="/de/programming/manual">Einleitung</a></li>
           
-            <li><a href="/de/gettingstarted/serial">USB Anschluss</a></li>
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <a href="/de/ide/ide"><span class="nav__sub-title">Programmierumgebung</span></a>
+        
+
+        
+        <ul>
           
-            <li><a href="/de/gettingstarted/WebUI">WLAN & Statusseite</a></li>
+            <li><a href="/de/ide/arduino">Arduino</a></li>
           
-            <li><a href="/de/gettingstarted/ide">Installation IDE</a></li>
+            <li><a href="/de/ide/PlatformIO">PlatformIO & VSCode</a></li>
           
         </ul>
         
@@ -234,77 +267,11 @@
           
             <li><a href="/de/programming/switches">Switches & Buttons</a></li>
           
-            <li><a href="/de/programming/RemoteControl">Fernbedienung</a></li>
+            <li><a href="/de/programming/events">Eventprogrammierung</a></li>
           
-            <li><a href="/de/programming/EventControlled">Events</a></li>
+            <li><a href="/de/programming/FtSwarmPixel">FtSwarmPixel</a></li>
           
-            <li><a href="/de/programming/FtSwarmPixel">RGB LEDs & FtSwarmPixel</a></li>
-          
-            <li><a href="/de/programming/FtSwarmOLED">OLED Display</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <a href="/de/rs485/rs485"><span class="nav__sub-title">RS485</span></a>
-        
-
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Extension Port</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/de/extensionPort/index">Einführung</a></li>
-          
-            <li><a href="/de/extensionPort/I2CMaster">I²C Breakout-Boards</a></li>
-          
-            <li><a href="/de/extensionPort/I2CSlave">I²C TX-/TXT Kommunikation</a></li>
-          
-            <li><a href="/de/extensionPort/gyro">Gyro</a></li>
-          
-            <li><a href="/de/extensionPort/outputs">Motorausgänge</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Firmware</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/de/firmware/Configuration">Konfiguration</a></li>
-          
-            <li><a href="/de/firmware/firmware">Firmware & Updates</a></li>
-          
-            <li><a href="/de/firmware/versions">Versionen</a></li>
-          
-        </ul>
-        
-      </li>
-    
-      <li>
-        
-          <span class="nav__sub-title">Advanced</span>
-        
-
-        
-        <ul>
-          
-            <li><a href="/de/advanced/PlatformIO">PlatformIO & VSCode</a></li>
-          
-            <li><a href="/de/advanced/debugging">Debugging</a></li>
+            <li><a href="/de/programming/debugging">Debugging</a></li>
           
         </ul>
         
@@ -321,7 +288,7 @@
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title">Alias Names</h1>
+      <h1 id="page-title" class="page__title">Alias Namen</h1>
     
     <p>Bislang wurden die IOs in den Beispielen über die Seriennummer des ftSwarm und dem Portnamen angesprochen. Das ist praktisch in kleinen Modellen, aber in größeren Modellen verliert man schnell die Übersicht. Dort ist es einfacher, die IOs anhand deren Funktion anzusprechen:</p>
 
@@ -331,56 +298,91 @@
 
 <p>Das Beispiel nutzt den gleichen Aufbau wie zuvor:</p>
 
-<p>Erster Controller:</p>
-<ul>
-  <li>Der Taster wird am Eingang A1 angeschlossen.</li>
-  <li>Ein 9V Netzteil wird an PWR angeschlossen.</li>
-</ul>
+<p><img src="/assets/img/examples/motor_switch_swarm.png" alt="Home" /></p>
 
-<p>Zweiter Controller:</p>
-<ul>
-  <li>Ein Motor oder eine Lampe werden am Ausgang M2 angeschlossen.</li>
-  <li>Ein 9V Netzteil wird an PWR angeschlossen.</li>
-</ul>
+<p>Es müssen nun zunächst Aliasnamen für den Switch und den Motor vergeben werden. Dazu muss die Standradfirmware geladen sein. Starten Sie eine serielle Konsole und wechseln mit <strong>setup</strong> in die Firmware. Wählen Sie dort <strong>“(i)  IO-Konfiguration”</strong>.</p>
 
-<p>Es müssen nun zunächst Aliasnamen für den Switch und den Motor vergeben werden. Dazu muss die Standradfirmware geladen sein. Über die die Terminalemulation im Hautpmenü <strong>(3) alias names</strong> auswählen:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>***** IO-Konfiguration *****
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias controler menu:
+     Name               Typ             Events Alias
+( 1) A1                 DigitalInput    0        
+( 2) A2                 DigitalInput    0        
+( 3) A3                 DigitalInput    0        
+( 4) A4                 DigitalInput    0        
+( 5) A5                 DigitalInput    0        
+( 6) A6                 DigitalInput    0        
+( 8) PWRCTL             Powersensor     0        
+( 9) ftSwarm1011.A1     DigitalInput    0        
+(10) ftSwarm1011.A2     DigitalInput    0        
+(11) ftSwarm1011.A3     DigitalInput    0        
+(12) ftSwarm1011.A4     DigitalInput    0        
+(13) ftSwarm1011.A5     DigitalInput    0        
+(14) ftSwarm1011.A6     DigitalInput    0        
+(15) ftSwarm1011.PWRCTL Powersensor     0   
 
-( 1) hostname ftSwarm100 - 
-( 2) A1   - switch                                 
-( 3) A2   -                                 
-( 4) A3   -                                 
-( 5) A4   -                                 
-( 6) A5   -                                 
-( 7) A6   -                                 
-( 8) M1   -                                 
-( 9) M2   -                                 
-(10) LED1 -                                 
-(11) LED2 -                                 
-(12) SERVO -                                 
+(a)  Aktoren
+(p)  Pixel/LEDs
 
-(0) exit
-alias&gt;
+(x)  Beenden
+
+IO-Konfiguration&gt;
 </code></pre></div></div>
 
-<p>Am ersten Controller muss für <strong>A1</strong> der Name <strong>switch</strong> eingestellt werden, am zweiten Controller für <strong>M2</strong> der Name <strong>motor</strong>. Das Beispielprogramm kann von <strong>Example/MotorSwitchAlias</strong> übernommen werden:</p>
+<p>Am zweiten Controller muss für <strong>A1</strong> der Name <strong>switch</strong> eingestellt werden. Wählen Sie deshalb <strong>”( 9) ftSwarm1011.A1”</strong> um den Port zu konfigurieren.</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;ftSwarmRS.h&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>***** A1 *****
+
+     Name:       A1
+(t)  IO-Typ:     DigitalInput
+(a)  Alias
+
+(+)  neues Event
+(s)  Konfiguration wechseln
+
+(x)  Beenden
+
+IO-Konfiguration/A1&gt;
+</code></pre></div></div>
+
+<p>Wählen Sie <strong>”(“a)  Alias”</strong> und vergeben den Alias-Namen <strong>switch</strong>. Kehren Sie mit <strong>(x)  Beenden</strong> in das Menu <strong>IO Konfiguration zurück</strong>.</p>
+
+<p>Am ersten Controller muss nun der Motor <strong>M2</strong> den Alias-Namen <strong>motor</strong> bekommen. Schalten Sie mit <strong>“(a)  Aktoren”</strong> die Darstellung von den Sensoren auf die Aktoren um:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>***** IO-Konfiguration *****
+
+     Name               Typ             Events Alias
+( 1) M1                 Motor           0        
+( 2) M2                 Motor           0        
+( 3) SERVO1             Servo           0        
+( 4) SERVO2             Servo           0        
+( 5) ftSwarm1011.M1     Motor           0        
+( 6) ftSwarm1011.M2     Motor           0        
+( 7) ftSwarm1011.SERVO1 Servo           0        
+( 8) ftSwarm1011.SERVO2 Servo           0        
+
+(i)  Eingänge
+(p)  Pixel/LEDs
+
+(x)  Beenden
+
+IO-Konfiguration&gt;
+</code></pre></div></div>
+
+<p>Wählen Sie mit <strong>”( 1) M1”</strong> den Motor aus und vergeben den Alias-Namen <strong>motor</strong>. Beenden Sie mit zweimal <strong>(x)  Beenden</strong> die Port- und die IO-Konfiguration. Beim Verlassen der IO-Konfiguration bestätigen Sie <strong>“Änderungen speichern? (J/N)?”</strong> mit “<strong>J</strong>.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;ftSwarm.h&gt;</span><span class="cp">
 </span>
 <span class="n">FtSwarmSwitch</span> <span class="o">*</span><span class="n">sw</span><span class="p">;</span>
-<span class="n">FtSwarmMotor</span>  <span class="o">*</span><span class="n">mot</span><span class="p">;</span>
+<span class="n">FtSwarmSMotor</span> <span class="o">*</span><span class="n">mot</span><span class="p">;</span>
 
 <span class="kt">void</span> <span class="nf">setup</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
-
-  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
 
   <span class="c1">// start the swarm</span>
   <span class="n">FtSwarmSerialNumber_t</span> <span class="n">local</span> <span class="o">=</span> <span class="n">ftSwarm</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span> <span class="p">);</span>
   
   <span class="c1">// get switch and motor instances</span>
   <span class="n">sw</span>  <span class="o">=</span> <span class="k">new</span> <span class="n">FtSwarmSwitch</span><span class="p">(</span> <span class="s">"switch"</span> <span class="p">);</span>
-  <span class="n">mot</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FtSwarmMotor</span><span class="p">(</span> <span class="s">"motor"</span> <span class="p">);</span>
+  <span class="n">mot</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FtSwarmSMotor</span><span class="p">(</span> <span class="s">"motor"</span> <span class="p">);</span>
 
 <span class="p">}</span>
 
@@ -388,7 +390,7 @@ alias&gt;
 
   <span class="c1">// check if switch is pressed or released</span>
   <span class="k">if</span> <span class="p">(</span> <span class="n">sw</span><span class="o">-&gt;</span><span class="n">isPressed</span><span class="p">()</span> <span class="p">)</span>
-    <span class="n">mot</span><span class="o">-&gt;</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+    <span class="n">mot</span><span class="o">-&gt;</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
   <span class="k">else</span>
     <span class="n">mot</span><span class="o">-&gt;</span><span class="n">setSpeed</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
   
@@ -419,7 +421,7 @@ alias&gt;
     <div id="footer" class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
-
+<script src="/assets/js/copy-code.js"></script>
 <!-- end custom footer snippets -->
         <div class="page__footer-follow">
   <ul class="social-icons">
@@ -452,12 +454,10 @@ alias&gt;
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
-    
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2026 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

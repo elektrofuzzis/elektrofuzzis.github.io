@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>FtSwarmLamp -</title>
-<meta name="description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
+<meta name="description" content="">
 
 
   <meta name="author" content="The ftSwarm Project">
@@ -23,8 +23,6 @@
 <meta property="og:title" content="FtSwarmLamp">
 <meta property="og:url" content="http://localhost:4000/de/cpp-api/FtSwarmLamp/">
 
-
-  <meta property="og:description" content="The ftSwarm Project connects multiple controllers in DIY roboticy projects.">
 
 
 
@@ -66,8 +64,6 @@
 <!-- end _includes/seo.html -->
 
 
-
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title=" Feed">
 
 
 <!-- https://t.co/dKP3o1e -->
@@ -115,40 +111,75 @@
         </a>
 
         <!-- original stuff 
-        <ul class="visible-links"></ul>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li></ul>
         end original stuff-->
-
-        <script>
-          function callRef( url ) {
-            if ( location.pathname.startsWith('/en/') ) {
-              location.href='/en/'+url;
-            } else {
-              location.href='/de/'+url;
-            }
-          }
-        </script>
 
         <ul class="visible-links">
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('gettingstarted/gettingstarted')" title="Manual">Manual</a>
+            <a id="gettingstarted" href="/en/gettingstarted/gettingstarted" title="Getting Started">Getting Started</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('cpp-api/index')" title="api">api</a>
+            <a id="programming" href="/en/programming/manual" title="C++ Manual">C++ Manual</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('products/index')" title="Products">Products</a>
+            <a id="remote" href="/en/remote/remote" title="Remote Control">Remote Control</a>
           </li>
           <li class="masthead__menu-item">
-            <a href="#" onclick="callRef('faq')" title="FAQ">FAQ</a>
+            <a id="firmware" href="/en/firmware/flash" title="firmware">Firmware</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="api" href="/en/cpp-api/index" title="api">api</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="products" href="/en/products/index" title="Products">Products</a>
+          </li>
+          <li class="masthead__menu-item">
+            <a id="faq" href="/en/faq" title="FAQ">FAQ</a>
           </li>
         </ul>
 
+        <!-- Translation -->
+        <script>
+          if ( location.pathname.startsWith('/de/') ) {
+
+            const gettingstarted = document.getElementById("gettingstarted");
+            gettingstarted.title = "Inbetriebnahme";
+            gettingstarted.innerHTML = "Inbetriebnahme";
+            gettingstarted.href = "/de/gettingstarted/gettingstarted"
+            
+            const programming = document.getElementById("programming");
+            programming.title = "C++ Handbuch";
+            programming.innerHTML = "C++ Handbuch";
+            programming.href = "/de/programming/manual"
+
+            const remote = document.getElementById("remote");
+            remote.title = "Fernsteuerung";
+            remote.innerHTML = "Fernsteuerung";
+            remote.href = "/de/remote/remote"
+
+            const firmware = document.getElementById("firmware");
+            firmware.href = "/de/firmware/flash"
+
+            const api = document.getElementById("api");
+            api.href = "/de/cpp-api/index"
+
+            const faq = document.getElementById("faq");
+            faq.href = "/de/faq"
+
+            const products = document.getElementById("products");
+            products.title = "Produkte";
+            products.innerHTML = "Produkte";
+            products.href = "/de/products/index"
+                      }
+        </script>
+
 
         <!-- language picker -->
+        <a href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
+        <a href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
 
-        <a class="alang" href="#" onclick="location.href=location.href.replace('/de/', '/en/')"><img class="language-picker" src="/assets/img/uk.png"></a>
-        <a class="alang" href="#" onclick="location.href=location.href.replace('/en/', '/de/')"><img class="language-picker" src="/assets/img/germany.png"></a>
-        
         <!-- language picker -->
 
         
@@ -197,8 +228,6 @@
         <ul>
           
             <li><a href="/de/cpp-api/index">Übersicht</a></li>
-          
-            <li><a href="/de/cpp-api/classDiagram">Klassendiagram</a></li>
           
         </ul>
         
@@ -272,8 +301,6 @@
           
             <li><a href="/de/cpp-api/FtSwarmOLED">OLED</a></li>
           
-            <li><a href="/de/cpp-api/FtSwarmPixel">RGB LED</a></li>
-          
         </ul>
         
       </li>
@@ -288,15 +315,25 @@
           
             <li><a href="/de/cpp-api/motors">Übersicht</a></li>
           
-            <li><a href="/de/cpp-api/FtSwarmEncoderMotor">Encoder Motor</a></li>
+            <li><a href="/de/cpp-api/FtSwarmMiniMotor">Mini-Motor</a></li>
           
-            <li><a href="/de/cpp-api/FtSwarmMotor">Mini-Motor</a></li>
+            <li><a href="/de/cpp-api/FtSwarmMotor">M-Motor</a></li>
           
-            <li><a href="/de/cpp-api/FtSwarmTractorMotor">Traktor Motor</a></li>
+            <li><a href="/de/cpp-api/FtSwarmSMotor">S-Motor</a></li>
           
             <li><a href="/de/cpp-api/FtSwarmXMMotor">XM-Motor</a></li>
           
-            <li><a href="/de/cpp-api/FtSwarmMotor">XS-Motor</a></li>
+            <li><a href="/de/cpp-api/FtSwarmXSMotor">XS-Motor</a></li>
+          
+            <li><a href="/de/cpp-api/FtSwarmTractorMotor">Traktor Motor</a></li>
+          
+            <li><a href="/de/cpp-api/FtSwarmEncoderMotor">Encoder Motor</a></li>
+          
+            <li><a href="/de/cpp-api/FtSwarmStepperMotor">Schrittmotor</a></li>
+          
+            <li><a href="/de/cpp-api/FtSwarmRCMotor">RC-Motor</a></li>
+          
+            <li><a href="/de/cpp-api/FtSwarmWheelDrive">Radantrieb</a></li>
           
         </ul>
         
@@ -317,6 +354,8 @@
             <li><a href="/de/cpp-api/FtSwarmCompressor">Kompressor</a></li>
           
             <li><a href="/de/cpp-api/FtSwarmServo">Servo</a></li>
+          
+            <li><a href="/de/cpp-api/FtSwarmRCServo">RC-Servo</a></li>
           
             <li><a href="/de/cpp-api/FtSwarmValve">Ventil</a></li>
           
@@ -373,6 +412,25 @@
 
 <p>Schaltet die Lampe ode LED aus. Identisch zu <strong>on(0)</strong>.</p>
 
+<h4 id="void-setblink-uint32_t-periodms-uint8_t-signal-uint8_t-duty-uint8_t-pause-uint8_t-b1-uint8_t-b2-uint8_t-b3-">void setBlink( uint32_t periodMS, uint8_t signal, uint8_t duty, uint8_t pause, uint8_t b1, uint8_t b2, uint8_t b3 )</h4>
+
+<p>Schaltet den Blinkeffekt der Lampe ein.</p>
+
+<ul>
+  <li>periodMS: Taktzeit in ms</li>
+  <li>signal: Anzahl der Signaltakte</li>
+  <li>pause: Anzahl der Pausentakte</li>
+  <li>b1: Helligkeit/Brightness der Lampe beim Signal</li>
+  <li>b2: Helligkeit/Brightness der Lampe in der Signalpause</li>
+  <li>b3: Helligkeit/Brightness der Lampe in den Pausentakten</li>
+</ul>
+
+<p><img src="/assets/img/examples/blink-de.png" alt="Home" /></p>
+
+<h4 id="void-revokeeffect-uint8_t-brightness-">void revokeEffect( uint8_t brightness )</h4>
+
+<p>Schaltet den Blinkeffect wieder aus und setzt die Helligkeit auf brightness.</p>
+
 
 
 <div class="entries-list">
@@ -388,7 +446,7 @@
     <div id="footer" class="page__footer">
       <footer>
         <!-- start custom footer snippets -->
-
+<script src="/assets/js/copy-code.js"></script>
 <!-- end custom footer snippets -->
         <div class="page__footer-follow">
   <ul class="social-icons">
@@ -421,12 +479,10 @@
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
-    
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2026 The ftSwarm Project. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

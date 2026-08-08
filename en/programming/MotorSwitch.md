@@ -11,64 +11,24 @@ Therefore you need a ftSwarmRS, a switch, a motor or lamp and a 9V power supply.
 
 The hardware setup is easy:
 
-- Connect a motor or a lamp to output M2 of your ftSwarm.
-- Connect a switch to input A1.
-- Connect a 9V power supply to PWR.
-- Connect the ftSwarm via USB cable with your computer.
+![Home](/assets/img/examples/motor_switch.png)
 
-To enable your controller to run programs, Kelda mode must be activated first. Open the interactive firmware menu via the serial interface. Change to **(2) swarm configuration** in the main menu:
-
-```
-swarm configuration
-
-This device is connected to swarm "ftSwarm100" with 1 member(s) online.
-Swarm PIN is 100.
-(1) Kelda:               none
-(2) swarm communication: wifi
-(3) create a new swarm
-(4) list swarm members
-
-(0) exit
-swarm configuration>
-```
-
-Select **(1) Kelda** to activate Kelda mode. To activate the change, your controller boots up.
-
-When restarting, the controller now shows that it is being operated in Kelda mode:
-
-```
-ftSwarmOS 0.5.0
-
-(C) Christian Bergschneider & Stefan Fuss
-
-Press any key to enter bios settings.
-I am KELDA!
-Boot ftSwarm100 (SN:100).
-```
-
-Since the controller was started in Kelda mode, it no longer automatically switches to the interactive firmware menu. Enter **setup**, the menu is started. Switch to **(2) swarm configuration** again. Now use **(3) create a new swarm** to give your swarm - even if it only consists of one controller - your favorite name.
-
-
-Write the following sketch or use the example file *MotorSwitch*. Upload it to your device. Whenever you press your switch, the motor starts running. If you release the switch, the motor stops.
-
-You like to use a ftSwarmControl or ftSwarm hardware? Just replace ``#include <ftSwarmRS.h>`` with ``#include <ftSwarmControl.h>`` or ``#include <ftSwarm.h>``.
+Copy the following code and upload it to your device. Whenever you press your switch, the motor starts running. If you release the switch, the motor stops.
 
 ```cpp
-#include <ftSwarmRS.h> // ftSwarmRS hardware
+#include <ftSwarm.h> 
 
 FtSwarmSwitch *sw;
-FtSwarmMotor  *mot;
+FtSwarmSMotor *mot;
 
 void setup( ) {
-
-  Serial.begin(115200);
 
   // start the swarm
   FtSwarmSerialNumber_t local = ftSwarm.begin( );
 	
   // get switch and motor instances
   sw  = new FtSwarmSwitch( local, FTSWARM_A1 );
-  mot = new FtSwarmMotor( local, FTSWARM_M2 );
+  mot = new FtSwarmSMotor( local, FTSWARM_M1 );
 
 }
 
@@ -76,7 +36,7 @@ void loop( ) {
 
   // check if switch is pressed or released
   if ( sw->isPressed() )
-    mot->setSpeed(255);
+    mot->setSpeed(100);
   else
     mot->setSpeed(0);
 	
@@ -93,13 +53,10 @@ Like all Arduino-sketches, it uses the main functions **`setup`** and **`loop`**
 - When the sketch starts, **`setup`** is called automatically. In standard you initialize your hardware in this function.
 - Afterwards **`loop`** starts. If the function stops, the sketch calls it again and again. **`loop`** is used to control you model.
 
- **`#include "ftSwarm.h"`** includes the ftSwarm-Library to access the ftSwarm firmware. You need it to send some debug and error messages if needed. 
+ **`#include "ftSwarm.h"`** loads the ftSwarm-Library.
+Next, the IOs **`switch`** and **`motor`** are defined.
 
-```cpp
-Serial.begin(115200);
-```
-
-Afterwrards the swarm is started:
+In **`setup`**, the swarm is first initialized:
 
 ```cpp
 // start the swarm
@@ -110,18 +67,23 @@ The result is the serial number of your local controller. With this serial numbe
 
 ```cpp
 sw  = new FtSwarmSwitch( local, FTSWARM_A1 );
-mot = new FtSwarmMotor( local, FTSWARM_M2 );
+mot = new FtSwarmMiniMotor( local, FTSWARM_M1 );
 ```
 
-*Attention:* Due to the architecture of the firmware, you could not access an IO before your swarm is started.
-With instantiating an IO, the firmware waits until the IO joins the swarm. If the swarm is not started, your application will wait forever. 
-To work with global objects, they need to be defined as pointers. So you are able to instantiate them after starting your swarm.
+The swarm must always be initialized first using **ftSwarm.begin();**. To define IOs globally, they must therefore be implemented as pointers. So they could be initialized after starting the swarm.
+
 
 The main loop is just about querying the switch state and starting/stopping the motor:
 
 ```cpp
 if ( sw->isPressed() )
-  mot->setSpeed(255);
+  mot->setSpeed(100);
 else
   mot->setSpeed(0);
 ```
+
+Choosing the right motor type is important. Each fischertechnik motor has its own characteristic curve and requires a different voltage to start. These characteristic curves are stored in the firmware, so that the motor without any mechanical load will rotate even with **mot->setSpeed(1)**.
+
+In our example, the motor type has no effect, since the motor is either running at full speed or is turned off.
+
+Motor speed is specified as a percentage — at a value of -100, the motor rotates at full speed in one direction; at 100, it rotates in the other direction. Stepper motors differ from this and operate within a range of -4096 to 4096.

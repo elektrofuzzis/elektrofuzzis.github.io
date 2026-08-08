@@ -45,7 +45,7 @@ Originally, the project was designed to use with *fischertechnik*. Since the mou
     </div>
     <div>
         <div><a class="linkfree" href="products/ftSwarmControl"><img class="zoom" src="/assets/img/ftSwarmControl.png"></a></div>
-        <div><p class="headline">ftSwarmControl</p></div>
+        <div><p class="headline">ftSwarmControlUSBMicro</p></div>
         <div>
             <p class="pdetail">
                 In addition to two joysticks, eight buttons and an LCD display, the ftSwarmControl control panel can control two DC motors and read out four digital sensors. In remote control mode, simple models can be simple models can be controlled without any line of code.

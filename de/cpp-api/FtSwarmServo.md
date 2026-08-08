@@ -28,7 +28,7 @@ Servos sind nur bei **ftSwarm** verfügbar, der **ftSwarm** verfügt über einen
 Constructor um ein FtSwarmServo Objekt zu erzeugen. Ist der angesprochene Controller nicht online, so wartet die Firmware solange bis der entsprechende Controller gestartet wird.
 
 - serialNumber: Seriennummer des ftSwarm-Controllers.
-- port: **FTSWARM_SERVO1** oder **FTSWARM_SSERVO2**
+- port: **FTSWARM_SERVO1** oder **FTSWARM_SERVO2**
 
 #### FtSwarmServo( const char *name )
 
@@ -40,7 +40,7 @@ Constructor um ein FtSwarmServo Objekt zu erzeugen. Ist der angesprochene Contro
 
 Setzt die Position bzw. den Winkel des Servoarms.
 
-- position: Wert zwischen -256 und 256.
+- position: Wert zwischen -45 und 45.
 
 #### int16_t getPosition()
 
@@ -48,9 +48,9 @@ Gibt die Position bzw. den Winkel des Servoarms zurück.
 
 #### void setOffset( int16_t offset )
 
-Setzt die Nullstellung des Servoarms. Der Defaultwert ist 128 für eine mittlere Position.
+Setzt die Nullstellung des Servoarms. Der Defaultwert ist 45 für eine mittlere Position.
 
-- offset: Wert zwischen 0 und 256.
+- offset: Wert zwischen 0 und 90.
 
 #### int16_t getOffset()
 
