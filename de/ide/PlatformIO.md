@@ -77,7 +77,7 @@ Um Ihr Modell zu programmieren benötigen Sie nun ein neues PlatformIO-Projekt. 
   </div>
   <div>
     <ol>
-      <li>Downloaden Sie <a href="../../../assets/firmware/pio_ftSwarm.zip">pio_ftSwarm.zip</a></li>
+      <li>Downloaden Sie <a href="../../../assets/firmware/pio-starter-0.7.1.zip">pio-starter-0.7.1.zip</a></li>
       <li>Entpacken Sie die zip-Datei in ein Verzeichnis Ihrer Wahl.</li>
       <li>Wechseln Sie zu VSCode und clicken auf das PlatformIO-Icon</li>
       <li>Wählen Sie bei "Pick a folder" Ihr gerade Verzeichnis aus.</li>

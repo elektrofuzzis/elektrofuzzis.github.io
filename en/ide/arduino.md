@@ -37,7 +37,7 @@ If you are using an ftSwarmDuino, you will also need the [ftDuino environment](h
 
 ### Install ftSwarm Library
 
-Download the latest ftSwarm library <a href="https://github.com/elektrofuzzis/ftSwarm/releases">ftSwarm.zip</a>. Install the ZIP file via *Sketch\Import Library\Add ZIP Library*. All controllers use the same library.
+Download the latest ftSwarm library <a href="../../../assets/firmware/ftSwarm-0.7.1.zip">ftSwarm.zip</a>. Install the ZIP file via *Sketch\Import Library\Add ZIP Library*. All controllers use the same library.
 
 ### Flashing a Test Program
 

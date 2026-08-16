@@ -37,7 +37,7 @@ Wenn Sie einen ftSwarmDuino verwenden, so benötigen Sie ausserdem die [ftDuino-
 
 ### Die ftSwarm Bibliotek installieren
 
-Downloaden Sie die neueste ftSwarm-Bibliothek <a href="https://github.com/elektrofuzzis/ftSwarm/releases">ftSwarm.zip</a>. Installieren Sie das ZIP-File über *Sketch\Bibliothek einbinden\ZIP Bibliothek hinzufügen*. Alle Controller verwenden die gleiche Bibliothek.
+Downloaden Sie die neueste ftSwarm-Bibliothek <a href="../../../assets/firmware/ftSwarm-0.7.1.zip">ftSwarm.zip</a>. Installieren Sie das ZIP-File über *Sketch\Bibliothek einbinden\ZIP Bibliothek hinzufügen*. Alle Controller verwenden die gleiche Bibliothek.
 
 ### Ein Testprogramm flashen
 
