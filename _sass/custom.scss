@@ -1,3 +1,50 @@
+.hero-image-wrap {
+  position: relative;
+  display: block;
+  max-width: 100%;
+}
+
+.hero-image-wrap > figure {
+  margin: 0;
+}
+
+.hero-version-popup {
+  position: absolute;
+  right: 12%;
+  top: 22%;
+  display: inline-block;
+  max-width: min(320px, 72%);
+  padding: 0.65rem 0.9rem;
+  border-radius: 0.8rem;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  font-size: 0.8em;
+  line-height: 1.35;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.22);
+  transform: rotate(-25deg) translate( 50px, -50px );
+  transform-origin: center center;
+  z-index: 2;
+}
+
+.hero-version-popup:before {
+  content: none !important;
+}
+
+.hero-version-popup:link,
+.hero-version-popup:visited,
+.hero-version-popup:hover,
+.hero-version-popup:active {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.hero-version-popup:hover {
+  background: rgba(0, 0, 0, 0.82);
+}
+
 p {
 	font-size: 0.8em;
   text-align: justify;

@@ -11,5 +11,18 @@
       "ftSwarmJST"
     ],
     "languages": ["en", "de"]
+  },
+    {
+    "version": "0.7.1",
+    "devices": [
+      "ftSwarmRS",
+      "ftSwarmRC",
+      "ftSwarmControlUSBMicro",
+      "ftSwarmControlUSBC",
+      "ftSwarmDuino",
+      "ftSwarmPwrDrive",
+      "ftSwarmJST"
+    ],
+    "languages": ["en", "de"]
   }
 ]

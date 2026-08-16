@@ -30,6 +30,8 @@ Features:
 - neuer Servotyp RC-Servo
 - neuer Motortypen RC-Motor, Radantrieb
 - Blinken bei Lampen und ftPixeln.
+- Bandbreitenoptimiertes WLAN-/RS485-Protokoll
+- WLAN-Client-Modus: Die SSIDs „ftSwarmXXX“ entfallen.
 
 ### Version 0.6.2 05/2024
 

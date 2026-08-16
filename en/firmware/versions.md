@@ -7,7 +7,7 @@ sidebar:
     nav: firmware-en
 ---
 
-With version 0.7.0, the way controllers are handled has changed in several key ways:
+With version 0.7.1, the way controllers are handled has changed in several key ways:
 
 - Previously, the controller type was selected via the corresponding library, e.g., ftSwarm-rs. With the new version, the controllers are available as boards in Arduino or PlatformIO and now use only a single shared ftSwarm library. Please configure your [Arduino IDE](../../ ide/arduino) or [VSCode/Platform-IDE](../../ide/platformio) accordingly.
 - You no longer need to compile the firmware for the swarm members yourself. You can easily flash the firmware via this [website](../flash). When upgrading to version 0.7.0, only the Wi-Fi and swarm settings will be retained for technical reasons.
@@ -15,7 +15,7 @@ With version 0.7.0, the way controllers are handled has changed in several key w
 - On the ftSwarmControl, almost all settings can also be adjusted via the OLED display. In the new [Remote Control Mode](../../remote/remote), standard models can be configured without programming.
 - Blinkeffect with ftSwarmLamp and ftSwarmPixel.
 
-### Version 0.7.0 08/2026
+### Version 0.7.1 08/2026
 
 Features:
 - Switch to official Arduino/PIO boards
@@ -30,6 +30,8 @@ Features:
 - New servo type: RC servo
 - New motor types: RC motor, wheel drive
 - Blinkeffect with ftSwarmLamp and ftSwarmPixel
+- Bandwidth optimized wifi/RS485 protocol
+- wifi client mode: ftSwarmXXX SSID are omitted
 
 ### Version 0.6.2 05/2024
 
