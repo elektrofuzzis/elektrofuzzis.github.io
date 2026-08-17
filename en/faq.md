@@ -9,7 +9,7 @@ sidebar:
 
 <details>
 <summary>I used my controller as Kelda. Now I want to deploy the firmware again.</summary>
-<p>Just run the last <a href="../gettingstarted/firmware">firmware update</a>.</p>
+<p>Just run the last <a href="../firmware/flash">firmware update</a>.</p>
 </details>
 
 <hr>

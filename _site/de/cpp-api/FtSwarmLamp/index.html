@@ -385,7 +385,7 @@
 
 <p>Wird eine LED an einen Motorausgang mit beiden Kabeln angeschlossen, so muss die Polung getestet werden. Leuchtet die LED nicht werden, so vertauschen Sie die Anschlüsse an der LED.</p>
 
-<p class="notice--info">Bei den <em>fischertechnik</em>-TX und TXT-Controllern können die Ausgänge auf acht unabhängige Ports (O1..O8) erweitert werden. Dies ist bei den ftSwarm-Controllern nur bedingt möglich. Es können an M1 oder M2 zwei LEDs auf GND geschaltet werden. Diese können abwechselnd aber nicht gleichzeitig eingeschaltet werden. Verwenden Sie n diesem Fall eine Instanz der Klasse FtSwarmMotor für beide LEDs. <strong>setSpeed(255)</strong> schaltet eine der beiden LEDs ein, <strong>setSpeed(-255)</strong> die andere LED. <strong>setSpeed(0)</strong> schaltet beide LEDs aus.</p>
+<p class="notice--info">Bei den <em>fischertechnik</em>-TX und TXT-Controllern können die Ausgänge auf acht unabhängige Ports (O1..O8) erweitert werden. Dies ist bei den ftSwarm-Controllern nur bedingt möglich. Es können an M1 oder M2 zwei LEDs auf GND geschaltet werden. Diese können abwechselnd aber nicht gleichzeitig eingeschaltet werden. Verwenden Sie in diesem Fall eine Instanz der Klasse FtSwarmMotor für beide LEDs. <strong>setSpeed(255)</strong> schaltet eine der beiden LEDs ein, <strong>setSpeed(-255)</strong> die andere LED. <strong>setSpeed(0)</strong> schaltet beide LEDs aus.</p>
 
 <h4 id="ftswarmlampftswarmserialnumber_t-serialnumber-ftswarmport_t-port">FtSwarmLamp(FtSwarmSerialNumber_t serialNumber, FtSwarmPort_t port)</h4>
 
@@ -410,7 +410,7 @@
 
 <h4 id="void-off-void-">void off( void )</h4>
 
-<p>Schaltet die Lampe ode LED aus. Identisch zu <strong>on(0)</strong>.</p>
+<p>Schaltet die Lampe oder LED aus. Identisch zu <strong>on(0)</strong>.</p>
 
 <h4 id="void-setblink-uint32_t-periodms-uint8_t-signal-uint8_t-duty-uint8_t-pause-uint8_t-b1-uint8_t-b2-uint8_t-b3-">void setBlink( uint32_t periodMS, uint8_t signal, uint8_t duty, uint8_t pause, uint8_t b1, uint8_t b2, uint8_t b3 )</h4>
 

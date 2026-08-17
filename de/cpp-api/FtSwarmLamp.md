@@ -15,7 +15,7 @@ sidebar:
 
 Wird eine LED an einen Motorausgang mit beiden Kabeln angeschlossen, so muss die Polung getestet werden. Leuchtet die LED nicht werden, so vertauschen Sie die Anschlüsse an der LED. 
 
-Bei den *fischertechnik*-TX und TXT-Controllern können die Ausgänge auf acht unabhängige Ports (O1..O8) erweitert werden. Dies ist bei den ftSwarm-Controllern nur bedingt möglich. Es können an M1 oder M2 zwei LEDs auf GND geschaltet werden. Diese können abwechselnd aber nicht gleichzeitig eingeschaltet werden. Verwenden Sie n diesem Fall eine Instanz der Klasse FtSwarmMotor für beide LEDs. **setSpeed(255)** schaltet eine der beiden LEDs ein, **setSpeed(-255)** die andere LED. **setSpeed(0)** schaltet beide LEDs aus.
+Bei den *fischertechnik*-TX und TXT-Controllern können die Ausgänge auf acht unabhängige Ports (O1..O8) erweitert werden. Dies ist bei den ftSwarm-Controllern nur bedingt möglich. Es können an M1 oder M2 zwei LEDs auf GND geschaltet werden. Diese können abwechselnd aber nicht gleichzeitig eingeschaltet werden. Verwenden Sie in diesem Fall eine Instanz der Klasse FtSwarmMotor für beide LEDs. **setSpeed(255)** schaltet eine der beiden LEDs ein, **setSpeed(-255)** die andere LED. **setSpeed(0)** schaltet beide LEDs aus.
 {: .notice--info}
 
 #### FtSwarmLamp(FtSwarmSerialNumber_t serialNumber, FtSwarmPort_t port)
@@ -37,7 +37,7 @@ Schaltet die Lampe bzw. die LED ein. Die Helligkeit kann über den Parameter pow
 
 #### void off( void )
 
-Schaltet die Lampe ode LED aus. Identisch zu **on(0)**.
+Schaltet die Lampe oder LED aus. Identisch zu **on(0)**.
 
 #### void setBlink( uint32_t periodMS, uint8_t signal, uint8_t duty, uint8_t pause, uint8_t b1, uint8_t b2, uint8_t b3 )
 

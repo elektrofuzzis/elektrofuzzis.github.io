@@ -8,7 +8,7 @@ sidebar:
 ---
 <div class="apicontainer">
     <div class="apileft">
-        Durch sein integriertes Getriebe ist der Traktormotor sehr leistungsstark. Da dieser Motortyp bis zu 950mA benötigt, müssen Sie beim Einsatz des XM Motors unbedingt das Powerbudget von 2A überprüfen.
+        Durch sein integriertes Getriebe ist der XM-Motor sehr leistungsstark. Da dieser Motortyp bis zu 950mA benötigt, müssen Sie beim Einsatz des XM Motors unbedingt das Powerbudget von 2A überprüfen.
     </div>
     <div class="apiright apiimg"><img title="Bildnachweis: fischertechnik" src="/assets/img/motor/motor-xm.png">XM Motor (135485)</div>
 </div>

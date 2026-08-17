@@ -7,9 +7,9 @@ products-en:
       - title: "ftSwarmRS"
         url: /en/products/ftSwarmRS
       - title: "ftSwarmXL"
-        url: /en/products/ftSwarmRC
-      - title: "ftSwarmRC"
         url: /en/products/ftSwarmXL
+      - title: "ftSwarmRC"
+        url: /en/products/ftSwarmRC
       - title: "ftSwarmControlUSBMicro"
         url: /en/products/ftSwarmControl
       - title: "ftSwarmPwrDrive"

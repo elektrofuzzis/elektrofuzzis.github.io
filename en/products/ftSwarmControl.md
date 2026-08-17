@@ -15,7 +15,7 @@ Like the ftSwarm-controllers, all JST connectors are reversed polarity protected
 
 |---------------|------|
 | | |
-| **Pinout**    | <img alt="ftSwarmControl Pinout" src="/assets/img/ftSwarmControlPinout.png" width="250">  |
+| **Pinout**    | <img alt="ftSwarmControl Pinout" src="/assets/img/ftSwarmControlPinout.svg" width="250">  |
 | **CPU**           | esp32-Wrover                               | 
 | **Memory**        | 2 MB RAM, 4MB Flash                        | 
 | **connectors**    | JST                                        | 

@@ -15,7 +15,7 @@ Therefore the ftSwarmDuino controller is plugged into the I²C interface of the 
 
 |---------------|------|
 | | |
-| **Pinout**    | <<img alt="ftSwarm Pinout" src="/assets/img/ftSwarmDuinoPinout.png" width="250"> |
+| **Pinout**    | <img alt="ftSwarm Pinout" src="/assets/img/ftSwarmDuinoPinout.svg" width="250"> |
 | **CPU**             | esp32-S3                                          | 
 | **Memory**        | 2 MB RAM, 4MB Flash                               | 
 | **Connectors**      | screw terminal (ftSwarmDuino)<br>4mm Bananenbuchsen (via ftDuino controller) |

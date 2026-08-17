@@ -24,7 +24,7 @@ Use this class for ftSwarmControl's built-in buttons only.
 Constructor to create a FtSwarmButton object. If the referenced controller isn't connected to the swarm yet, the firmware will waits until the controller gets online.
 
 - serialNumber: Serial number of the used ftSwarm controller.
-- port: Use **FTSWARM_S1**, **FTSWARM_S2**, **FTSWARM_S3**, **FTSWARM_S4** for standard buttons, **FTSWARM_J1** & **FTSWARM_J2** for joystick buttons 
+- port: Use **FTSWARM_S1** ... **FTSWARM_S4** for standard buttons, **FTSWARM_J1** & **FTSWARM_J2** for joystick buttons 
   and **FTSWARM_F1** & **FTSWARM_F2** for frontside buttons.
 
 #### FtSwarmButton(const char *name)

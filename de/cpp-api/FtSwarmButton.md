@@ -24,7 +24,7 @@ Die Klasse FtSwarmButton funktioniert nur mit den On-Board-Tastern des ftSwarmCo
 Constructor um ein FtSwarmButton Objekt zu erzeugen. Ist der angesprochene Controller nicht online, so wartet die Firmware solange bis der entsprechende Controller gestartet wird.
 
 - serialNumber: Seriennummer des ftSwarm-Controllers.
-- port: **FTSWARM_S1**...**FTSWARM_S2** (Standardtasten), **FTSWARM_J1** & **FTSWARM_J2** (Joystick), **FTSWARM_F1** & **FTSWARM_F2** (Frontside)
+- port: **FTSWARM_S1**...**FTSWARM_S4** (Standardtasten), **FTSWARM_J1** & **FTSWARM_J2** (Joystick), **FTSWARM_F1** & **FTSWARM_F2** (Frontside)
   
   
 #### FtSwarmButton(const char *name)

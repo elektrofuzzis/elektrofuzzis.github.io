@@ -13,7 +13,7 @@ This controller is the original version of the ftSwarm and is no longer availabl
 
 |---------------|------|
 | | |
-| **Pinout**    | <img alt="ftSwarm Pinout" src="/assets/img/ftSwarmJSTPinout.png" width="250"> |
+| **Pinout**    | <img alt="ftSwarm Pinout" src="/assets/img/ftSwarmJSTPinout.svg" width="250"> |
 | **CPU**           | esp32-Wrover                               | 
 | **Memory**        | 2 MB RAM, 4MB Flash                        | 
 | **connectors**    | JST                                        | 

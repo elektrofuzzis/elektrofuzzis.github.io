@@ -15,7 +15,7 @@ Therefore the ftSwarmPwrdrive controller is plugged into the I²C interface of t
 
 |---------------|------|------|
 | | |
-| **Pinout**    | <img alt="ftSwarm Pinout" src="/assets/img/ftSwarmPwrDrivePinout.png" width="250"> |
+| **Pinout**    | <img alt="ftSwarm Pinout" src="/assets/img/ftSwarmPwrDrivePinout.svg" width="250"> |
 | **CPU**             | esp32-S3                                          | 
 | **Memory**        | 2 MB RAM, 4MB Flash                               | 
 | **Connectors**      | screw terminal (ftSwarmPwrDrive) <br>4mm Bananenbuchsen (ftPwrDrive) |

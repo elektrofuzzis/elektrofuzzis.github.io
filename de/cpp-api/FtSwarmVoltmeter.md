@@ -1,5 +1,5 @@
 ---
-title: FtSwarmVotmeter
+title: FtSwarmVoltmeter
 layout: category
 lang: de
 classes: wide

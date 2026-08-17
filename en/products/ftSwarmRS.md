@@ -13,7 +13,7 @@ This controller is the slightly more powerful successor to the ftSwarm and ftSwa
 
 |---------------|------|
 | | |
-| **Pinout**    | <img alt="ftSwarm Pinout" src="/assets/img/ftSwarmRSPinout.png" width="250"> |
+| **Pinout**    | <img alt="ftSwarm Pinout" src="/assets/img/ftSwarmRSPinout.svg" width="250"> |
 | **CPU**           | esp32-S3 |
 | **Memory**        | 2 MB RAM, 4MB Flash |
 | **connectors**    | screw terminal |

@@ -13,7 +13,7 @@ This controller is build for hard work. All connections to the screw terminals a
 
 |---------------|------|
 | | |
-| **Pinout**    | <img alt="ftSwarm Pinout" src="/assets/img/ftSwarmXLPinout.png" width="250"> |
+| **Pinout**    | <img alt="ftSwarm Pinout" src="/assets/img/ftSwarmXLPinout.svg" width="250"> |
 | **CPU**           | esp32-S3 |
 | **Memory**        | 2 MB RAM, 4MB Flash |
 | **connectors**    | screw terminal |

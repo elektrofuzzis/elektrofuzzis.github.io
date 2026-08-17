@@ -33,7 +33,7 @@ gallery:
 ---
 Digitale Sensoren sind Schalter und kennen nur zwei Zustände: "ein" und "aus".
 
-Die meisten digitalen Sensoren von *fischertechnik* haben zwei Anschlüsse. Diese werden an die beiden Anschlüsse des Eingangs am Controller angeschlossen. Bei einigen Sensoren ist ein Anschluß rot markiert. Dieser Anschluß muss am beim ftSwarm/ftSwarmControl an das rote Kabel angeschlossen werden, beim ftSwarmRS an den Signalpin.
+Die meisten digitalen Sensoren von *fischertechnik* haben zwei Anschlüsse. Diese werden an die beiden Anschlüsse des Eingangs am Controller angeschlossen. Bei einigen Sensoren ist ein Anschluß rot markiert. Dieser Anschluß muss beim ftSwarm/ftSwarmControl an das rote Kabel angeschlossen werden, beim ftSwarmRS an den Signalpin.
 
 Die Anschlüsse von [ftSwarm](/de/gettingstarted/1stftSwarm) und [ftSwarmControl](/de/gettingstarted/1stftSwarmControl) sind auf den Pinout-Seiten beschrieben.
 

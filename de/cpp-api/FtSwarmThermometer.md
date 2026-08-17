@@ -19,14 +19,14 @@ sidebar:
 
 #### FtSwarmThermometer(FtSwarmSerialNumber_t serialNumber, FtSwarmPort_t port)
 
-Constructor um ein FtSwarmButton Objekt zu erzeugen. Ist der angesprochene Controller nicht online, so wartet die Firmware solange bis der entsprechende Controller gestartet wird.
+Constructor um ein FtSwarmThermometer Objekt zu erzeugen. Ist der angesprochene Controller nicht online, so wartet die Firmware solange bis der entsprechende Controller gestartet wird.
 
 - serialNumber: Seriennummer des ftSwarm-Controllers.
 - port: Portnummer, **FTSWARM_A1**, **FTSWARM_A2**, ..., **FTSWARM_A6**. ftSwarmControl unterstützt nur **FTSWARM_A1**.
 
 #### FtSwarmThermometer(const char *name)
 
-Constructor um ein FtSwarmButton Objekt zu erzeugen. Ist der angesprochene Controller nicht online, so wartet die Firmware solange bis der entsprechende Controller gestartet wird.
+Constructor um ein FtSwarmThermometer Objekt zu erzeugen. Ist der angesprochene Controller nicht online, so wartet die Firmware solange bis der entsprechende Controller gestartet wird.
 
 - name: Aliasname des IO-Ports.
 

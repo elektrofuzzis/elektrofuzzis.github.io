@@ -9,7 +9,7 @@ classes: wide
 
 <details>
 <summary>Ich habe auf meinem Controller ein eigenes Programm laufen und möchte nun die Standard-Firmware einspielen.</summary>
-<p>Spielen Sie einfach das letzte <a href="../gettingstarted/firmware">Firmware Update</a> ein.</p>
+<p>Spielen Sie einfach das letzte <a href="../firmware/flash">Firmware Update</a> ein.</p>
 </details>
 
 <hr>
@@ -106,7 +106,7 @@ motor->setSpeed(200);</code></pre></div></div>
 
 }</code></pre></div></div>
 <p>Wenn das Programm läuft, erhalten Sie mit dem Drücken und Loslassen der Taster <strong>S1 pressed.</strong> und <strong>S1 released.</strong> Nachrichten. In manchen Fällen, kommt es aber zu zwei aufeinander folgenden <strong>S1 pressed.</strong> Meldungen, die zugehörige <strong>S1 released.</strong> Nachricht fehlt.</p>
-<p>Der Schwarm prüft aller 25ms die Eingänge. Beim Auslesen von S1 vergleicht die Firmwae den neuen Stand (z.B. gedrückt) mit dem vorherigen Zustand (z.B. nicht gerdückt). Dadurch wird der Toggle-Zustand auf <strong>FTSWARM_TOGGLEUP</strong> gesetzt.</p>
+<p>Der Schwarm prüft aller 25ms die Eingänge. Beim Auslesen von S1 vergleicht die Firmware den neuen Stand (z.B. gedrückt) mit dem vorherigen Zustand (z.B. nicht gerdückt). Dadurch wird der Toggle-Zustand auf <strong>FTSWARM_TOGGLEUP</strong> gesetzt.</p>
 <p>Bleibt der Taster gedrückt, so prüft die <strong>loop</strong>-Funktion spätestens nach 250ms den Zustand und gibt auf der seriellen Konsole <strong>S1 pressed</strong> aus. <strong>local_S1->getToggle()</strong> setzt dabei den Status des Eingangs auf <strong>FTSWARM_NOTOGGLE</strong>. Beim nächsten Durchlauf der loop ist der Zustand <strong>local_S1->getToggle()</strong> und es wird nichts ausgegeben.</p>
 <p>Nachdem der Taster losgelassen wurde, ändert sich der Zustand zu <strong>FTSWARM_TOGGLEDOWN</strong>. Auf der Konsole wird <strong>S1 released</strong> ausgegeben.</p>
 <p>Wird der Taster, nachdem er gedrückt wurde (Ausgabe <strong>S1 pressed.</strong>), innerhalb der 250ms losgelassen und erneut gedrückt, so ändert sich der Zustand des Tasters während dem <strong>delay</strong> zweimal. Am Ende der 250ms steht der Taster auf <strong>FTSWARM_TOGGLEUP</strong>.</p>
