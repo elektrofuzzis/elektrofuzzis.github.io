@@ -52,6 +52,6 @@ Sets the Lamp to blink effect.
 
 ![Home](/assets/img/examples/blink-en.png)
 
-#### void revokeEffect( uint8_t brightness )
+#### void resetBlink( uint8_t brightness )
 
 Revoke the blink effect and set the lamp's brightness.

@@ -77,6 +77,6 @@ Die Farben c1 bis c3 verwenden folgende Farbwerte:
   - <span class="magenta">FTSWARM_EFFECT_COLOR_MAGENTA</span>
   - <span class="gray">FTSWARM_EFFECT_COLOR_WHITE</span>
 
-#### void revokeEffect( CRGB color )
+#### void resetBlink( CRGB color )
 
 Schaltet den Blinkeffect wieder aus und setzt die Farbe auf color.

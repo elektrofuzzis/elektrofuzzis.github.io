@@ -78,6 +78,6 @@ Colors c1 bis c3 are using the following values:
   - <span class="magenta">FTSWARM_EFFECT_COLOR_MAGENTA</span>
   - <span class="gray">FTSWARM_EFFECT_COLOR_WHITE</span>
 
-#### void revokeEffect( CRGB color )
+#### void resetBlink( CRGB color )
 
 Revoke the blink effect and set the ftPixel's color.

@@ -1,5 +1,5 @@
 ---
-title: C++ API
+title: Übersicht Sensoren & Aktoren
 layout: category
 lang: de
 classes: wide

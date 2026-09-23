@@ -52,6 +52,6 @@ Schaltet den Blinkeffekt der Lampe ein.
 
 ![Home](/assets/img/examples/blink-de.png)
 
-#### void revokeEffect( uint8_t brightness )
+#### void resetBlink( uint8_t brightness )
 
 Schaltet den Blinkeffect wieder aus und setzt die Helligkeit auf brightness.

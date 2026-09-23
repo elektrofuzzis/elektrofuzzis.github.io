@@ -15,6 +15,18 @@ With version 0.7.1, the way controllers are handled has changed in several key w
 - On the ftSwarmControl, almost all settings can also be adjusted via the OLED display. In the new [Remote Control Mode](../../remote/remote), standard models can be configured without programming.
 - Blinkeffect with ftSwarmLamp and ftSwarmPixel.
 
+### Version 0.8.0 09/2026
+
+Features:
+- CLI command nvs.clear() to defrag NVS
+
+Bugfixes:
+- optimized error handling during startuo
+
+### Version 0.7.2 09/2026
+
+- Blinking effect for all internal ftPixels in the swarm.
+
 ### Version 0.7.1 08/2026
 
 Features:

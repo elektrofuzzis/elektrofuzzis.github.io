@@ -15,7 +15,19 @@ Mit Version 0.7.0 verändert sich die Handhabung der Controller in einigen wesen
 - Am ftSwarmControl lassen sich fast alle Einstellungen auch über das OLED-Display durchführen. Im neuen [Fernsteuerungsmodus](../../remote/remote) können Standardmodelle ohne Programmierung konfiguriert werden.
 - Blinkeffekt bei Lampen und ftPixeln.
 
-### Version 0.7.0 08/2026
+### Version 0.8.0 09/2026
+
+Features:
+- CLI commando nvs.clear() um den NVS zu defragmentieren.
+
+Bugfixes:
+- Verbessertes Fehlerhandling beim Start des Swarms
+
+### Version 0.7.2 09/2026
+
+- Blinkeffekt für alle internen ftPixel im Swarm.
+
+### Version 0.7.1 08/2026
 
 Features:
 - Umstellung auf offizielle Arduino/PIO-Boards

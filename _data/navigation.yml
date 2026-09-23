@@ -133,7 +133,9 @@ manual-en:
 cppapi-en:
   - title: "C++ API"
     children:
-      - title: "Overview"
+      - title: "ftSwarm"
+        url: /en/cpp-api/ftSwarm
+      - title: "Sensors & Actors"
         url: /en/cpp-api/index
   - title: "Analog Sensors"
     children:
@@ -215,10 +217,13 @@ cppapi-en:
         url: /en/cpp-api/FtSwarmRCServo
       - title: "Valve"
         url: /en/cpp-api/FtSwarmValve
+
 cppapi-de:
   - title: "C++ API"
     children:
-      - title: "Übersicht"
+      - title: "ftSwarm"
+        url: /de/cpp-api/ftSwarm
+      - title: "Sensoren & Aktoren"
         url: /de/cpp-api/index
   - title: "Analoge Sensoren"
     children:
