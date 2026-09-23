@@ -6,7 +6,7 @@ Lang: en
 ---
 <div class="hero-image-wrap">
     {% include figure popup=true image_path="/assets/img/ftSwarmFamily.png" alt="ftSwarm Controllers" %}
-    <a class="hero-version-popup" href="/en/firmware/versions">New version 0.7.1 available.<br>Read upgrade guide!</a>
+    <a class="hero-version-popup" href="/en/firmware/versions">New version 0.8.0 available.<br>Read upgrade guide!</a>
 </div>
 
 # The ftSwarm Project

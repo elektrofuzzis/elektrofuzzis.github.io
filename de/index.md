@@ -6,7 +6,7 @@ classes: wide
 ---
 <div class="hero-image-wrap">
     {% include figure popup=true image_path="/assets/img/ftSwarmFamily.png" alt="ftSwarm Controllers" %}
-    <a class="hero-version-popup" href="/de/firmware/versions">Neue Version 0.7.1 <br> Beachten Sie den Upgrade Guide!</a>
+    <a class="hero-version-popup" href="/de/firmware/versions">Neue Version 0.8.0 <br> Beachten Sie den Upgrade Guide!</a>
 </div>
 
 # Das ftSwarm Projekt
