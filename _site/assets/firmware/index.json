@@ -8,7 +8,8 @@
       "ftSwarmControlUSBC",
       "ftSwarmDuino",
       "ftSwarmPwrDrive",
-      "ftSwarmJST"
+      "ftSwarmJST",
+      "ftSwarmXL"
     ],
     "languages": ["en", "de"]
   },
@@ -21,7 +22,8 @@
       "ftSwarmControlUSBC",
       "ftSwarmDuino",
       "ftSwarmPwrDrive",
-      "ftSwarmJST"
+      "ftSwarmJST",
+      "ftSwarmXL"
     ],
     "languages": ["en", "de"]
   },
@@ -34,7 +36,8 @@
       "ftSwarmControlUSBC",
       "ftSwarmDuino",
       "ftSwarmPwrDrive",
-      "ftSwarmJST"
+      "ftSwarmJST",
+      "ftSwarmXL"
     ],
     "languages": ["en", "de"]
   }
