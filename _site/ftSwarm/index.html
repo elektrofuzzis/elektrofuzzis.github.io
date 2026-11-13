@@ -21,7 +21,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="">
 <meta property="og:title" content="The ftSwarm Project">
-<meta property="og:url" content="https://elektrofuzzis.github.io/ftSwarm/">
+<meta property="og:url" content="http://localhost:4000/ftSwarm/">
 
 
 
@@ -50,7 +50,7 @@
     
       "@type": "Person",
       "name": "The ftSwarm Project",
-      "url": "https://elektrofuzzis.github.io/"
+      "url": "http://localhost:4000/"
     
   }
 </script>
@@ -232,8 +232,24 @@
     
       <h1 id="page-title" class="page__title">The ftSwarm Project</h1>
     
-    <script type="text/javascript">
-    location.href="/de/index.html";
+    <script>
+    var languages = navigator.languages && navigator.languages.length
+        ? navigator.languages
+        : [navigator.language || ""];
+    var target = "/en/index.html";
+
+    for (var i = 0; i < languages.length; i++) {
+        var language = languages[i].toLowerCase();
+        if (language === "de" || language.indexOf("de-") === 0) {
+            target = "/de/index.html";
+            break;
+        }
+        if (language === "en" || language.indexOf("en-") === 0) {
+            break;
+        }
+    }
+
+    location.replace(target);
 </script>
 
 
