@@ -163,12 +163,18 @@ cppapi-en:
         url: /en/cpp-api/FtSwarmReedSwitch
       - title: "Switch"
         url: /en/cpp-api/FtSwarmSwitch
+  - title: "Position & Speed"
+    children:
+      - title: "Overview"
+        url: /en/cpp-api/positionSpeed
       - title: "Counter"
         url: /en/cpp-api/FtSwarmCounter/
       - title: "Frequency"
         url: /en/cpp-api/FtSwarmFrequencyMeter/
       - title: "Rotary"
         url: /en/cpp-api/FtSwarmRotaryEncoder/
+      - title: "Gyro"
+        url: /en/cpp-api/FtSwarmGyro/
   - title: "LEDs, Lamps & Displays"
     children:
       - title: "Overview"
@@ -251,12 +257,18 @@ cppapi-de:
         url: /de/cpp-api/FtSwarmReedSwitch
       - title: "Taster"
         url: /de/cpp-api/FtSwarmSwitch
+  - title: "Position & Geschwindigkeit"
+    children:
+      - title: "Übersicht"
+        url: /de/cpp-api/positionSpeed
       - title: "Zähler"
         url: /de/cpp-api/FtSwarmCounter/
       - title: "Frequenzmeter"
         url: /de/cpp-api/FtSwarmFrequencyMeter/
       - title: "Drehgeber"
         url: /de/cpp-api/FtSwarmRotaryEncoder/
+      - title: "Gyro"
+        url: /de/cpp-api/FtSwarmGyro/
   - title: "LEDs, Lampen & Displays"
     children:
       - title: "Übersicht"

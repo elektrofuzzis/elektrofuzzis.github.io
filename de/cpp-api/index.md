@@ -40,6 +40,7 @@ digital:
  - url: "/de/cpp-api/FtSwarmButton/"
    image_path: "/assets/img/switches/ftSwarmControl.png"
    title: "Buttons ftSwarmControl"
+positionSpeed:
  - url: "/de/cpp-api/FtSwarmCounter/"
    image_path: "/assets/img/switches/counter.png"
    title: "Zähler"
@@ -49,6 +50,9 @@ digital:
  - url: "/de/cpp-api/FtSwarmRotaryEncoder/"
    image_path: "/assets/img/switches/rotary.png"
    title: "Drehgeber"
+ - url: "/de/cpp-api/FtSwarmGyro/"
+   image_path: "/assets/img/gyro/gyro.png"
+   title: "Gyro"
 led:
  - url: "en/cpp-api/FtSwarmLamp/"
    image_path: "/assets/img/LampLedDisplay/led.png"
@@ -130,6 +134,10 @@ other:
 ### digitale Sensoren
 
 {% include gallery id= "digital" %}
+
+### Position & Geschwindigkeit
+
+{% include gallery id= "positionSpeed" %}
 
 ### LEDs, Lampen und Displays
 
