@@ -1,5 +1,5 @@
 ---
-title: The ftSwarm Project
+title: Hello
 Lang: en
 layout: category
 sidebar:

@@ -2,3 +2,4 @@ Gemfile.*
 jekyll.bat
 LICENSE
 package*
+_site/

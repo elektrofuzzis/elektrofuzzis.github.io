@@ -185,7 +185,6 @@ exclude:
   - README
   - tmp
   - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
   - jekyll.bat
   - gitpush.bat
 keep_files:
